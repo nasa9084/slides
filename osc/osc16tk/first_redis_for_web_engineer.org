@@ -1,0 +1,30 @@
+#+REVEAL_ROOT: ../../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: reveal_slide_number:nil reveal_control:nil reveal_progress:nil toc:0 reveal_mathjax:t num:nil LaTeX:t timestamp:nil
+#+REVEAL_THEME: black
+#+REVEAL_EXTRA_CSS: ../../extra.css
+#+TITLE: WebエンジニアのためのはじめてのRedis
+#+AUTHOR: @nasa9084
+
+* I'm...
+  #+REVEAL_HTML: <div style="float: left;">
+  file:img/pika.jpg
+  #+REVEAL_HTML: </div>
+
+  - 北村壮大 (Masahiro Kitamura)
+  - @nasa9084
+  - 北海道大学工学部
+  - 情報エレクトロニクス学科
+  - コンピュータサイエンスコース
+  - 情報認識学研究室
+
+** file:img/digiporo_logo.png
+   初心者向けIT技術勉強会
+   - HTTPのキホン
+   - 正規表現入門
+   - Webサーバーを構築してみよう
+   - はじめてのSQL
+   - などなど...
+
+* Redis
+** NoSQL

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>WebエンジニアのためのはじめてのRedis</title>
+<meta name="author" content="(@nasa9084)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="../../reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="../../reveal.js/css/theme/black.css" id="theme"/>
+
+<link rel="stylesheet" href="../../extra.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../../reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">WebエンジニアのためのはじめてのRedis</h1><h2 class="author">@nasa9084</h2>
+</section>
+
+<section>
+<section id="slide-orgheadline2">
+<h2 id="orgheadline2">I'm&#x2026;</h2>
+<div style="float: left;">
+
+<div class="figure">
+<p><img src="img/pika.jpg" alt="pika.jpg" />
+</p>
+</div>
+</div>
+
+<ul>
+<li>北村壮大 (Masahiro Kitamura)</li>
+<li>@nasa9084</li>
+<li>北海道大学工学部</li>
+<li>情報エレクトロニクス学科</li>
+<li>コンピュータサイエンスコース</li>
+<li>情報認識学研究室</li>
+
+</ul>
+
+</section>
+<section id="slide-orgheadline1">
+<h3 id="orgheadline1"><img src="img/digiporo_logo.png" alt="digiporo_logo.png" /></h3>
+<p>
+初心者向けIT技術勉強会
+</p>
+<ul>
+<li>HTTPのキホン</li>
+<li>正規表現入門</li>
+<li>Webサーバーを構築してみよう</li>
+<li>はじめてのSQL</li>
+<li>などなど&#x2026;</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgheadline4">
+<h2 id="orgheadline4">Redis</h2>
+<div class="outline-text-2" id="text-orgheadline4">
+</div></section>
+<section id="slide-orgheadline3">
+<h3 id="orgheadline3">NoSQL</h3>
+</section>
+</section>
+</div>
+</div>
+<script src="../../reveal.js/lib/js/head.min.js"></script>
+<script src="../../reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: false,
+progress: false,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: '../../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: '../../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: '../../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: '../../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: '../../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
