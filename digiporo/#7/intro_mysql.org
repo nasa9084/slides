@@ -1,0 +1,244 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t
+#+REVEAL_THEME: night
+#+TITLE: 初めてのSQL
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* 自己紹介
+#+REVEAL_HTML: <div style="float:left;">
+[[../pika.jpg]]
+#+REVEAL_HTML: </div>
+- 名前
+  + 北村壮大 : Masahiro Kitamura
+  + HN : nasa9084
+- 所属
+  + 北海道大学
+  + 工学部
+  + 情報エレクトロニクス学科
+  + コンピュータサイエンスコース
+  + 情報認識学研究室
+
+* DBMS
+DataBase Magagement System
+
+DBを管理し、外部からの要求に応えてDBの操作をするソフトウェア
+
+#+ATTR_REVEAL: :frag (appear)
+- RDBMS :: Relational Database Management System
+- ODBMS :: Object-oriented Database Management System
+- ORDBMS :: Object-oriented Relational Database Management System
+- NoSQL :: Not only SQL
+
+#+BEGIN_NOTES
+- 外部 :: 他のソフトウェア
+- ODBMS :: db4o, Magmaなど
+- ORDBMS :: Postgreなど
+- NoSQL :: MongoDB, Redisなど
+#+END_NOTES
+
+** RDBMS
+関係代数を基礎概念としたDBMS
+#+ATTR_REVEAL: :frag (appear)
+→Excelみたいな表形式
+
+#+BEGIN_NOTES
+実際は表形式とは全く関係ないけど。。。
+#+END_NOTES
+
+*** RDBMS製品
+- Oracle
+- DB2
+- SQL Server
+- PostgreSQL
+- MySQL
+- SQLite
+
+#+BEGIN_NOTES
+- Oracle :: 歴史が古い。デファクト
+- DB2 :: IBM製。IBMPCでしか動かなかったのでOracleに負けた
+- SQL Server :: MS製。Windows用
+- PG :: カリフォルニア大学発祥。面白い
+- MySQL :: 最も一般的。MariaDBはこの派生
+- SQLite :: ファイルベースで軽く小さなDBMS
+#+END_NOTES
+
+* SQL
+RDBMS用問い合わせ言語
+
+[[./img/SQL.png]]
+
+#+BEGIN_NOTES
+SEQUELというIBMが開発した言語がベース
+#+END_NOTES
+
+** 文法
+文法は三種類に分類可能
+#+ATTR_REVEAL: :frag (appear)
+- DDL :: Data Definition Language
+- DML :: Data Manipulation Language
+- DCL :: Data Control Language
+
+#+BEGIN_NOTES
+- DDL :: CREATE, DROP, ALTER, TRUNCATE
+- DML :: SELECT, INSERT, UPDATE, DELETE
+- DCL :: GRANT, REVOKE
+#+END_NOTES
+
+** CRUD
+RDBMSで最低限必要な機能
+- Create
+- Read
+- Update
+- Delete
+
+#+BEGIN_NOTES
+くらっど
+ほんとはRDBMSに限らない
+- INSERT
+- SELECT
+- UPDATE
+- DELETE
+#+END_NOTES
+** 方言と標準SQL
+RDBMSごとに文法が少しずつ違う
+→標準SQLの策定
+* CREATE
+** CREATE DATABASE
+ データベースを作る
+ #+BEGIN_SRC sql
+ CREATE DATABASE digiporo;
+ #+END_SRC
+
+** CREATE TABLE
+ テーブル(表)を作る
+ #+BEGIN_SRC sql
+ CREATE TABLE birth (no INT, name VARCHAR(128), birthday DATE);
+ #+END_SRC
+
+ | no | name   |   birthday |
+ |----+--------+------------|
+
+*** データ型(MySQL)
+ - 整数型 :: INT
+ - 浮動小数点型 :: FLOAT, DOUBLE
+ - 日付・時刻型 :: DATE, TIME, DATETIME, TIMESTAMP, YEAR
+ - 文字列型 :: CHAR, VARCHAR
+ - バイナリ文字列型 :: BINARY, VARBINARY
+ - 列挙型 :: ENUM
+ - 集合型 :: SET
+
+* INSERT
+データベースに値を挿入する
+#+BEGIN_SRC sql
+INSERT INTO birth VALUES (1, "太郎", 1993-04-05);
+INSERT INTO birth VALUES (2, "花子", 1994-05-06);
+INSERT INTO birth VALUES (3, "よしこ", 1995-06-07);
+#+END_SRC
+
+| no | name   |   birthday |
+|----+--------+------------|
+|  1 | 太郎   | 1993-04-05 |
+|  2 | 花子   | 1994-05-06 |
+|  3 | よしこ | 1995-06-07 |
+
+* SELECT
+データベースから情報をとってくる
+#+BEGIN_SRC sql
+SELECT * FROM birth;
+#+END_SRC
+
+| no | name   |   birthday |
+|----+--------+------------|
+|  1 | 太郎   | 1993-04-05 |
+|  2 | 花子   | 1994-05-06 |
+|  3 | よしこ | 1995-06-07 |
+
+** 列を指定する
+#+BEGIN_SRC sql
+SELECT no,name FROM birth;
+#+END_SRC
+
+| no | name   |
+|----+--------+
+|  1 | 太郎   |
+|  2 | 花子   |
+|  3 | よしこ |
+
+** WHERE句で条件を指定する
+#+BEGIN_SRC sql
+SELECT * FROM birth WHERE birthday=1995-06-07;
+#+END_SRC
+
+| no | name   |   birthday |
+|----+--------+------------|
+|  3 | よしこ | 1995-06-07 |
+
+** 列と条件を両方指定する
+#+BEGIN_SRC sql
+SELECT name FROM table WHERE birthday=1995-06-07;
+#+END_SRC
+
+| name   |
+|--------|
+| よしこ |
+
+* 算術演算
+SELECT文では計算が可能
+
+| price | amount |
+|-------+--------|
+|   100 |     20 |
+|   200 |      5 |
+|   500 |     10 |
+
+#+BEGIN_SRC sql
+SELECT price*amount AS total FROM stock;
+#+END_SRC
+
+| total |
+|-------|
+|  2000 |
+|  1000 |
+|  5000 |
+
+** WHERE句での計算
+#+BEGIN_SRC sql
+SELECT price*amount AS total FROM stock WHERE price*amount>2500;
+#+END_SRC
+
+| total |
+|-------|
+| 5000  |
+
+*WHEREはSELECTより先に動くので別名を使えないので注意*
+
+* UPDATE
+データを更新する
+
+#+BEGIN_SRC sql
+UPDATE stock SET amount=0 WHERE price=100;
+#+END_SRC
+
+| price | amount |
+|-------+--------|
+|   100 |      0 |
+|   200 |      5 |
+|   500 |     10 |
+
+* DELETE
+データを削除する
+#+BEGIN_SRC sql
+DELETE FROM stock WHERE amount=0
+#+END_SRC
+
+| price | amount |
+|-------+--------|
+|   200 |      5 |
+|   500 |     10 |
+
+* まとめ
+- DBを管理するソフトをDBMSという
+- DBMSには複数種類ある
+- RDBMSではSQLを使う

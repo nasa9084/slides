@@ -1,0 +1,16 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: reveal_mathjax:t
+#+OPTIONS: toc:0
+#+OPTIONS: num:nil
+#+REVEAL_THEME: night
+#+TITLE: プログラムと一緒に学ぶフローチャート入門
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* フローチャート
+「流れ図」のこと。
+
+プログラム(や、作業工程)を図に表したもの
+
+* 1.

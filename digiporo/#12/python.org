@@ -1,0 +1,171 @@
+#+REVEAL_ROOT: ../reveal.js
+#+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t timestamp:nil
+#+REVEAL_THEME: night
+#+TITLE: Python
+#+AUTHOR: nasa9084
+#+EMAIL:
+#+REVEAL_EXTRA_CSS: ../extra.css
+#+OPTIONS: ^:{}
+
+* 自己紹介
+#+REVEAL_HTML: <div style="float:left;">
+[[../pika.jpg]]
+#+REVEAL_HTML: </div>
+- 名前
+  + 北村壮大 : Masahiro Kitamura
+  + HN : nasa9084
+- 所属
+  + 北海道大学
+  + 工学部
+  + 情報エレクトロニクス学科
+  + コンピュータサイエンスコース
+  + 情報認識学研究室
+  + 春から日本仮想化技術株式会社
+
+* Agenda
+*お話すること*
+- Pythonに関連する文化
+- パッケージ管理システム
+
+*お話しないこと*
+- Pythonの詳細な文法
+
+* PYTHON
+[[./python_logo.jpg]]
+
+- Guido van Rossum (Ductch Programmer)
+  + Python's BDFL
+- Computer Programming for Everybody
+  + 容易かつ直観的な言語で、主要なプログラミング言語と同程度に強力である
+  + オープンソースであり、その開発に誰でも貢献できる
+  + 平易な英語のようにわかりやすいコード
+  + 日常的タスクに適しており、開発時間を短くできる
+- 空飛ぶモンティ・パイソン
+
+#+BEGIN_NOTES
+- BDFL: Benevolent Dictator For Life
+  + 優しい終身の独裁者
+- Guido: Google(〜2012), Dropbox(2013〜)
+#+END_NOTES
+
+** 言語機能
+*** オフサイドルール
+- インデントで「ブロック」を表現
+  + 視覚的にわかりやすい
+
+*** 動的型付け
+- 値に型があり、変数には型がない
+
+*** オブジェクト指向プログラミング
+- 扱えるデータのすべてがオブジェクト
+  + 整数値や文字列など
+  + クラス
+  + 関数
+
+*** "Battery Included"
+- 正規表現
+- HTTP
+- データベース
+- GUI
+- and so on.
+
+** VERSION
+- 2.x
+  + 最新は2.7.12
+  + 2020年までは(一応)サポート
+- 3.x
+  + 最新は3.5.2
+  + 後方互換を気にしない大きなアップデート
+
+* PEP
+** WHAT IS "PEP"？
+Python Enhancement Proposal
+
+#+ATTR_REVEAL: :frag (appear)
+0. Standards Track PEP
+   : 新機能・新実装
+0. Informational PEP
+   : 課題・ガイドライン
+0. Process PEP
+   : Pythonを取り巻くプロセス
+
+#+BEGIN_NOTES
+Pythonのコミュニティに対して情報を提供したり、新機能などの説明をするための設計書
+- Info: 自由に無視したり従ったりしてよい
+#+END_NOTES
+
+** PEP 8: Style Guide for Python Code
+*Pythonコードのためのスタイルガイド*
+
+#+ATTR_REVEAL: :frag (appear)
+- Indentation
+- Tabs or Spaces?
+- Maximum Line Length
+- Blank Lines
+- Whitespace in Expressions and Statements
+- Comments
+- Naming Conventions
+
+** PEP 20: The Zen of Python
+#+BEGIN_SRC python
+>>> import this
+#+END_SRC
+
+* PIP
+** WHAT IS "PIP"?
+*パッケージ管理システム*
+
+- PyPI(Python Package Index)上に沢山のパッケージ
+- 現在は標準で付属
+  + 2.7.9以降
+  + 3.4以降
+- PyPIに公開することで誰でも利用可能に
+
+#+BEGIN_NOTES
+- rubyでのgem
+- nodeでのnpm
+- perlでのcpan
+#+END_NOTES
+
+** requirements.txt
+#+BEGIN_SRC requirements
+bottle==0.12.9
+PyMySQL==0.7.5
+redis==2.10.5
+requests==2.10.0
+uwsgi==2.0.13.1
+#+END_SRC
+
+#+BEGIN_SRC bash
+$ pip install -r requirements.txt
+#+END_SRC
+
+** venv
+*Virtual Environment*
+- パッケージを環境ごとに隔離する
+  + プロジェクトごとにPIPをクリーンに保てる
+  + requirements.txtをpipから出力して再現可能
+- python 3.3から標準化
+
+* Anaconda
+- Python + よく使われるパッケージ群
+  + jupyter
+  + neon
+  + numpy
+  + sphinx
+
+#+BEGIN_NOTES
+PATHを書き換えられてしまって問題が発生することもあるので注意
+#+END_NOTES
+
+* Pythonの実装
+Pythonには複数の実装がある
+- CPython
+- Jython
+- IronPython
+- PyPy
+
+* Python Boot Camp in 札幌
+[[./py_bootcamp.png]]
+
+*2016/11/19(SAT) 13:00-17:00*

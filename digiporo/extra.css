@@ -1,0 +1,13 @@
+.org-src-container pre{
+    font-size: 0.7em;
+}
+
+.reveal section img {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.reveal .src {
+    font-size: .75em;
+}

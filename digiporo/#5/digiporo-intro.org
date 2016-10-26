@@ -1,0 +1,45 @@
+#+REVEAL_ROOT:../reveal.js/
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: reveal_mathjax:t
+#+OPTIONS: num:nil
+#+OPTIONS: toc:0
+#+REVEAL_THEME: night
+#+OPTIONS: reveal_title_slide:nil
+#+TITLE: digiporo #5
+#+AUTHOR: nasa9084
+#+EMAIL:
+* [[../digiporo_logo.png]]
+
+* 開催の理由
+** 札幌、北海道で行われている勉強会
+   - Python札幌
+   - CTF勉強会
+   - せきゅぽろ
+   - C++勉強会
+
+** でも・・・
+
+** 初心者向け勉強会がない！
+
+** というわけで
+作っちゃいました。
+#+BEGIN_NOTES
+初心者じゃない人には常識に近い内容かも
+#+END_NOTES
+
+* 今日の内容
+  - 正規表現入門
+    : nasa9084
+  - 自宅でトラシューしてみよう
+    : こばやし
+  - UNIX入門
+    : 榎本優樹
+  - ユースケースから学ぶクラウドネイティブの始め方
+    : @smokeymonkey
+  - LT: 趣味のサービス開発
+    : @mktakuya
+* 本日のおやつ
+*andersen*
+DANISH HEART
+* 懇親会について
+だいたい3000円くらいです

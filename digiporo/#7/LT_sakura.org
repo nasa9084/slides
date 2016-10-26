@@ -1,0 +1,60 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t
+#+REVEAL_THEME: solarized
+#+TITLE: LT!
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* いちご大福
+[[./img/search_ichigo.png]]
+
+* いちご大福好きですか？
+[[./img/search_ichigo2.png]]
+
+* 2016/05/06
+* 研究室で花見に行きました
+研究室って
+#+REVEAL_HTML: <span style="color:pink;">
+コミュニティ
+#+REVEAL_HTML: </span>
+かなって
+* かど丸の苺大福買ってきて
+by ボス
+* かど丸
+[[./img/kadomaru_map.png]]
+
+* 営業時間6:00-18:00
+ただし昼11時ころには全商品が完売して閉店
+
+* の、
+* いちご大福
+* 結構有名
+* 去年5:30に行ったら売り切れ
+by 先輩
+* !?!!!!?!?!???!?!?!?!??!?
+* じゃぁ5時にいこう
+* 5:00AM
+[[./img/gyoretsu.jpg]]
+* すでに行列
+* 25番目くらい
+* 衝撃
+* 先頭の人は1:30から
+* 頭おかしい
+* 買えた
+[[./img/ichigo.jpg]]
+
+* 検索結果をもう一度
+[[./img/search_ichigo.png]]
+* かど丸のいちご大福
+[[./img/ichigo.jpg]]
+* すごく苺の匂い
+* 美味しかったです。
+* ぜひ一度並んでみては
+ゴマ大福とか
+#+REVEAL_HTML: <span style="color:pink;">
+さくら餅
+#+REVEAL_HTML: </span>
+とか
+も美味しいらしいです
+* 完

@@ -1,0 +1,350 @@
+/* リセット */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 リセット */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+    &:before, &:after {
+        content: '';
+        content: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 実際のスタイル指定 */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+body {
+    color: black;
+    font-family: 'PT Sans', 'Noto Sans JP', sans-serif;
+    min-height: 740px;
+    background: rgb(215, 215, 215);
+    background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+
+    transition:         0.5s;
+
+    &:hover, &:focus {
+        background: rgba(255,255,255,1);
+        text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+/* ステップのスタイル */
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+    box-sizing:         border-box;
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+/* 現在のステップ以外は少し透過 */
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+/* 普通っぽいスライド */
+.slide {
+    display: block;
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    q {
+        display: block;
+        font-size: 50px;
+        line-height: 72px;
+        margin-top: 100px;
+        strong {
+            white-space: nowrap;
+        }
+        img {
+            margin: 1em;
+            max-width: 10em;
+            max-height: 8em;
+        }
+    }
+    ul {
+        list-style: circle;
+        text-align: left;
+        padding: 1em;
+        margin-left: 5em;
+        font-size: 1.25em;
+    }
+}
+
+/* 各ステップのスタイル */
+#title {
+    padding: 0;
+    .subtitle_before {
+        font-size: 64px;
+        position: absolute;
+        top: -0.5em;
+        left: 1.5em;
+        transform: translateZ(20px);
+    }
+
+    h1 {
+        font-size: 150px;
+        transform: translateZ(50px);
+    }
+
+    .subtitle_after {
+        font-size: 64px;
+        position: absolute;
+        bottom: 2em;
+        right: 2em;
+    }
+
+    .username {
+        display: block;
+        text-align: right;
+    }
+}
+
+.footnote {
+    font-size: 32px;
+    &:before {
+        content: '* ';
+    }
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#self-intro.future {
+    opacity: 0;
+}
+#self-intro.present {
+    opacity: 1;
+}
+#self-intro.past {
+    opacity: 0;
+} 
+
+#easy {
+    width: 600px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1;
+    b {
+        display: block;
+        font-size: 120px;
+        line-height: 250px;
+    }
+}
+
+#tiny {
+    width: 550px;
+    text-align: center;
+    &.present {
+        span.rotating {
+            @keyframes vibe {
+                10% { transform: rotate(-1deg); }
+                20% { transform: rotate(1deg); }
+                30% { transform: rotate(-1deg); }
+                40% { transform: rotate(1deg); }
+                50% { transform: rotate(-1deg); }
+                60% { transform: rotate(1deg); }
+                70% { transform: rotate(-1deg); }
+                80% { transform: rotate(1deg); }
+                90% { transform: rotate(-1deg); }
+            }
+            display: inline-block;
+            animation-name: vibe;
+            animation-duration: .5s;
+            animation-delay: .5s;
+        }
+        span.positioning {
+            @keyframes positioning {
+                20% { transform: translateX(-1em); }
+                40% { transform: translateX(0); }
+                60% { transform: translateX(-1em); }
+            }
+            display: inline-block;
+            animation-name: positioning;
+            animation-duration: 2s;
+            animation-delay: 1s;
+        }
+    }
+}
+
+#script {
+    width: 700px;
+    b {
+        display: inline-block;
+        transition: 0.5s;
+    }
+}
+
+#checkbox {
+    img {
+        max-height: 15em;
+        padding-left: 3em;
+    }
+}
+
+#run-stop {
+    width: 1000px;
+    padding-bottom: 300px;
+}
+
+#one-more-thing {
+    p {
+        font-size: 2em;
+        font-weight: bold;
+    }
+}
+
+
+#its-in-github {
+    p {
+        transform-style: preserve-3d;
+    }
+
+    span, b {
+        display: inline-block;
+        transform: translateZ(40px);
+
+        transition: 0.5s;
+    }
+
+    .have {
+        transform: translateZ(-40px);
+    }
+
+    .you {
+        transform: translateZ(20px);
+    }
+
+    .noticed {
+        transform: translateZ(-40px);
+    }
+
+    .its {
+        transform: translateZ(60px);
+    }
+
+    .in {
+        transform: translateZ(-10px);
+    }
+
+    .footnote {
+        font-size: 32px;
+        transform: translateZ(-10px);
+    }
+
+    &.present {
+        span, b {
+            transform: translateZ(0px);
+        }
+    }
+}
+/* 最後のステップ: オーバービュー */
+#overview { display: none }
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* ヒント */
+.hint {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(400px);
+    transition: opacity 1s, transform 0.5s 1s;
+}
+
+.impress-enabled {
+    pointer-events: none;
+    .hint { display: block }
+    #impress { pointer-events: auto }
+}
+
+.impress-on-bored .hint {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1s 5s, transform 0.5s 4.5s;
+}

@@ -1,0 +1,375 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: toc:0 num:nil reveal_mathjax:t
+#+REVEAL_THEME: night
+#+TITLE: DIVE INTO *~/regexp?/~*
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* 正規表現
+Regular Expression
+
+ある *規則* に適合する文字列を探すための記法
+
+#+BEGIN_NOTES
+正則表現とも
+#+END_NOTES
+
+** 利点
+一つの文字列で複数の文字列を表すことができる
+
+** 例えば・・・
+#+ATTR_REVEAL: :frag (appear)
+- "a"で始まる
+- ".txt"で終わる
+
+** 用途
+- grep
+- page/pg/more/less
+- 各種プログラミング言語
+- emacs/vim
+
+#+BEGIN_NOTES
+- 文字列検索コマンド
+- ファイルの内容を表示
+- 文字列処理
+#+END_NOTES
+
+** 構成要素
+- 通常文字 :: ほとんどの文字
+- 特殊文字(メタ文字) :: 正規表現で特別な意味を持つ文字
+#+ATTR_REVEAL: :frag (appear)
+→「正規表現の説明」≒「メタ文字の説明」
+
+** 基本と拡張
+正規表現には大きく3つ
+
+- 基本正規表現 (BRE) :: grepなどのデフォルト
+- 拡張正規表現 (ERE) :: egrep, grep -Eなど
+- Perl正規表現 :: Perlを始めとするプログラミング言語
+
+#+BEGIN_NOTES
+一般には多くの特殊文字を持つ正規表現が好まれる
+#+END_NOTES
+
+** よくある書き方
+~/hogehoge/~
+
+デリミタ(区切り文字)で挟む
+#+ATTR_REVEAL: :frag (appear)
+→Perlでの書き方
+
+#+BEGIN_NOTES
+デリミタは違う記号でも良い
+#+END_NOTES
+
+** 置換演算子(Perl)
+
+s/hoge/piyo/
+#+ATTR_REVEAL: :frag (appear)
+→hogeをpiyoに置き換える
+
+* メタ文字
+特別な意味を持つ文字
+** .
+NULL文字を除く任意の一文字
+
+** *
+直前の文字の0回以上回数の繰り返し
+
+*BREとEREで扱いが少し違う*
+- BRE :: 先頭の*は通常文字として扱われる
+- ERE :: 文字だけではなく正規表現も使える
+
+** ^
+行の先頭・文字列の先頭
+
+- BRE :: 正規表現の先頭でのみメタ文字
+- ERE :: どこでもメタ文字
+
+** $
+行の末尾・文字列の末尾
+
+- BRE :: 正規表現の末尾でのみメタ文字
+- ERE :: どこでもメタ文字
+
+** \
+エスケープ
+
+直後のメタ文字を通常文字として扱う
+
+または
+
+通常文字と組み合わせてメタ文字とする
+
+- ~\$500~
+- ~C:\\~
+
+** [...]
+ブラケット表現
+
+[ ]の間に書いた文字のうち *一つと* マッチする
+
+~-~ を使うと範囲指定もできる
+
+先頭に ~^~ を書くと否定の意味
+#+ATTR_REVEAL: :frag (appear)
+→[^ ]の間に書いた文字 *以外と* マッチする
+
+#+BEGIN_NOTES
+範囲指定は場合により環境依存なところもあるので注意
+#+END_NOTES
+
+*** 例
+- [a-z] :: 英小文字にマッチ
+- [aeiou] :: 母音にマッチ
+
+** \{m,n\}  {m,n}
+インターバル表現
+
+直前の文字のm回以上n回以下の繰り返し
+
+- BRE :: \{m,n\}
+- ERE :: {m,n}
+
+#+BEGIN_NOTES
+さっき注意した逆エスケープ
+#+END_NOTES
+
+* EREで使えるメタ文字
+#+BEGIN_NOTES
+今は殆どEREかPerl regexなのでBREは省略
+#+END_NOTES
+
+** ( )
+グルーピング
+
+文字列・正規表現をグループ化できる
+
+** +
+直前の文字・正規表現の *1回以上の繰り返し*
+
+** ?
+直前の文字・正規表現が0回または1回
+
+*** 例
+~/regexp?/~
+#+ATTR_REVEAL: :frag (appear)
+→"regex", "regexp"にマッチ
+
+** |
+ORの意味
+
+直前の正規表現または直後の正規表現に一致
+
+#+BEGIN_NOTES
+GNU grepではBRE状態でも\|で使用可能
+
+わかりにくくなりやすいので上手にカッコでくくる
+#+END_NOTES
+
+*** 例
+~/read|write/~
+#+ATTR_REVEAL: :frag (appear)
+→"read", "write"にマッチ
+
+~/(P|p)ython/~
+#+ATTR_REVEAL: :frag (appear)
+→"Python", "python"にマッチ
+
+* 文字クラス
+複数の文字をまとめたもの
+#+ATTR_REVEAL: :frag (appear)
+→ブラケット表現のこと
+
+** POSIX文字クラス
+- BRE :: ~[[:hoge:]]~
+- ERE :: [:hoge:]
+#+ATTR_REVEAL: :frag (appear)
+→これもブラケット表現と呼ぶ
+
+#+BEGIN_NOTES
+意味的には一緒なので
+
+否定するときはコロンの後ろに^
+#+END_NOTES
+
+** 文字クラス
+
+| 文字クラス | 内容                 | 等価な表現  |
+|------------+----------------------+-------------|
+| [:alnum:]  | アルファベットと数字 | [0-9a-zA-Z] |
+| [:alpha:]  | アルファベット       | [a-zA-Z]    |
+| [:lower:]  | 小文字アルファベット | [a-z]       |
+| [:upper:]  | 大文字アルファベット | [A-Z]       |
+| [:digit:]  | 数字                 | [0-9]       |
+| [:xdigit:] | 16進数数値           | [0-9a-fA-F] |
+
+** 文字型
+ブラケット表現の略記
+
+| 文字型 | 内容                     |
+|--------+--------------------------|
+| \l     | 半角小文字アルファベット |
+| \u     | 半角大文字アルファベット |
+| \d     | 数字                     |
+
+#+BEGIN_NOTES
+以前よく使われていた
+
+今は文字クラスを使ったほうが良さげ
+#+END_NOTES
+
+* 後方参照
+置換でよく使われる
+
+EREでは仕様には無い
+
+#+BEGIN_NOTES
+実際には使えることも多い
+#+END_NOTES
+
+** \x
+xは1,2,3,...
+
+事前に\( \)で括ったグループを順に使える
+
+#+BEGIN_NOTES
+1オリジン
+
+EREで使える場合は括弧にエスケープいらない
+#+END_NOTES
+
+** 例1
+'や"で囲まれた部分を探したい
+#+ATTR_REVEAL: :frag (appear)
+~/\(['"]\).*\1/~
+
+** 例2
+"￥900"や"￥50"の様な箇所をすべて"900円"や"50円"の形に直したい
+#+ATTR_REVEAL: :frag (appear)
+→置換の検索で正規表現を使う
+
+*** 使い方
+- 検索文字列 :: ~￥\([:digit:]+\)~
+- 置換文字列 :: ~\1円~
+
+* 非欲張り指定子
+** 欲張り指定子
+~*~ , ~+~ , ~?~ , ~\{m,n\}~ , ~{m,n}~
+#+ATTR_REVEAL: :frag (appear)
+→基本的に欲張り(最左最長一致)
+
+** どういうことか?
+
+** HTMLの編集
+*<div>div</div>を<div>span</div>に変えたい*
+
+- 検索文字列 ::  ~(</?).*(>)~
+- 置換文字列 ::  ~\1span\2~
+
+*** perlを使ってやってみよう
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC perl
+$w = "<div>div</div>を<div>span</div>に変えたい！";
+$w =~ s#(</?).*(>)#\1span\2#g;
+print $w;
+#+END_SRC
+
+#+ATTR_REVEAL: :frag (appear)
+*結果*
+
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC html
+<span>に変えたい！
+#+END_SRC
+
+#+ATTR_REVEAL: :frag (appear)
+[[https://ideone.com/4LGPGm]]
+
+#+BEGIN_NOTES
+- -r :: 拡張
+- g :: すべて置換
+#+END_NOTES
+
+** なんかちがう！
+
+** 理由
+一致する最長で選ぶ
+
+** 非欲張り指定子
+*欲張り指定子* : ~*~ , ~+~ , ~?~ , ~\{m,n\}~ , ~{m,n}~
+#+ATTR_REVEAL: :frag (appear)
+→ *非欲張り指定子* : ~*?~ , ~+?~ , ~??~ , ~\{m,n\}?~ , ~{m,n}?~
+
+#+ATTR_REVEAL: :frag (appear)
+これで最短一致する
+
+*** perlを使ってやってみよう ver.2
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC perl
+$w = "<div>div</div>を<div>span</div>に変えたい！";
+$w =~ s#(</?).*?(>)#\1span\2#g;
+print $w;
+#+END_SRC
+
+#+ATTR_REVEAL: :frag (appear)
+*結果*
+
+#+ATTR_REVEAL: :frag (appear)
+#+BEGIN_SRC html
+<span>div</span>を<span>span</span>に変えたい！
+#+END_SRC
+
+#+ATTR_REVEAL: :frag (appear)
+[[https://ideone.com/R2lpII]]
+
+* THINKING TIME!
+** 例題をちょこっと
+#+BEGIN_NOTES
+HTMLが全くわからない人はいるか?
+#+END_NOTES
+
+*** 例題1
+以下にマッチする正規表現
+#+REVEAL_HTML: <div style="float:left;">
+- Windows
+- WINDOWS
+- Windows95
+- WINDOWS95
+- Windows 95
+- WINDOWS 95
+以下同様に
+#+REVEAL_HTML: </div>
+- 98
+- 2000
+- XP
+- 7
+- 8
+- 8.1
+- 10
+
+*** 回答例1
+#+BEGIN_SRC perl
+W(indows|INDOWS) ?(9[58]|2000|XP|7|8(\.1)?|10)
+#+END_SRC
+
+*** 例題2
+#+BEGIN_SRC html
+<a href="hoge">hogehoge</a>
+<a href="piyo">piyopiyo</a>
+<a href="fuga">fugafuga</a>
+#+END_SRC
+
+↓
+
+#+BEGIN_SRC html
+<a href="hoge" target="_blank">hogehoge</a>
+<a href="piyo" target="_blank">piyopiyo</a>
+<a href="fuga" target="_blank">fugafuga</a>
+#+END_SRC
+
+*** 回答例2
+#+BEGIN_SRC perl
+s#<(.+?)>(.+)<(.+)>#<\1 target="_blank">\2<\3>#g
+#+END_SRC

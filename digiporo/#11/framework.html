@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Web Framework</title>
+
+    <!-- Required stylesheet -->
+    <link rel="stylesheet" media="screen" href="deck.js/core/deck.core.css">
+    <!-- Extension CSS files go here. Remove or add as needed. -->
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/status/deck.status.css">
+    <link rel="stylesheet" media="screen" href="deck.js/extensions/scale/deck.scale.css">
+    <!-- Style theme. More available in /themes/style/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="deck.js/themes/style/neon.css">
+    <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="deck.js/themes/transition/horizontal-slide.css">
+    <!-- Basic black and white print styles -->
+    <link rel="stylesheet" media="print" href="deck.js/core/print.css">
+    <!-- Required Modernizr file -->
+    <script src="deck.js/modernizr.custom.js"></script>
+  </head>
+  <body class="deck-container">
+    <section class="slide" id="title">
+      <h1>Getting started with WAF!</h1>
+    </section>
+    <section class="slide" id="whoami">
+      <h2>WHO AM I?</h2>
+      <img src="../pika.jpg" style="float:left;">
+      <ul style="margin-left: 10em;">
+        <li><h3>NAME: Masahiro Kitamura</h3></li>
+        <li><h3>a.k.a. @nasa9084</h3></li>
+        <li><h3>Hokkaido Univ.</h3></li>
+        <li><h3>HOKKAIDO(CURRENT) -> TOKYO(FUTURE)</h3></li>
+      </ul>
+      <h4 class="blue">KEYWORDS</h4>
+      <ul class="flex">
+        <li><h4>digiporo</h4></li>
+        <li><h4>Builderscon</h4></li>
+        <li><h4>Python</h4></li>
+        <li><h4>PyCon JP 2016</h4></li>
+        <li><h4>emacs</h4></li>
+        <li><h4>Redis</h4></li>
+        <li><h4>Liquor/Liqueur</h4></li>
+      </ul>
+    </section>
+    <section id="define_waf" class="slide">
+      <h2 class="only">WAF := Web Application Framework</h2>
+    </section>
+    <section id="typical" class="slide">
+      <h1>For Example...</h1>
+    </section>
+    <section class="slide" id="java">
+      <h2>Java</h2>
+      <ul class="no_deco">
+        <li><img alt="" src="img/java_ee.png"/></li>
+        <li><img alt="" src="img/Apache-Struts.png"/></li>
+        <li><img alt="" src="img/Spring.png"/></li>
+        <li><img alt="" src="img/apache-wicket.png"/></li>
+      </ul>
+    </section>
+    <section id="js" class="slide">
+      <h2>JavaScript</h2>
+      <ul class="no_deco">
+        <li><img alt="" src="img/jQuery.png"/></li>
+        <li><img alt="" src="img/angularjs.png"/></li>
+        <li><img alt="" src="img/polymer.png"/></li>
+        <li><img alt="" src="img/reactjs.png"/></li>
+        <li><img alt="" src="img/riotjs.png"/></li>
+        <li><img alt="" src="vuejs.png"/></li>
+      </ul>
+    </section>
+    <section id="php" class="slide">
+      <h2>PHP</h2>
+      <ul class="no_deco">
+        <li><img alt="" src="img/cakephp.png"/></li>
+        <li><img alt="" src="img/laravel.png"/></li>
+      </ul>
+    </section>
+    <section id="perl" class="slide">
+      <h2>Perl</h2>
+      <ul class="no_deco">
+        <li><img alt="" src="img/catalyst.png"/></li>
+        <li><img alt="" src="img/mojolicious.png"/></li>
+      </ul>
+    </section>
+    <section id="python" class="slide">
+      <h2>Python</h2>
+      <ul class="no_deco">
+        <li><img alt="" src="img/django.png"/></li>
+        <li><img alt="" src="img/flask.png"/></li>
+        <li><img alt="" src="img/bottle.png"/></li>
+        <li><img alt="" src="img/pyramid.png"/></li>
+      </ul>
+    </section>
+    <section id="ruby" class="slide">
+      <h2>Ruby</h2>
+      <ul class="no_deco">
+        <li><img alt="" src="img/rails.png"/></li>
+        <li><img alt="" src="img/sinatra.png"/></li>
+      </ul>
+    </section>
+    <section class="slide" id="waf">
+      <h2>WAF - Web Application Framework</h2>
+      <p>Library + Library + Library + ...</p>
+      <ul>
+        <li class="slide">
+          <h3>Security</h3>
+          <p>ユーザ認証, アクセス認可, ロール割当</p>
+        </li>
+        <li class="slide">
+          <h3>Database Accessor/Database Mapper</h3>
+          <p>統一API, Object-Relation Mapper(O/Rマッパー)</p>
+        </li>
+        <li class="slide">
+          <h3>URL Mapper</h3>
+          <p>ルータ</p>
+        </li>
+        <li class="slide">
+          <h3>Template Engine</h3>
+          <p>HTML生成機構</p>
+        </li>
+        <li class="slide">
+          <h3>Boilerplate</h3>
+          <p>雛形</p>
+        </li>
+      </ul>
+    </section>
+    <section id="router" class="slide">
+      <h2>URL Mapper/Router</h2>
+      <p>URL <-> [Router] <-> Script</p>
+      <h3>以前の書き方(CGI)</h3>
+      <code>
+      http://example.com/user.cgi?id=1
+      </code>
+      <p>ダサい</p>
+      <h3>最近の書き方</h3>
+      <code>
+      http://example.com/user/1/
+      </code>
+      <p>いい感じ</p>
+      <ul>
+        <li class="slide"><h3>
+          URLに拡張子を含まない
+        </h3></li>
+        <li class="slide"><h3>
+          URLに直接変数を含むことができる
+        </h3></li>
+        <li class="slide"><h3>
+          階層構造を簡潔に表せる
+        </h3></li>
+      </ul>
+    </section>
+    <section id="router_example" class="slide">
+      <h2>実際のコード例</h2>
+      <div class="flex">
+        <section>
+          <h3>Mojolicious/Perl</h3>
+          <pre>
+            <code>
+get "/user/:id" => sub {
+    # Exec
+}
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>bottle/Python</h3>
+          <pre>
+            <code>
+@get("/user/:id")
+def user(id):
+    # Exec
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Sinatra/Ruby</h3>
+          <pre>
+            <code>
+get '/user/:id' do
+    # Exec
+end
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Laravel/PHP</h3>
+          <pre>
+            <code>
+Route::get('user/{id}', function($id) {
+    # Exec
+});
+            </code>
+          </pre>
+        </section>
+      </div>
+    </section>
+    <section id="templateengine" class="slide">
+      <h2>Template Engine</h2>
+      <ul>
+        <li>
+          <h4>Scripts -> HTML</h4>
+          <p>スクリプトからHTMLを切り分ける</p>
+        </li>
+        <li>
+          <h4>HTML <-> Data</h4>
+          <p>HTMLで作った雛形にデータを埋め込む</p>
+        </li>
+        <li>
+          <h4>Iteration</h4>
+          <p>リストやオブジェクトをループで回す</p>
+        </li>
+        <li>
+          <h4>Components</h4>
+          <p>HTMLを部品に分ける</p>
+        </li>
+      </ul>
+    </section>
+    <section id="merit" class="slide">
+      <h2>WAFを用いるメリット</h2>
+      <ul>
+        <li class="slide">
+          <h3>生産性の向上</h3>
+          <p>必要な機能が(ある程度)揃っているので高速にアプリケーション開発可能に</p>
+        </li>
+        <li class="slide">
+          <h3>バグの減少</h3>
+          <p>車輪の再開発が不要なため余計なバグが減る</p>
+        </li>
+        <li class="slide">
+          <h3>可読性向上</h3>
+          <p>書き方がある程度統一されるため個人差が減る</p>
+        </li>
+        <li class="slide">
+          <h3>大規模開発しやすい</h3>
+          <p>ドキュメントなどがあるので規約も徹底しやすい</p>
+        </li>
+        <li class="slide">
+          <h3>セキュリティ向上</h3>
+          <p>セキュリティホールになりそうなところは隠蔽されてることも多い</p>
+        </li>
+      </ul>
+    </section>
+    <section id="demerit" class="slide">
+      <h2>WAFを用いるデメリット</h2>
+      <li class="slide">
+        <h3>学習コスト</h3>
+        <p>フレームワーク毎に合わせた書き方が必要</p>
+      </li>
+      <li class="slide">
+        <h3>技術力が上がらない</h3>
+        <p>仕組みがわからなくても使えてしまう</p>
+      </li>
+    </section>
+    <section id="mywaf" class="slide">
+      <h2>オレオレフレームワークのすゝめ</h2>
+      <h3>自分による、自分のための、自分だけのフレームワーク</h3>
+      <ul>
+        <li><h4>ドキュメントなんてない</h4></li>
+        <li><h4>安定してない</h4></li>
+        <li><h4>設計がクソ</h4></li>
+        <li><h4>セキュリティに問題がある</h4></li>
+        <li><h4>保守されない</h4></li>
+      </ul>
+    </section>
+    <section id="mywaf-because" class="slide">
+      <h2>オレオレFWを作る理由</h2>
+      <ul>
+        <li>
+          <h4>わからないことがわかる</h4>
+          <p>意外と書けない</p>
+        </li>
+        <li>
+          <h4>読解力が上がる</h4>
+          <p>大手FWではどうやって書いてるのか？</p>
+        </li>
+        <li>
+          <h4>設計力が上がる</h4>
+          <p>大体途中で書き直す</p>
+        </li>
+      </ul>
+    </section>
+    <section id="mywaf-guide" class="slide">
+      <h2>おすすめな指針</h2>
+      <ul>
+        <li><h4>無計画</h4></li>
+        <li><h4>無責任</h4></li>
+        <li><h4>無テスト</h4></li>
+        <li><h4>有限時間</h4></li>
+      </ul>
+      <span style="float: right;">出典: @uzulla</span>
+    </section>
+    <section id="end" class="slide">
+      <h2>Conclusion</h2>
+      <ul>
+        <li><h4>WAFは便利</h4></li>
+        <li><h4>WAFはライブラリの集合体のようなもの</h4></li>
+        <li><h4>現代のwebプログラミングには必須</h4></li>
+        <li><h4>デメリットもある</h4></li>
+        <li><h4>自分で作るのも勉強になる</h4></li>
+      </ul>
+    </section>
+
+    <!-- Required JS files. -->
+    <script src="deck.js/jquery.min.js"></script>
+    <script src="deck.js/core/deck.core.js"></script>
+
+    <!-- Extension JS files. Add or remove as needed. -->
+    <script src="deck.js/extensions/menu/deck.menu.js"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js"></script>
+    <script src="deck.js/extensions/status/deck.status.js"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+    <script src="deck.js/extensions/scale/deck.scale.js"></script>
+    <script>
+     $(function() {
+       $.deck('.slide');
+     });
+    </script>
+  </body>
+</html>

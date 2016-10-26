@@ -1,0 +1,414 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: reveal_mathjax:t
+#+OPTIONS: toc:0
+#+OPTIONS: num:nil
+#+REVEAL_TRANS: fade
+#+REVEAL_THEME: sky
+#+TITLE: HTTPのお話
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* 準備
+** URIとURL, URN
+- URL :: Uniform Resource Locator
+- URN :: Uniform Resource Name
+↓
++ URI :: Uniform Resource Identifier (RFC2396→RFC3986)
+
+#+BEGIN_NOTES
+- RFC2396(1998年) :: URIを定義
+- RFC3986(2005年) :: 改定、分散したURIの定義を統合
+#+END_NOTES
+
+*** URIの形式
+*scheme://user:password@domain:port/resource*
+- scheme :: http, ftp, mailto, ...
+- domain :: hogehoge.com
+- port :: TCP/IP Port
+- resource :: /path/to/resource.extension
+
+** TCP/IP port
+- TCP/IPで使用する番号
+- 情報の出入り口や港のようなもの
+#+ATTR_REVEAL: :frag (appear)
+→これでどのアプリケーションの通信なのか判断できる
+
+*** Well-known port
+慣例的に、用途が固定化しているTCP/IPポート番号
+|------------+---------------------|
+| ポート番号 | サービス/プロトコル |
+|------------+---------------------|
+|         20 | FTP                 |
+|         22 | SSH                 |
+|         80 | HTTP                |
+|        110 | POP3                |
+|        443 | HTTP over SSL/TLS   |
+|        465 | SMTP over SSL/TLS   |
+|        993 | IMAP over SSL/TLS   |
+|------------+---------------------|
+
+** TLS
+Transport Layer Security
+- 通信相手の認証
+- 通信内容の暗号化
+- 改竄の検出
+- トランスポート層とアプリケーション層の間
+
+*** TCP/IP 4階層モデル
+現在のインターネット通信で最も利用されている通信プロトコル群
+
+*** 　
+:PROPERTIES:
+:reveal_background: ./img/tcp-ip_model.png
+:reveal_background_size: 20%
+:END:
+
+*** TCP/IPモデルの流れ
+送信側は上層から下層へ、受信側は下層から上層へ
+- 送信時は順に情報を付加する
+- 受信時は順に情報を外していく
+
+*** 　
+:PROPERTIES:
+:reveal_background: ./img/tcp-ip_flow.png
+:reveal_background_size: 50%
+:END:
+
+* 今回のベース
+[[./img/http_book.jpg]]
+
+* HTTP
+Hypertext Transfer Protocol
+- *ネットワークで情報をやり取りするための決めごと*
+  + サーバーとクライアントという２つの「役割」がある
+- よく使われるのはHTTP/1.1 (RFC2616, RFC7230 - RFC7235)
+- 今後はHTTP/2 (RFC7540)
+- トランスポートプロトコルとしてTCPを利用
+- リクエスト - レスポンス型プロトコル
+- URIでリソースを指定
+#+BEGIN_NOTES
+- Request for Comments :: IETFによる技術仕様の保存・公開形式
+- Internet Engineering Task Force :: インターネット技術の標準化を策定する組織
+- HTTP/1.1 (RFC2616, RFC2730-RFC7235)
+- HTTP/2 (RFC7540): 16年ぶりの更新
+#+END_NOTES
+
+** 具体的には・・・
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/http_specify01.png
+:reveal_background_size: 500px
+:END:
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/http_specify02.png
+:reveal_background_size: 500px
+:END:
+
+* HTTP通信の基本的な流れ
+** 　
+:PROPERTIES:
+:reveal_background: ./img/req-res01.png
+:reveal_background_size: 50%
+:END:
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/req-res02.png
+:reveal_background_size: 50%
+:END:
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/req-res03.png
+:reveal_background_size: 50%
+:END:
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/req-res04.png
+:reveal_background_size: 50%
+:END:
+
+* RequestとResponse
+HTTPとは要求を送って、その返答を返してもらう仕組み
+
+要求をRequest, 返答をResponseという
+
+要求・返答の時に送るメッセージをそれぞれ、Request Message, Response Messageという
+
+これらのメッセージをまとめてHTTP Messageという
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/http_message.png
+:reveal_background_size: 30%
+:END:
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/http_request.png
+:reveal_background_size: 30%
+:END:
+*** Request Methodの種類
+主に使うのは2つ
+|--------+------------------|
+| Method | 用途             |
+|--------+------------------|
+| GET    | データの取得要求 |
+| POST   | データの送信要求 |
+|--------+------------------|
+** 　
+:PROPERTIES:
+:reveal_background: ./img/http_response.png
+:reveal_background_size: 30%
+:END:
+*** Response Codeの大まかな種類
+三桁の数字で大まかな情報がわかる
+| コード | 種別               | 意味             |
+|--------+--------------------+------------------|
+|    1xx | 情報               | 処理継続         |
+|    2xx | 成功               | 理解、受理済み   |
+|    3xx | リダイレクション   | 追加処理が必要   |
+|    4xx | クライアントエラー | リクエストに誤り |
+|    5xx | サーバーエラー     | 処理に失敗       |
+|--------+--------------------+------------------|
+
+*** Response Codeの例
+|------+-------------------------------+--------------------------|
+| code | メッセージ                    | 意味                     |
+|------+-------------------------------+--------------------------|
+|  200 | OK                            | リクエスト成功           |
+|------+-------------------------------+--------------------------|
+|  301 | Moved Permanently             | 恒久的に移動した         |
+|------+-------------------------------+--------------------------|
+|  401 | Unauthorized                  | 認証が必要               |
+|------+-------------------------------+--------------------------|
+|  403 | Forbidden                     | 禁止                     |
+|------+-------------------------------+--------------------------|
+|  404 | Not Found                     | 未検出                   |
+|------+-------------------------------+--------------------------|
+|  451 | Unavailable For Legal Reasons | 政治的検閲による閲覧禁止 |
+|------+-------------------------------+--------------------------|
+|  500 | Internal Server Error         | サーバ内部エラー         |
+|------+-------------------------------+--------------------------|
+|  503 | Service Unavailable           | サービス利用不可         |
+|------+-------------------------------+--------------------------|
+
+#+BEGIN_NOTES
+- 301 : Locationヘッダに移動先URI
+- 401 : 大体のブラウザは認証ダイアログを出す
+- 503 : 過負荷やメンテナンス
+#+END_NOTES
+
+* HTTPの歴史
+** HTTP/0.9
+*最初のHTTP*
+- 1991年に最初にドキュメント化されたHTTP
+- 非常にシンプルで、紙一枚で済む程度
+  + メソッドはGETのみ
+  + ヘッダもなし
+  + HTMLのみが使われることを想定
+
+#+BEGIN_SRC CODE
+GET /index.html
+#+END_SRC
+
+** HTTP/1.0
+- 1995年にRFC1945として初版が発行
+- メソッドが増えた
+- レスポンスにヘッダがつくように
+  + ステータスコード
+- リクエストにバージョンをつけることに
+
+#+BEGIN_SRC CODE
+GET /index.html HTTP/1.0
+#+END_SRC
+
+** HTTP/1.1
+- 1997年にRFC2068として初版が発表
+  + その後二回改定
+    - RFC2616
+    - RFC7230 - 7235
+- バーチャルホストのサポート
+  + Hostヘッダの登場
+- 持続的接続のサポート
+
+#+BEGIN_SRC CODE
+GET /index.html HTTP/1.1
+Host: hoge.fuga.com
+#+END_SRC
+
+#+BEGIN_NOTES
+一台の鯖の中に複数のWeb鯖を用意できるように
+#+END_NOTES
+
+*** SPDY
+*Google発の通信プロトコル*
+- HTTPを基にして高速化を行ったプロトコル
+- TLS接続の上にセッション層を追加
+  + 単一のSPDYセッションで複数のリクエストを送受信
+- データの先読み機能
+- HTTPS必須
+
+#+BEGIN_NOTES
+スピーディー
+#+END_NOTES
+
+** HTTP/2
+*16年ぶりHTTPバージョンアップ*
+- SPDYをベースに策定
+- 2015年にRFC7540として文書化
+- HTTP/1.1との後方互換性を維持
+- 非同期接続の多重化
+- ヘッダ圧縮
+- リクエスト・レスポンスのパイプライン化
+* HTTPの問題
+HTTPにはいくつかの問題点がある
+- 認証問題
+- セッションステートレス問題
+
+#+BEGIN_NOTES
+今回はセッションステートレスの解説
+#+END_NOTES
+
+** (セッション)ステートレス問題
+HTTPは非常に簡単な仕組み
+- 声をかけて返事してもらうだけ
+- 返事が終わったら会話(session)は終わり
+#+ATTR_REVEAL: :frag (appear)
+→状態(state)を記憶できない(less)
+
+*** ステートフルとステートレス
+ハンバーガー店を例に
+
+参考 : [[http://yohei-y.blogspot.jp/2007/10/blog-post.html]]
+
+*** ステートフルなセッション
+#+REVEAL_HTML: <div style="font-size: x-large;">
+- 客「こんにちは」 ::
+店員「いらっしゃいませ。○○バーガーへようこそ」
+- 客「ハンバーガーセットをお願いします」 ::
+店員「サイドメニューは何になさいますか?」
+- 客「ポテトで」 ::
+店員「ドリンクは何になさいますか?」
+- 客「ジンジャーエールで」 ::
+店員「+50円でドリンクをLサイズにできますがいかがですか?」
+- 客「Mでいいです」 ::
+店員「以上でよろしいですか?」
+- 客「はい」 ::
+店員「かしこまりました」
+#+REVEAL_HTML: </div>
+
+*** ステートレスなセッション
+#+REVEAL_HTML: <div style="font-size: x-large;">
+- 客「こんにちは」 ::
+店員「いらっしゃいませ。○○バーガーへようこそ」
+- 客「ハンバーガーセットをお願いします」 ::
+店員「サイドメニューは何になさいますか?」
+- 客「ハンバーガーセットをポテトでお願いします」 ::
+店員「ドリンクは何になさいますか?」
+- 客「ハンバーガーセットをポテトとジンジャーエールでお願いします」 ::
+店員「+50円でドリンクをLサイズにできますがいかがですか?」
+- 客「ハンバーガーセットをポテトとジンジャーエール(M)でお願いします」 ::
+店員「以上でよろしいですか?」
+- 客「ハンバーガーセットをポテトとジンジャーエール(M)でお願いします。以上」 ::
+店員「かしこまりました」
+#+REVEAL_HTML: </div>
+
+*** なぜステートレスなのか
+HTTPの通信を考えると、ステートレスの利点が大きい
+
+*** ステートレスの利点
+スケーラビリティがある
+
+*** 同時受付対応のセッション
+#+REVEAL_HTML: <div style="font-size:x-large;">
+- 客「こんにちは」 ::
+店員1「いらっしゃいませ。○○バーガーへようこそ」
+- 客「ハンバーガーセットをお願いします」 ::
+店員2「サイドメニューは何になさいますか?」
+- 客「ハンバーガーセットをポテトでお願いします」 ::
+店員3「ドリンクは何になさいますか?」
+- 客「ハンバーガーセットをポテトとジンジャーエールでお願いします」 ::
+店員4「+50円でドリンクをLサイズにできますがいかがですか?」
+- 客「ハンバーガーセットをポテトとジンジャーエール(M)でお願いします」 ::
+店員5「以上でよろしいですか?」
+- 客「ハンバーガーセットをポテトとジンジャーエール(M)でお願いします。以上」 ::
+店員6「かしこまりました」
+#+REVEAL_HTML: </div>
+
+* HTTP Cookie
+ウェブサーバとウェブブラウザ間で状態を管理するプロトコル
+
+保存された情報そのものもCookieと呼ぶ
+
+** ステートレス問題の解決
+HTTPだけではステートレス問題が存在
+
+いくつかの解決策を考案
+- IPアドレスにより区別
+  + プライベートネットワークからのアクセスを区別できない
+- 状態をURLに含める
+  + 本来二度起きない状態が何度も発生してしまう
+#+ATTR_REVEAL: :frag (appear)
+→ネットスケープ・ナビゲータがCookieを実装
+
+** 　
+:PROPERTIES:
+:reveal_background: ./img/cookie_flow.png
+:reveal_background_size: 40%
+:END:
+
+#+BEGIN_NOTES
+1. サーバがUAにcookieを渡す
+2. 次回通信時UAはcookieをサーバに渡す
+#+END_NOTES
+
+* RESTful API
+** REST
+REpresentational State Transfer
+
+分散システムで複数のソフトを連携させるのに適した設計原則
+- セッションなどの状態管理を行わない
+- 情報を操作する命令の体型が予め定義・共有されている
+- すべての情報は汎用的な構文で一意に識別される
+- 情報内に別の情報や状態へのリンクを含めることができる
+#+ATTR_REVEAL: :frag (appear)
+→HTTPと非常に相性が良い
+
+*** RESTをHTTPに対応付けると・・・
+- セッションなどの状態管理を行わない :: HTTPはステートレス
+- 情報を操作する命令の体型が予め定義・共有されている :: GET/POSTなど
+- すべての情報は汎用的な構文で一意に識別される :: URI
+- 情報内に別の情報や状態へのリンクを含めることができる :: HTML,XMLなど
+
+** API
+Application Programming Interface
+
+プログラムの機能・情報を外部から利用するための規約
+
+例えば・・・
+- File IO API(OSが提供)
+
+*** web API
+あるURIにHTTPリクエストを送信すると処理結果を返してくれる
+
+** RESTful API
+RESTに従って設計されたAPI
+#+ATTR_REVEAL: :frag (appear)
+→一般にはweb APIにRESTを適用 = RESTful API
+#+ATTR_REVEAL: :frag (appear)
+同じURIに対する呼び出しには常に同じ結果が返される
+
+** RESTful APIの例
+- twitter REST API
+- Github API
+
+** 何が嬉しい?
+HTTPの基本的な動作を理解していると、同じような操作で簡単に取り扱える！
+
+* THANK YOU!

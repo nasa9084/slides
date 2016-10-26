@@ -1,0 +1,247 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t
+#+REVEAL_THEME: night
+#+TITLE: Shell入門
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* 自己紹介
+#+REVEAL_HTML: <div style="float:left;">
+[[../pika.jpg]]
+#+REVEAL_HTML: </div>
+- 名前
+  + 北村壮大 : Masahiro Kitamura
+  + HN : nasa9084
+- 所属
+  + 北海道大学
+  + 工学部
+  + 情報エレクトロニクス学科
+  + コンピュータサイエンスコース
+  + 情報認識学研究室
+
+* 今回のお話
+** Shell入門
+*お題目*
+- ヘルプの読み方
+- 標準入出力について
+- リダイレクト
+- パイプ
+- ヒアドキュメントのご紹介
+
+** 対象環境
+*bash* を対象としています
+
+(多分zsh等のbash系シェルでも大差はない内容)
+
+** 注意
+話を簡単にするため、複数箇所で「正しくはない」お話が含まれます
+* SHELLとは
+#+BEGIN_QUOTE
+ユーザのためにインタフェースを提供するソフトウェアであり、カーネルのサービスへのアクセスを提供する。
+#+END_QUOTE
+#+ATTR_REVEAL: :frag (appear)
+→UNIXの文脈ではコマンドインタプリタのこと
+
+#+BEGIN_NOTES
+ユーザが入力した文字列をOSやプログラミング言語へ通訳して渡すプログラムのこと
+#+END_NOTES
+
+** SHELLのご紹介超簡易版
+*** 最初のSHELL - sh
+ケン・トンプソンという人が開発した
+
+非常にシンプルなコマンドラインインタプリタ
+
+*** Bourne Shell
+多くのUNIX系システムでのデフォルトシェル
+
+/bin/shは大体Bourne Shellかその互換プログラムへのリンク
+
+*** Bourne Again Shell(Bash)
+GNUプロジェクト用Shell
+
+非常に高機能だがやや遅い
+
+一部システムでは/bin/shの実態がコレ
+
+*** Z Shell(zsh)
+最も多機能なShell
+
+*** tcsh
+C言語風のShell
+
+国際化対応がメチャはやだった
+
+
+FreeBSDでは現在標準Shell
+
+Mac OS Xでは10.2まで標準→10.3からはbashが標準
+
+* 「端末」ということば
+Shellのお話をするとき、「端末」「ターミナル」といったら
+#+ATTR_REVEAL: :frag (appear)
+→Shellを動かすソフトウェアのこと
+
+* HELP
+Helpの読み方のお話(要約)
+
+#+BEGIN_NOTES
+全部やると大変なので大事なところだけ
+#+END_NOTES
+
+** I. [] → なくてもいい
+[]で囲まれているものはオプション
+#+ATTR_REVEAL: :frag (appear)
+→必要な場合だけ書く
+
+#+BEGIN_NOTES
+ネストしている場合は内側から順に省略可能
+#+END_NOTES
+
+** II. ... → 繰り返せる
+直前のものを複数回書いても良い
+
+#+BEGIN_NOTES
+書かなくても良い
+#+END_NOTES
+
+** III. オプションはまとめて指定できる時がある
+#+BEGIN_NOTES
+言葉だけだと説明しにくいので例で
+#+END_NOTES
+
+*** example
+calコマンドを例に
+#+BEGIN_SRC bash
+cal [-13nsmjyYwhV] [[[DAY] MONTH] YEAR]
+#+END_SRC
+
+#+ATTR_REVEAL: :frag (appear)
+- 13nsmjyYwhVというオプションがある
+  + この内必要なものを選べる
+- -1mや-3sjといった指定が可能
+  + 普通は-1 -mや-3 -s -jといった感じ
+
+#+BEGIN_NOTES
+ついで
+- YEARを書けばMONTHも書いても良い
+- MONTH YEARを書けばDAYも書いても良い
+#+END_NOTES
+
+* 標準ストリーム
+プログラムから見た、データの入出力の流れや入出力先のこと
+
+UNIX系OSでは普通３つ
+- 標準入力
+- 標準出力
+- 標準エラー出力
+
+水道管のようなもの
+
+#+BEGIN_NOTES
+入力元、出力先の変更もできる
+
+特別指定しない場合、
+- 入力はキーボード
+- 出力は端末画面
+#+END_NOTES
+
+** ファイル記述子(File Descripter:FD)
+プログラムがアクセスするファイルや
+
+標準入出力をOSが識別するための番号
+
+** 0. 標準入力(Standard Input:stdin)
+いわゆる普通の入力。
+
+** 1. 標準出力(Standard Output:stdout)
+いわゆる普通の出力。
+
+** 2. 標準エラー出力(Standard Error:stderr)
+エラー関係を出力する部分。
+
+* リダイレクト
+標準入出力をファイルに接続する
+** <
+CMD n< FILE
+
+標準入力をファイルに接続する
+
+#+BEGIN_NOTES
+nはFD
+
+デフォルトは0
+#+END_NOTES
+
+** n>
+CMD > FILE
+
+CMDの標準出力をFILEに接続する
+
+FILEの内容はCMDの出力内容で上書き保存される
+
+#+BEGIN_NOTES
+nはFD
+
+デフォルトは1
+#+END_NOTES
+
+** n>>
+CMD >> FILE
+
+CMDの標準出力をFILEの末尾に書き足す
+
+#+BEGIN_NOTES
+さっきのはクリアして書く
+
+こっちは書き足し
+#+END_NOTES
+
+* パイプ
+標準出力を次のコマンドの標準入力に接続する
+
+* イメージ図で考えてみる
+ココまでの内容を図にして
+
+** デフォルト
+[[./img/default_inout.png]]
+
+** リダイレクト
+*** 入力
+[[./img/input-redirect.png]]
+
+*** 出力
+[[./img/output-redirect.png]]
+
+** パイプ
+[[./img/pipe.png]]
+
+* ヒアドキュメント
+プログラム中に *複数行の* 文字列を埋め込む方法 (もちろん一行でも)
+
+#+BEGIN_SRC bash
+$ cat <<EOF
+hogehoge
+EOF
+hogehoge
+$
+#+END_SRC
+
+<<のあとに指定し行があるまで文字列だとみなす
+
+#+BEGIN_NOTES
+リダイレクトの一種
+
+EOFは好きな文字列で良い
+#+END_NOTES
+* まとめ
+- SHELLにはいろいろある
+  + bash, zsh, tcsh, etc...
+- ヘルプには決まった書き方がある
+  + その読み方を覚えればカンタン
+- UNIXコマンドは普通入力が1つ出力が2つ
+  + IN :: 標準入力
+  + OUT :: 標準出力、標準エラー出力
+- リダイレクト、パイプはコマンドの標準入出力の繋ぎかえ
+- ヒアドキュメントっていう複数行入力する技(?)がある

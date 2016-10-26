@@ -1,0 +1,178 @@
+#+REVEAL_ROOT: ../reveal.js
+#+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t timestamp:nil
+#+REVEAL_THEME: night
+#+TITLE: WEB Environments
+#+AUTHOR: nasa9084
+#+EMAIL:
+#+REVEAL_EXTRA_CSS: ../remove_image_decoration.css
+#+OPTIONS: ^:{}
+
+* 自己紹介
+#+REVEAL_HTML: <div style="float:left;">
+[[../pika.jpg]]
+#+REVEAL_HTML: </div>
+- 名前
+  + 北村壮大 : Masahiro Kitamura
+  + HN : nasa9084
+- 所属
+  + 北海道大学
+  + 工学部
+  + 情報エレクトロニクス学科
+  + コンピュータサイエンスコース
+  + 情報認識学研究室
+
+* Server
+** 何らかのサービスを提供するソフトウェア
+- Web Server
+- Application Server
+- Mail Server
+- Database Server
+- FTP Server
+- Proxy Server
+#+ATTR_REVEAL: :frag (appear)
+*今回はHTTP ServerとApplication Serverが登場*
+
+#+BEGIN_NOTES
+サーバコンピュータもサーバと呼ぶ
+#+END_NOTES
+
+** Web Server
+クライアントからのHTTPリクエストに対してHTTPレスポンスでリソースを返す
+→HTTP Server
+
+** 図にすると
+** [[./client_server.png]]
+** 代表的なHTTP Server
+[[./apache.png]]
+[[./nginx.png]]
+[[./plone.png]]
+[[./raidenhttpd.png]]
+
+** Application Server
+アプリケーションを呼び出して仕事をしてくれる
+
+#+BEGIN_NOTES
+WebServerとApplication/Databaseの橋渡し的存在
+
+ミドルウェア
+#+END_NOTES
+
+* HTTPの復習
+- クライアントがリクエストメッセージをサーバに送る
+- サーバがレスポンスメッセージをクライアントに返す
+
+** メッセージ
+- ヘッダとボディで構成される
+- テキスト
+
+#+BEGIN_NOTES
+テキスト = 人間が読める形式
+#+END_NOTES
+
+* CGI
+*Common Gateway Interface*
+
+Web Serverでプログラムを動かす仕組み
+
+** 動作
+0. リクエストを受け取る
+0. CGIプログラムを起動する
+0. CGIプログラムが結果を返す
+0. クライアントにレスポンスを返す
+
+** 標準入出力
+- HTTPリクエストのボディは標準入力へ
+- 標準出力は *そのまま* クライアントに送られる
+
+#+BEGIN_NOTES
+出力データは正当なHTTPレスポンスの形式である必要がある
+#+END_NOTES
+
+** 環境変数(environment variable)
+OS上のタスクがデータを共有するための変数
+
+- QUERY_STRING :: クライアントが要求したURIのうち、検索文字列部
+- CONTENT_LENGTH :: クライアントからのHTTPリクエストのボディ部の長さ
+- PATH_INFO :: CGIプログラムに対応する仮想パスの後ろに続いた余分のパス
+- PATH_TRANSLATED :: PATH_INFOを物理パスに対応させたもの
+** [[./cgi.png]]
+
+* WSGI
+*Web Server Gateway Interface*
+
+Python WebアプリケーションとWeb Serverを接続するための標準仕様
+** 今は昔
+** Python Webアプリケーションの実装方法
+- CGI
+- FastCGI
+- mod_python
+#+ATTR_REVEAL: :frag (appear)
+*統一したい！*
+** WSGIの誕生
+** 動作
+0. リクエストを受け取る
+0. アプリケーションのエントリポイントをcallする
+0. アプリケーションの返り値を使ってレスポンスを作る
+** call
+WSGIアプリケーションはcallableオブジェクトを持つ
+#+ATTR_REVEAL: :frag (appear)
+→コレを呼び出す
+** callableオブジェクト
+*callable == 呼び出し可能*
+
+hoge()のような形
+
+#+ATTR_REVEAL: :frag (appear)
+- 関数
+- __call__が定義されたクラス
+
+** アプリケーション引数
+0. 環境変数(env)
+0. start_responseオブジェクト
+
+** start_responseオブジェクト
+ステータスコードやHTTPレスポンスヘッダを入れる
+
+→コレをもとにサーバがレスポンスをつくる
+
+** ボディ
+iterableオブジェクトの形で返す
+** iterable
+*iterable == 反復可能*
+- list
+- tuple
+- dict
+
+* Rack
+** Ruby用の仕様
+** Rubyの人が思った
+** "WSGIいいな。。。"
+** Rackの誕生
+** 動作
+0. リクエストを受け取る
+0. アプリケーションのエントリポイントをcallする
+0. アプリケーションの返り値でレスポンスを作る
+
+** アプリケーション引数
+- 環境変数(env)
+
+** アプリケーションの返り値
+- ステータスコード(status)
+- HTTPヘッダ(headers)
+- ボディ(body)
+#+ATTR_REVEAL: :frag (appear)
+→３つまとめて配列にして返す
+
+* PSGI
+*Perl Web Server Gateway Interface*
+** Perl用
+** Perlの人が思った
+** "WSGIとかRackとかいいな。。。"
+** PSGIの誕生
+** 動作
+** 大体Rackと同じ
+
+* Web三層構成
+[[./web-3-layers-structure.png]]
+
+* THANK YOU

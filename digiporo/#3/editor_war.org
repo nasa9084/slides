@@ -1,0 +1,313 @@
+#+REVEAL_ROOT: ../reveal.js/
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: reveal_mathjax:t
+#+OPTIONS: toc:0
+#+OPTIONS: num:nil
+#+REVEAL_THEME: night
+#+TITLE: エディタ戦争のお話
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* 自己紹介
+#+REVEAL_HTML: <div style="float:left;">
+[[../pika.jpg]]
+#+REVEAL_HTML: </div>
+- 名前
+  + 北村壮大 : Masahiro Kitamura
+  + HN : nasa9084
+- 所属
+  + 北海道大学
+  + 工学部
+  + 情報エレクトロニクス学科
+  + コンピュータサイエンスコース
+  + 情報認識学研究室
+
+* えでぃた
+** エディタとは
+: テキストエディタ(英語:text editor)とはコンピュータで文字情報(テキスト)のみのファイル、
+: すなわちテキストファイルを作成、編集、保存するためのソフトウェア(プログラム)である。
+: 一般に、文字情報の入力、削除、コピー、貼り付け、検索、置換、整形などの機能を備えている。
+: Microsoft Windowsのメモ帳や、Mac OS Xのテキストエディット、UNIXのvi、Emacsなど、
+: 多くのOSやデスクトップ環境に最初から装備されている。
+: - Wikibedia より -
+
+** エディタの種類
+#+ATTR_REVEAL: :frag (highlight-blue none) :frag-idx (1 -)
+- スクリーンエディタ :: emacs, vi, Sublime Text, Atom, ...
+- ラインエディタ :: ed, ELDIN
+- ストリームエディタ :: sed, awk, perl, python, ...
+
+#+BEGIN_NOTES
+- いわゆるエディタ
+- 一行単位でテキストを編集するためのプログラム
+- 予め決めた手順で一括処理するエディタ
+#+END_NOTES
+
+** IDE (統合開発環境)
+: 統合開発環境（とうごうかいはつかんきょう）、IDE (Integrated Development Environment) は、
+: ソフトウェアの開発環境。従来、コンパイラ、テキストエディタ、デバッガなどがばらばらで
+: 利用していたものをひとつの対話型操作環境（多くはGUI）から利用できるようにしたもの。
+: 最近のIDEには、GUIアプリケーション開発のための迅速なプロトタイピング (RAD) が可能なものが多い。
+: 統合開発環境を使うことによって、巨大かつ複雑なソフトウェアでも、作成者に負担をかけることなく
+: 開発することが可能になる。
+: - Wikipedia より -
+#+ATTR_REVEAL: :frag (appear)
+*→ MS Visual Studio, Xcode, Eclipse, NetBeans, IntelliJIDEA, ...*
+#+BEGIN_NOTES
+- MS-VS :: 昔はJava環境とかも会った.
+- Xcode :: 昔はOS X付属だった.
+- Eclipse :: OSS. IBMが開発.
+- NetBeans :: OSS. Sun→Oracleが開発.
+ほぼpure Java. JavaのGUI開発に強い.
+- IDEA :: JavaのIDEとしては二番人気.
+#+END_NOTES
+
+** 戦争?
+: エディタ戦争（Editor War）とは、プログラミングを行う人々（特にハッカー文化に属する人々）の間で続いている、
+: どのテキストエディタが一番よいかというテーマの論争である。その中でも二大陣営といえるのは、vi愛好派とEmacs愛好派である。
+: ハッカー文化においては、愛好するソフトウェアを宗教的狂信とも言える尊敬を持って扱う伝統があり、
+: そのようなソフトウェアの中でもテキストエディタはもっとも一般的である。
+: 自らの選択したエディタが最善であると信じるグループ間で数々の論争（フレーム）が発生してきた。
+: - Wikipedia より -
+#+ATTR_REVEAL: :frag (appear)
+→In short:: プログラマ界でのきのこたけのこ戦争
+
+* 今日のお話
+** エディタをさらっと紹介
+#+ATTR_REVEAL: :frag (appear)
+登場するエディタ
+#+ATTR_REVEAL: :frag (appear)
+- emacs
+- vi/vim
+- Sublime Text
+- Atom
+- Brackets
+- nano
+#+ATTR_REVEAL: :frag (appear)
+今回は本当にさらっと
+
+* emacs
+** どんなエディタ？
+- 主としてUNIX環境・CLI環境で使われる
+  + GUI環境もある
+- OSSで、多種の実装がある(emacsen)
+  + GNU Emacs
+  + NTEmacs
+- エディタ戦争の二大陣営の一つ
+- バッファという概念でファイルを操作
+- *emacsがあればPC上で行うことは大体できる*
+  + ブラウザも標準搭載
+- emacs lispで拡張・設定
+- テーマ機能
+
+#+BEGIN_NOTES
+ox(雄牛)の複数形oxenからの類推
+過去にはMeadowも
+#+END_NOTES
+
+** バッファ
+- emacs上でのファイルのコピー
+  + 他のエディタでいうところのウィンドウやタブ
+- ファイルだけではなくいろいろなバッファがある
+  + ディレクトリ
+  + メッセージ
+- いわゆるウィンドウは「フレーム」と呼ぶ
+  + 「ウィンドウ」はフレームの中でのバッファ表示領域
+
+** キーボードから手を離さず作業できる
+- 多彩なキーバインド
+  + いわゆるキーボード・ショートカット
+  + emacsでのすべての動作を個別に割り当てることができる
+- 意味ベースのキーバインド
+  + キーボードの配列に依存しない
+  + 例
+    - Ctrl-f : 一文字右へ(Front)
+    - Ctrl-n : 一行下へ(Next-line)
+
+** emacs lispによる設定
+独自プログラミング言語emacs lispで設定を記述
+#+ATTR_REVEAL: :frag (appear)
+→エディタとしての基本的な機能も設定ファイルで変更できる
+#+ATTR_REVEAL: :frag (appear)
+~/.emacs.d/init.elに設定を書く
+
+#+BEGIN_NOTES
+昔は.emacs.dに書いていた
+#+END_NOTES
+
+*** 設定の例
+- 改行の動作 :: カーソル位置によって改行の動作を変更
+- キーバインドの設定 :: キーバインドはすべて変更可能
+#+ATTR_REVEAL: :frag (appear)
+→キーバインドを変更可能
+#+ATTR_REVEAL: :frag (appear)
+プレフィクスキーを使用することで無数のキーバインドが設定可能
+
+** emacs lispによる拡張
+- emacs lispを使うことでエディタの機能を拡張できる
+- パッケージシステムも搭載
+#+ATTR_REVEAL: :frag (appear)
+→他の人が作った拡張を利用可能
+
+*** 拡張の例
+- 補完機能 :: company.el
+- 文法チェック :: flycheck.el
+- emmet :: emmet.el
+- 命名辞書 :: codic.el
+- 定型文入力補助 :: yasnippet.el
+- メールクライアント :: mew.el
+- gitクライアント :: magit.el
+- twitter :: twittering-mode.el
+
+#+BEGIN_NOTES
+その他サーバーなどもある。ブラウザは標準搭載
+#+END_NOTES
+
+* vi/vim
+** どんなエディタ?
+- 主としてUNIX環境・CLI環境で使われる
+  + GUI環境もある : gvim
+- 最近だと"vi"コマンドでvimが起動することが多い
+- エディタ戦争二大陣営の一つ
+- UNIXの設計思想
+  + do one thing, and do it well
+- モードという概念でファイルを操作
+- 軽量・高速に動作
+- 大体のUNIX環境で標準搭載
+
+#+BEGIN_NOTES
+現状ほとんどvimなので、vimの話。
+#+END_NOTES
+
+** モード
+vi/vimではモードを行ったり来たりしながらファイルを編集する
+- コマンドモード
+  + コマンド入力をするモード
+    - カーソル移動
+      + hjklで移動
+    - コピー
+    - ペースト
+    - 保存
+- 編集モード
+  + ファイルを編集するモード
+  + 普通に文字が打てる
+
+** .vimrcによる設定
+シェルの設定ファイル同様、~/.vimrcに設定を書くことでカスタマイズ可能
+
+** vim scriptによる拡張
+- 独自スクリプト言語vim scriptを使うことで拡張が可能
+- プラグイン管理システムも存在(NeoBundle)
+  + emacsとは違い自分でインストール
+  + 安定感はないとかあるとか
+
+*** 拡張の例
+- 補完機能 :: neocomplete.vim
+- 文法チェック :: syntastic
+- emmet :: emmet-vim
+- 定型文入力補助 :: Neosnippet.vim
+- git補助 :: fugitive.vim
+- twitter :: TwitVim
+
+* Sublime Text
+** どんなエディタ?
+- web系で最近流行のエディタ
+- 綺麗な見た目が特長
+  + タブ型のGUI
+- Pythonで書かれている
+  + 拡張もPythonベース
+- シェアウェア(体験版が無制限で使用可能)
+  + $59 ≒ ￥6958
+
+#+BEGIN_NOTES
+体験版は保存の時にたまにライセンス買ってダイアログが出る
+#+END_NOTES
+
+** JSONによる設定
+- 設定はJSONで書く
+  + 多言語でも使われるので慣れてればすぐ書ける
+
+** Pythonによる拡張
+プラグインシステムを導入すると拡張できる(Package Control)
+
+*** 拡張の例
+- 補完強化 :: All Autocomplete
+- 文法チェック :: SublimeLinter
+- 行末空白ハイライト :: TrailingSpaces
+- ベンダープレフィクス調整 :: Autoprefixer
+- emmet :: Emmet
+- git補助 :: Git
+- twitter :: Sublime Tweet
+
+#+BEGIN_NOTES
+- デフォルトでも補完機能が付いている
+- 末尾空白はemacsだと設定するだけでできる
+- 日本語tweetで難あり
+#+END_NOTES
+* Atom
+- GitHub発の新エディタ
+- 綺麗なGUI
+- Chromiumベース
+  + electron
+- OSS
+  + 動作はまだまだだが成長が早い
+- 大容量ファイルは苦手
+
+** ユーザインターフェースのカスタマイズ
+ChromiumベースなのでJS、CSSでカスタマイズ可能
+
+** パッケージシステム
+パッケージシステムを標準搭載
+#+BEGIN_NOTES
+多数導入すると・・・
+#+END_NOTES
+
+*** 拡張の例
+- 文法チェック :: Linter
+- Grunt :: grunt-runner
+- Gulp :: gulp-control
+- twitter :: elastic-twitter-stream
+
+#+BEGIN_NOTES
+- 自前のAPIトークンが必要、検索メインなど難あり
+#+END_NOTES
+
+* Brackets
+- Adobe謹製のエディタ
+- フラットなGUI
+- デフォルトで日本語対応
+- フリーソフトウェア
+
+#+BEGIN_NOTES
+画面分割に難あり
+#+END_NOTES
+
+** ホバービュー
+画像ファイル文字列の上にカーソルを乗せると画像がポップアップ
+
+** ライブプレビュー
+HTML/CSSをブラウザでリアルタイムに結果表示
+
+** クイックエディット
+HTML上でタグに適用されているスタイルをその場で編集
+
+** 拡張機能マネージャー
+デフォルトで搭載
+
+*** 拡張の例
+- 文法チェック :: Interactive Linter
+- emmet :: Emmet
+- 定型文入力補助 :: Brackets Snippets
+- git補助 :: Git
+
+#+BEGIN_NOTES
+twitterはできないっぽい
+#+END_NOTES
+* nano
+- CLIエディタ
+- ほぼメモ帳並みの機能プラスアルファ
+  + 正規表現検索
+  + シンタックスハイライト
+- 画面下部に操作方法
+- 最近のLinuxだと結構入っている
+* THANK YOU!
