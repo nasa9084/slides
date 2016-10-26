@@ -1,0 +1,40 @@
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    text-transform: none;
+}
+
+.reveal .figure img {
+    border: none;
+}
+
+.reveal h1 {
+    font-size: 1.25em;
+}
+
+.reveal > .backgrounds > .slide-background {
+    border-left: rgba(255, 20, 147, .7) 30px solid;
+}
+
+.reveal .author {
+    text-align: right;
+    margin-right: 3em;
+    font-size: .75em;
+}
+
+.reveal h2[id^=orgheadline] {
+    text-align: left;
+    margin-left: 1em;
+}
+
+.reveal .figure img[alt*="pika"] {
+    border: gray 10px solid;
+    margin-left: 2em;
+}
+
+.reveal li {
+    list-style: none;
+}
