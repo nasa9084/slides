@@ -47,3 +47,10 @@
 - 実装はC
 - 最新のStableは3.2.5
 #+END_NOTES
+
+** Key-value Store
+   - dict(Python)
+   - hash(Perl, Ruby)
+   - map(C++, Java, Go)
+   - 名前空間
+
