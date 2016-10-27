@@ -3,7 +3,7 @@
 #+OPTIONS: reveal_slide_number:nil reveal_control:nil reveal_progress:nil toc:0 reveal_mathjax:t num:nil LaTeX:t timestamp:nil
 #+REVEAL_THEME: black
 #+REVEAL_EXTRA_CSS: ../../extra.css
-#+TITLE: WebエンジニアのためのはじめてのRedis
+#+TITLE: Webエンジニアのためのはじめてのredis
 #+AUTHOR: @nasa9084
 
 * I'm...
@@ -26,5 +26,5 @@
    - はじめてのSQL
    - などなど...
 
-* Redis
 ** NoSQL
+* redis
