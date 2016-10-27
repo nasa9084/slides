@@ -1,3 +1,2 @@
-*.org linguist-language=org-mode
 /reveal.js/* linguist-vendored
 reveal.js/* linguist-vendored
