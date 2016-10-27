@@ -25,7 +25,8 @@
     font-size: .75em;
 }
 
-.reveal h2[id^=orgheadline] {
+.reveal h2[id^=orgheadline],
+.reveal h3[id^=orgheadline] {
     text-align: left;
     margin-left: 1em;
 }
@@ -37,4 +38,13 @@
 
 .reveal li {
     list-style: none;
+}
+
+.reveal section img {
+    background: none;
+    box-shadow: none;
+}
+
+.reveal .figure img[alt="redis.png"] {
+    margin-left: 2em;
 }
