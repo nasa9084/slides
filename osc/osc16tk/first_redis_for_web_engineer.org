@@ -29,3 +29,6 @@
    - などなど...
 
 * redis
+:PROPERTIES:
+:reveal_background: img/redis_bg.png
+:END:
