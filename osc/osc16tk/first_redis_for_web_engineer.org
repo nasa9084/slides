@@ -54,7 +54,6 @@
    - map(C++, Java, Go)
    - 名前空間
 
-** memcached
 
 * Redisのデータ型
 ** String
