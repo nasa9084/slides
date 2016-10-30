@@ -103,3 +103,5 @@ Redisの中でも特徴的な型
 #+BEGIN_NOTES
 少ないフィールドのHashはメモリ効率が良い
 #+END_NOTES
+
+* redisの使いどころ
