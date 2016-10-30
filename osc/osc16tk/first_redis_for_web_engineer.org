@@ -57,6 +57,18 @@
 
 * Redisのデータ型
 ** String
+   - 文字列
+     + 文字列の一部置き換え
+     + 長さの取得
+   - 数値
+     + ~INCR~ / ~DECR~ できる
+   - 最大512MB
+   - バイナリセーフ
+
+#+BEGIN_NOTES
+最も基本的な型
+#+END_NOTES
+
 ** List
 ** Set
 ** Sorted Set
