@@ -70,6 +70,14 @@
 #+END_NOTES
 
 ** List
+   - Stringのリスト
+   - Linked List
+   - 最大2^{32}-1要素
+
+#+BEGIN_NOTES
+先頭・末尾要素へのアクセスが高速
+#+END_NOTES
+
 ** Set
 ** Sorted Set
 ** Hash
