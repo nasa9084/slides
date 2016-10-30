@@ -79,5 +79,11 @@
 #+END_NOTES
 
 ** Set
+   - Stringの集合
+     + 順序なし
+     + 重複なし
+   - 最大2^{32}-1要素
+
+
 ** Sorted Set (ZSet)
 ** Hash
