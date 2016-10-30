@@ -79,5 +79,5 @@
 #+END_NOTES
 
 ** Set
-** Sorted Set
+** Sorted Set (ZSet)
 ** Hash
