@@ -1,10 +1,10 @@
-#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_ROOT: ../../reveal.js
 #+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t timestamp:nil
 #+REVEAL_THEME: night
 #+TITLE: WEB Environments
 #+AUTHOR: nasa9084
 #+EMAIL:
-#+REVEAL_EXTRA_CSS: ../remove_image_decoration.css
+#+REVEAL_EXTRA_CSS: ../reveal_extra_css.css
 #+OPTIONS: ^:{}
 
 * 自己紹介

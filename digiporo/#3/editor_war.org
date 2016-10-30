@@ -1,4 +1,4 @@
-#+REVEAL_ROOT: ../reveal.js/
+#+REVEAL_ROOT: ../../reveal.js/
 #+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 #+OPTIONS: reveal_mathjax:t
 #+OPTIONS: toc:0

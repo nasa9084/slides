@@ -1,4 +1,4 @@
-#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_ROOT: ../../reveal.js
 #+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t timestamp:nil
 #+REVEAL_THEME: night
 #+TITLE: Python

@@ -1,4 +1,4 @@
-#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_ROOT: ../../reveal.js
 #+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 #+OPTIONS: toc:0 reveal_mathjax:t num:nil LaTeX:t
 #+REVEAL_THEME: solarized
