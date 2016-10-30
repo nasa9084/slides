@@ -86,4 +86,13 @@
 
 
 ** Sorted Set (ZSet)
+   - Stringの集合
+     + 重複なし
+   - 各メンバがScoreで順序付けされる
+
+#+BEGIN_NOTES
+Redisの中でも特徴的な型
+- 中間要素へのアクセスが高速
+#+END_NOTES
+
 ** Hash
