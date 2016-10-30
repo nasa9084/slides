@@ -96,3 +96,10 @@ Redisの中でも特徴的な型
 #+END_NOTES
 
 ** Hash
+   - StringからStringへのmap
+     + Java: ~HashMap<String, String>~
+   - 最大2^{32}-1ペア
+
+#+BEGIN_NOTES
+少ないフィールドのHashはメモリ効率が良い
+#+END_NOTES
