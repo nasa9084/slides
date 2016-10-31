@@ -104,7 +104,7 @@ file:img/comp_rdb_kvs.png
    file:img/list.png
 
    - Stringのリスト
-   - Linked List
+   - 実装はLinked List
    - 最大2^{32}-1要素
 
 #+BEGIN_NOTES
