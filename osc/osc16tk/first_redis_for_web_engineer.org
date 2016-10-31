@@ -95,6 +95,7 @@ file:img/comp_rdb_kvs.png
      + ~INCR~ / ~DECR~ できる
    - 最大512MB
    - バイナリセーフ
+     + 画像などもOK
 
 #+BEGIN_NOTES
 最も基本的な型
