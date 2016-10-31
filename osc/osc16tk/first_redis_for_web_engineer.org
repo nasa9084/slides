@@ -140,3 +140,8 @@ Redisの中でも特徴的な型
 #+END_NOTES
 
 * redisの使いどころ
+** 有効期限のあるデータ
+keyに対して有効期限を設定できる
+- ~EXPIRE key seconds~
+- ~EXPIREAT key timestamp~
+
