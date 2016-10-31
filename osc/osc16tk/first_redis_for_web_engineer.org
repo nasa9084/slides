@@ -40,7 +40,11 @@
 
    - remote dictionary server
    - Key-Value Store (KVS)
+     + 豊富なデータ型
    - in-memory
+     + 永続化もできる
+   - 簡単・速い
+     + Python, Ruby等と相性◎
 
 #+BEGIN_NOTES
 - BSD license
