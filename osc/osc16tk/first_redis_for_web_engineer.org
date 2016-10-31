@@ -106,11 +106,14 @@ file:img/comp_rdb_kvs.png
 
    - Stringのリスト
    - 実装はLinked List
+     + 先頭・末尾への挿入・アクセスは *$O(1)$*
+     + 中間要素へのアクセスは $O(N)$
    - 最大2^{32}-1要素
 
 #+BEGIN_NOTES
-先頭・末尾要素へのアクセスが高速
+2^{32}-1 = 約42億
 #+END_NOTES
+
 
 ** Set
    file:img/set.png
@@ -118,6 +121,7 @@ file:img/comp_rdb_kvs.png
    - Stringの集合
      + 順序なし
      + 重複なし
+   - 追加・削除・アクセスが *$O(1)$*
    - 最大2^{32}-1要素
 
 
@@ -127,6 +131,8 @@ file:img/comp_rdb_kvs.png
    - Stringの集合
      + 重複なし
    - 各メンバがScoreで順序付けされる
+   - Scoreの取り出しは *$O(1)$*
+   - 追加は $O(\log{N})$
 
 #+BEGIN_NOTES
 Redisの中でも特徴的な型
@@ -138,6 +144,7 @@ Redisの中でも特徴的な型
 
    - StringからStringへのmap
      + Java: ~HashMap<String, String>~
+   - 追加・削除・アクセスが *$O(1)$*
    - 最大2^{32}-1ペア
 
 #+BEGIN_NOTES
