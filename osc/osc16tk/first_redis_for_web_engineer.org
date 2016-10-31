@@ -54,6 +54,8 @@
    - map(C++, Java, Go)
    - 名前空間
 
+file:img/comp_rdb_kvs.png
+
 ** RDBMSとの比較
 
 | 機能             | RDBMS | Redis |
