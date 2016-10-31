@@ -48,3 +48,11 @@
 .reveal .figure img[alt="redis.png"] {
     margin-left: 2em;
 }
+
+.reveal table td {
+    text-align: center;
+}
+
+.reveal table tr td:first-child {
+    text-align: left;
+}
