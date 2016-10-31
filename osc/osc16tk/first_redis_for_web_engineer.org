@@ -145,3 +145,24 @@ keyに対して有効期限を設定できる
 - ~EXPIRE key seconds~
 - ~EXPIREAT key timestamp~
 
+*** Sample Code (HubotMaker)
+#+BEGIN_SRC python
+from redis import Redis
+from uuid import uuid4
+
+class User:
+    def generate_apikey(self):
+        redis = Redis(host='localhost', port=6389)
+        if redis.exists(self.token):
+            return self.token
+        new_apikey = 'hbt-' + str(uuid4())
+        ttl = 10 * 60 * 60  # 10 minutes
+        redis.setex(new_apikey, self.name, ttl)
+        self.apikey = new_apikey
+        return self.apikey
+#+END_SRC
+
+https://github.com/web-apps-tech/hubotmaker.git
+
+https://hubot.web-apps.tech/
+

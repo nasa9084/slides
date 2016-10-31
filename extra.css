@@ -49,6 +49,10 @@
     margin-left: 2em;
 }
 
+.reveal .src {
+    font-size: .75em;
+}
+
 .reveal table td {
     text-align: center;
 }
