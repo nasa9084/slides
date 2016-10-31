@@ -39,7 +39,7 @@
    #+REVEAL_HTML: </div>
 
    - remote dictionary server
-   - Key-Value Store
+   - Key-Value Store (KVS)
    - in-memory
 
 #+BEGIN_NOTES
@@ -48,7 +48,7 @@
 - 最新のStableは3.2.5
 #+END_NOTES
 
-** Key-value Store
+** Key-value Store (KVS)
    - dict(Python)
    - hash(Perl, Ruby)
    - map(C++, Java, Go)
