@@ -80,6 +80,10 @@ file:img/comp_rdb_kvs.png
 
 * Redisのデータ型
 ** String
+   #+REVEAL_HTML: <div style="float: left;">
+   file:img/string.png
+   #+REVEAL_HTML: </div>
+
    - 文字列
      + 文字列の一部置き換え
      + 長さの取得
@@ -93,6 +97,8 @@ file:img/comp_rdb_kvs.png
 #+END_NOTES
 
 ** List
+   file:img/list.png
+
    - Stringのリスト
    - Linked List
    - 最大2^{32}-1要素
@@ -102,6 +108,8 @@ file:img/comp_rdb_kvs.png
 #+END_NOTES
 
 ** Set
+   file:img/set.png
+
    - Stringの集合
      + 順序なし
      + 重複なし
@@ -109,6 +117,8 @@ file:img/comp_rdb_kvs.png
 
 
 ** Sorted Set (ZSet)
+   file:img/zset.png
+
    - Stringの集合
      + 重複なし
    - 各メンバがScoreで順序付けされる
@@ -119,6 +129,8 @@ Redisの中でも特徴的な型
 #+END_NOTES
 
 ** Hash
+   file:img/hash.png
+
    - StringからStringへのmap
      + Java: ~HashMap<String, String>~
    - 最大2^{32}-1ペア
