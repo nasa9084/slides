@@ -53,6 +53,10 @@
     font-size: .75em;
 }
 
+.reveal .small .src {
+    font-size: .5em;
+}
+
 .reveal .org-src-container+p {
     text-align: left;
     padding-left: 4em;

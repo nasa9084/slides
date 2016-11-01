@@ -187,3 +187,51 @@ https://github.com/web-apps-tech/hubotmaker.git
 https://hubot.web-apps.tech/
 #+REVEAL_HTML: </div>
 
+** リアルタイム・ランキング
+*sorted set* が活躍
+
+
+#+BEGIN_SRC redis
+zadd key score member
+#+END_SRC
+keyにscore点を持ったmemberを追加する
+
+#+BEGIN_SRC redis
+zincrby key increment member
+#+END_SRC
+keyのmemberにincrement点加点する
+
+#+BEGIN_SRC redis
+zrange key start stop
+#+END_SRC
+keyのstart番目からstop番目を取得する
+
+
+*** Sample Code
+#+REVEAL_HTML: <div class="small">
+#+BEGIN_SRC python
+from redis import Redis
+
+redis = Redis()
+
+while True:
+    print('input member:score> ', end='')
+    ipt = input()
+    if ipt == 'show':  # command 'show'
+        ranking = redis.zrange('ranking', 0, 5, withscores=True)[::-1]
+        for i, m in enumerate(ranking):
+            values = {
+                'rank': i+1,
+                'member': m[0].decode(),
+                'point': m[1]
+            }
+            print('{rank}: {member} ({point}pt)'.format(**values))
+        continue
+    member, score = args.split(':')
+    redis.zadd('ranking', member, int(score))
+print('good bye')
+#+END_SRC
+#+REVEAL_HTML:</div>
+
+https://github.com/nasa9084/samples.git
+
