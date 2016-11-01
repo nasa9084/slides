@@ -53,6 +53,11 @@
     font-size: .75em;
 }
 
+.reveal .org-src-container+p {
+    text-align: left;
+    padding-left: 4em;
+}
+
 .reveal table td {
     text-align: center;
 }

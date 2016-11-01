@@ -154,8 +154,15 @@ Redisの中でも特徴的な型
 * redisの使いどころ
 ** 有効期限のあるデータ
 keyに対して有効期限を設定できる
-- ~EXPIRE key seconds~
-- ~EXPIREAT key timestamp~
+#+BEGIN_SRC redis
+EXPIRE key seconds
+#+END_SRC
+keyにseconds秒の期限を設定する
+
+#+BEGIN_SRC redis
+EXPIREAT key timestamp
+#+END_SRC
+keyの期限をtimestampにする
 
 *** Sample Code (HubotMaker)
 #+BEGIN_SRC python
