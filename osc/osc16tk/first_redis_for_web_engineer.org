@@ -235,3 +235,21 @@ print('good bye')
 
 https://github.com/nasa9084/samples.git
 
+* redisを使ってみる
+** try redis
+   file:img/try_redis.png
+   http://try.redis.io/
+
+#+BEGIN_NOTES
+チュートリアルも搭載
+#+END_NOTES
+
+** official docker container
+:PROPERTIES:
+:reveal_background: img/docker.png
+:END:
+
+#+BEGIN_SRC shell
+$ docker run redis
+#+END_SRC
+
