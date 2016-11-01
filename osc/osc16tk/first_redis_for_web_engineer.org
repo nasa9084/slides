@@ -83,6 +83,10 @@ file:img/comp_rdb_kvs.png
 #+END_NOTES
 
 * Redisのデータ型
+#+BEGIN_NOTES
+memcachedと比較して型が多いのがredisの特徴
+#+END_NOTES
+
 ** String
    #+REVEAL_HTML: <div style="float: left;">
    file:img/string.png
