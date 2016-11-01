@@ -181,7 +181,9 @@ class User:
         return self.apikey
 #+END_SRC
 
+#+REVEAL_HTML: <div>
 https://github.com/web-apps-tech/hubotmaker.git
 
 https://hubot.web-apps.tech/
+#+REVEAL_HTML: </div>
 
