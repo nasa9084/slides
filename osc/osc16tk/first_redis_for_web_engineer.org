@@ -22,7 +22,13 @@
   #+REVEAL_HTML: </div>
 *KEYWORDS: emacs python お酒*
 
-#+REVEAL: split
+** 　
+   :PROPERTIES:
+   :reveal_background: img/hu.jpg
+   :END:
+
+
+** 　
   file:img/digiporo_logo.png
 
    初心者向けIT技術勉強会
