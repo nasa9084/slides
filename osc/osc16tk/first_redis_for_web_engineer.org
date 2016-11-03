@@ -206,6 +206,42 @@ memcachedと比較して型が多いのがredisの特徴
    - 追加・削除・アクセスが *$O(1)$*
    - 最大2^{32}-1要素
 
+*** Set
+    #+REVEAL_HTML: <div class="flex-container"><div>
+    *redis*
+    #+BEGIN_SRC redis
+    > SADD foo 1 3 5
+    (integer) 3
+    > SMEMBERS foo
+    "1"
+    "3"
+    "5"
+    > SADD foo 1
+    (integer) 0
+    > SMEMBERS foo
+    "1"
+    "3"
+    "5"
+    #+END_SRC
+    #+REVEAL_HTML: </div><div>
+    *python*
+    #+BEGIN_SRC python
+    from redis import Redis
+
+    redis = Redis()
+    redis.sadd('foo', 1, 3, 5)
+    print(redis.smembers('foo'))
+    #=>{b'3', b'5', b'1'}
+    redis.sadd('foo', 1)
+    print(redis.smembers('foo'))
+    #=>{b'3', b'5', b'1'}
+    #+END_SRC
+    #+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+和集合・積集合・差集合演算もできる
+#+END_NOTES
+
 
 ** Sorted Set (ZSet)
    file:img/zset.png
