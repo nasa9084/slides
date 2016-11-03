@@ -6,11 +6,11 @@
 #+TITLE: Webエンジニアのためのはじめてのredis
 #+AUTHOR: @nasa9084
 
-  #+REVEAL_HTML: <div style="float: left;">
 * $ whoami
   :PROPERTIES:
   :reveal_background: img/ikura.jpg
   :END:
+  #+REVEAL_HTML: <div class="flex-container">
   file:img/pika.jpg
 
   - *北村壮大 (Masahiro Kitamura)*
