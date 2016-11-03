@@ -22,13 +22,6 @@
   #+REVEAL_HTML: </div>
 *KEYWORDS: emacs python お酒*
 
-  - 北村壮大 (Masahiro Kitamura)
-  - @nasa9084
-  - 北海道大学工学部
-  - 情報エレクトロニクス学科
-  - コンピュータサイエンスコース
-  - 情報認識学研究室
-
 #+REVEAL: split
   file:img/digiporo_logo.png
 
