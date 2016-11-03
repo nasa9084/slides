@@ -203,8 +203,14 @@ memcachedと比較して型が多いのがredisの特徴
    - Stringの集合
      + 順序なし
      + 重複なし
-   - 追加・削除・アクセスが *$O(1)$*
+   - 追加・削除・アクセスが平均で *$O(1)$*
    - 最大2^{32}-1要素
+
+#+BEGIN_NOTES
+- Hash表を用いて実装されているため
+- リサイズは同期操作
+  + 巨大なセットを扱うときは注意
+#+END_NOTES
 
 *** Set
     #+REVEAL_HTML: <div class="flex-container"><div>
