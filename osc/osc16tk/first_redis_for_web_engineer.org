@@ -255,6 +255,7 @@ memcachedと比較して型が多いのがredisの特徴
 #+BEGIN_NOTES
 Redisの中でも特徴的な型
 - 中間要素へのアクセスが高速
+- サンプルは後で
 #+END_NOTES
 
 ** Hash
