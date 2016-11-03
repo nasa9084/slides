@@ -115,6 +115,43 @@ memcachedと比較して型が多いのがredisの特徴
 最も基本的な型
 #+END_NOTES
 
+*** String
+    #+REVEAL_HTML: <div class="flex-container"><div>
+    *redis*
+    #+BEGIN_SRC redis
+    > SET hoge fugafuga
+    OK
+    > GET hoge
+    "fugafuga"
+
+    > SET point 10
+    OK
+    > GET point
+    "10"
+    > INCR point
+    (integer) 11
+    > GET point
+    "11"
+    #+END_SRC
+    #+REVEAL_HTML: </div><div>
+    *python*
+    #+BEGIN_SRC python
+    from redis import Redis
+
+    redis = Redis()
+    redis.set('hoge', 'fugafuga')
+    print(redis.get('hoge'))
+    #=> b'fugafuga'
+
+    redis.set('point', 10)
+    print(redis.get('point'))
+    #=> b'10'
+    redis.incr('point')
+    print(redis.get('point'))
+    #=> b'11'
+    #+END_SRC
+    #+REVEAL_HTML: </div></div>
+
 ** List
    file:img/list.png
 
