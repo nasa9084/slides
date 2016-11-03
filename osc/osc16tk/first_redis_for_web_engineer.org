@@ -270,6 +270,44 @@ Redisの中でも特徴的な型
 少ないフィールドのHashはメモリ効率が良い
 #+END_NOTES
 
+*** Hash
+    #+REVEAL_HTML: <div class="flex-container"><div>
+    *redis*
+    #+BEGIN_SRC redis
+    > HSET bar 0:00 5
+    (integer) 1
+    > HGETALL bar
+    1) "0:00"
+    2) "5"
+    > HMSET bar 1:00 5 2:00 6
+    > HKEYS bar
+    1) "0:00"
+    2) "1:00"
+    3) "2:00"
+    > HGET bar 0:00
+    "5"
+    #+END_SRC
+    #+REVEAL_HTML: </div><div>
+    *python*
+    #+BEGIN_SRC python
+    from redis import Redis()
+
+    redis = Redis()
+    redis.hset('bar', '0:00', '5')
+    print(redis.hgetall('bar'))
+    #=>{b'0:00': b'5'}
+    add_dict = {
+        '1:00': '5',
+        '2:00': '6'
+    }
+    redis.hmset('bar', add_dict)
+    print(redis.hkeys('bar'))
+    #=>[b'0:00', b'1:00', b'2:00]
+    print(redis.hget('bar', '0:00'))
+    #=>b'5'
+    #+END_SRC
+    #+REVEAL_HTML: </div></div>
+
 * redisの使いどころ
 ** 有効期限のあるデータ
 keyに対して有効期限を設定できる
