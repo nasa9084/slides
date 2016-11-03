@@ -69,3 +69,11 @@
 .reveal table tr td:first-child {
     text-align: left;
 }
+
+.reveal .flex-container {
+    display: flex;
+}
+
+.reveal .flex-container div {
+    flex: 1;
+}
