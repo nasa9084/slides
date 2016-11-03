@@ -8,6 +8,9 @@
 
 * I'm...
   #+REVEAL_HTML: <div style="float: left;">
+  :PROPERTIES:
+  :reveal_background: img/ikura.jpg
+  :END:
   file:img/pika.jpg
   #+REVEAL_HTML: </div>
 
