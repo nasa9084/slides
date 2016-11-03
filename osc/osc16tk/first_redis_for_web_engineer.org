@@ -6,8 +6,8 @@
 #+TITLE: Webエンジニアのためのはじめてのredis
 #+AUTHOR: @nasa9084
 
-* I'm...
   #+REVEAL_HTML: <div style="float: left;">
+* $ whoami
   :PROPERTIES:
   :reveal_background: img/ikura.jpg
   :END:
