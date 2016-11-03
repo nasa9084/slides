@@ -20,6 +20,7 @@
   - *コンピュータサイエンスコース*
   - *情報認識学研究室*
   #+REVEAL_HTML: </div>
+*KEYWORDS: emacs python お酒*
 
   - 北村壮大 (Masahiro Kitamura)
   - @nasa9084
