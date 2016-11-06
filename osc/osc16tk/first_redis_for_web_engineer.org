@@ -347,7 +347,7 @@ Redisの中でも特徴的な型
     #+REVEAL_HTML: </div><div>
     *python*
     #+BEGIN_SRC python
-    from redis import Redis()
+    from redis import Redis
 
     redis = Redis()
     redis.hset('bar', '0:00', '5')
