@@ -380,6 +380,11 @@ keyの期限をtimestampにする
 
 #+ATTR_REVEAL: :frag (appear)
 *RDBMSだと少し面倒*
+
+*** 例えば
+- Session ID
+- One Time Token
+
 *** Sample Code
 #+BEGIN_SRC python
 from redis import Redis
