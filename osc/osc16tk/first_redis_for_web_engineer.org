@@ -378,6 +378,8 @@ EXPIREAT key timestamp
 #+END_SRC
 keyの期限をtimestampにする
 
+#+ATTR_REVEAL: :frag (appear)
+*RDBMSだと少し面倒*
 *** Sample Code
 #+BEGIN_SRC python
 from redis import Redis
