@@ -474,4 +474,14 @@ https://github.com/nasa9084/samples.git
 $ docker run redis
 #+END_SRC
 
-* Conclusion
+* まとめ
+*redisはいいぞ*
+
+** あらためて まとめ
+- in-memory KVS
+- 永続化もできる
+- データ型が豊富
+  + String, List, Set, Hash, SortedSet
+- SQLを書くのも面倒なデータに便利
+  + Session IDとか
+- try redisなどで試せる
