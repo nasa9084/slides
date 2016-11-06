@@ -279,8 +279,41 @@ memcachedと比較して型が多いのがredisの特徴
 #+BEGIN_NOTES
 Redisの中でも特徴的な型
 - 中間要素へのアクセスが高速
-- サンプルは後で
 #+END_NOTES
+
+*** Sorted Set (ZSet)
+    #+REVEAL_HTML: <div class="flex-container"><div>
+    *redis*
+    #+BEGIN_SRC redis
+    > ZADD bar 20 ham
+    (integer) 1
+    > ZADD bar 10 egg
+    (integer) 1
+    > ZADD bar 30 spam
+    (integer) 1
+    > ZRANGE bar 0 -1 WITHSCORES
+    1) "egg"
+    2) "10"
+    3) "ham"
+    4) "20"
+    5) "spam"
+    6) "30"
+    #+END_SRC
+    #+REVEAL_HTML: </div><divo>
+    *python*
+    #+BEGIN_SRC python
+    from redis import Redis
+
+    redis = Redis()
+    redis.zadd('bar', 'ham', 20)
+    redis.zadd('bar', 'egg', 10)
+    redis.zadd('bar', 'spam', 30)
+    print(
+        redis.zrange('bar', 0, -1, withscores=True)
+    )
+    #=>[(b'egg', 10.0), (b'ham', 20.0), (b'spam', 30.0)]
+    #+END_SRC
+    #+REVEAL_HTML: </div>
 
 ** Hash
    file:img/hash.png
