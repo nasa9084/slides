@@ -267,7 +267,6 @@ memcachedと比較して型が多いのがredisの特徴
 和集合・積集合・差集合演算もできる
 #+END_NOTES
 
-
 ** Sorted Set (ZSet)
    file:img/zset.png
 
