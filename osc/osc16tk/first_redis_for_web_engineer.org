@@ -55,6 +55,8 @@
      + *永続化もできる*
    - 簡単・速い
      + Python, Ruby等と相性◎
+     #+ATTR_REVEAL: :frag (appear)
+     →Web技術者は学んで損はない！
 
 #+BEGIN_NOTES
 - BSD license
