@@ -95,6 +95,22 @@ file:img/comp_rdb_kvs.png
 - トランザクションがないので
 #+END_NOTES
 
+** memcachedとの比較
+
+|                | memcached  | redis        |
+|----------------+------------+--------------|
+| 得意なデータ   | キャッシュ | キャッシュ   |
+| データ型       | 文字列のみ | いろいろ     |
+| 永続化         | ×         | ○           |
+| ディスクIO     | 行わない   | 無効化できる |
+| 速度           | 高速       | 高速         |
+| マルチスレッド | ○         | ×           |
+| メモリ効率     | △         | ○           |
+
+#+BEGIN_NOTES
+- スレッド単位ではmemcachedとredisは同程度
+#+END_NOTES
+
 * Redisのデータ型
 #+BEGIN_NOTES
 memcachedと比較して型が多いのがredisの特徴
