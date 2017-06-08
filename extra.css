@@ -32,7 +32,6 @@
 }
 
 .reveal .figure img[alt*="pika"] {
-    border: gray 10px solid;
     margin-left: 2em;
 }
 
@@ -43,6 +42,7 @@
 .reveal section img {
     background: none;
     box-shadow: none;
+    border: none;
 }
 
 .reveal .figure img[alt="redis.png"] {
