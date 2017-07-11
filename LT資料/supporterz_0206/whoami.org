@@ -1,0 +1,117 @@
+#+REVEAL_ROOT: ../reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: reveal_mathjax:t
+#+OPTIONS: toc:0
+#+OPTIONS: num:nil
+#+REVEAL_THEME: sky
+#+TITLE: 自己紹介
+#+AUTHOR: M.Kitamura
+#+EMAIL:
+
+* 基本データ
+#+REVEAL_HTML: <div style="float:left;">
+[[./pika.jpg]]
+#+REVEAL_HTML: </div>
+- 名前 ::
+  + 北村壮大 : Masahiro Kitamura
+  + HN: @nasa9084
+- 年齢 :: 0x16歳
+- 所属 ::
+  + 北海道大学
+  + 工学部
+  + 情報エレクトロニクス学科
+  + コンピュータサイエンスコース
+  + 情報認識学研究室
+
+** keyword
+- *emacs*
+- python
+- 読書
+- 美味しいお酒
+- 美味しいお酒
+- 美味しい食べ物
+
+* アルバイト
+- キリンビール園アーバン札幌店
+  + 約三年半
+- BAR PROOF
+  + 現在
+* コミュニティ活動
+- 主催
+  + *でじぽろ*
+  + 初心者向けバイナリ勉強会
+- 今後の活動
+  + Haskell勉強会(hs.hs)
+  + Python勉強会
+  + OSC 2016
+  + PyConJP 2016
+
+** でじぽろ
+[[./digiporo_logo.png]]
+- 「なんでもやる」IT勉強会
+- 初心者向け
+- 他の勉強会への足がかり
+- 月一回開催
+http://digiporo.connpass.com/
+
+** Haskell勉強会
+#+REVEAL_HTML: <img src="./hshs.png" style="border:none;">
+
+Hokkaido Sapporo Haskell
+
+#+ATTR_REVEAL: :frag (appear)
+→hs.hs と命名
+
+#+ATTR_REVEAL: :frag (appear)
+2月14日に第一回を開催予定
+#+ATTR_REVEAL: :frag (appear)
+http://hshs.connpass.com/
+
+* 制作経験
+** 学生実験
+- Oculus Rift DK2を使った実験
+[[./orift.jpg]]
+- SR観光アプリケーション
+  + C#を使用して開発
+  + 主に開発担当
+
+** Global Game Jam 2016 Sapporo
+#+REVEAL_HTML: <div style="float:left;">
+[[./roque.png]]
+#+REVEAL_HTML: </div><div style="margin-top:4em;">
+
+世界最大のGameJam
+
+全世界で同時にゲームを制作
+
+48時間でデプロイ
+
+Javascript/enchant.js
+
+#+REVEAL_HTML:</div>
+** Webサービス自動インストーラスクリプト
+
+Shell Script(bash)
+
+- Wordpress
+- Redmine
+
+友人のサーバーで動作
+** 欠席届生成スクリプト
+シェルスクリプト+pLaTeXで作成
+
+ダイアログ形式で入力
+
+↓
+
+PDFで欠席届生成
+#+ATTR_REVEAL: :frag (appear)
+*コース内で活用*
+** SNS制作 (現在進行中)
+友人と酒飲みSNSを作成
+
+- メールアドレスのドメインで範囲を限定
+  + hokudai.ac.jp
+- 今から呑める人募集SNS
+
+* THANK YOU!

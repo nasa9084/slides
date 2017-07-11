@@ -1,0 +1,82 @@
+#+REVEAL_ROOT: ../digi-poro/reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#+OPTIONS: reveal_mathjax:t
+#+OPTIONS: toc:0
+#+OPTIONS: num:nil
+#+REVEAL_THEME: night
+#+TITLE: I LOVE emacs
+#+AUTHOR: nasa9084
+#+EMAIL:
+
+* 自己紹介
+#+REVEAL_HTML: <div style="float:left;">
+[[./pika.jpg]]
+#+REVEAL_HTML: </div>
+- 名前
+  + 北村壮大 : Masahiro Kitamura
+  + HN : nasa9084
+- 所属
+  + 北海道大学
+  + 工学部
+  + 情報エレクトロニクス学科
+  + コンピュータサイエンスコース
+  + 情報認識学研究室
+- 0x16歳
+- お酒大好き
+  + 誘ってくれたら嬉しい
+
+* emacs
+PC上での作業は大体できるすごいエディタ
+
+* twitter
+** プログラミング中にtwitter見たい！
+** 普通なら・・・
+- エディタ最小化
+- ブラウザ立ち上げる
+- http://twitter.com/ 開く
+- 見る
+- ブラウザ閉じる
+- エディタに戻る
+
+** emacsなら！
+- M-x twit
+- 見る
+- C-b RET
+
+* ディレクトリ操作
+** 例えば
+** 編集中のファイルの名前を変更したい！
+** 普通なら・・・
+- エディタ閉じる
+- リネーム
+- ファイル開き直す
+- 編集している場所まで戻る
+
+** emacsなら！
+- M-x dired :: ディレクトリ操作画面
+- R :: リネームをする
+- C-b RET :: 戻る
+
+* TeX
+** 論文・レポートでTeX(LaTeX)
+** コンパイルが必要
+** 普通なら・・・
+- エディタ最小化
+- 端末開く
+- ディレクトリ移動
+- platex hoge.tex
+- xdvi hoge.dvi
+
+** emacsなら！
+- C-t j
+- C-t p RET
+
+* IN SHORT :: emacs大好き！
+
+* 番宣
+** でじぽろ
+[[./digiporo_logo.png]]
+** 大体月一開催
+** 参加者募集中
+** 発表者募集中
+* THANK YOU!
