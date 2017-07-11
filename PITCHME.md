@@ -26,4 +26,4 @@
   - **Having  persistence**
 * Easy and Fast
 * Compatible w/Python, Ruby, and so on
-- web engineers should learn redis! |
+<span style="color: #e49436;" class="fragment">web engineers should learn redis!</span>
