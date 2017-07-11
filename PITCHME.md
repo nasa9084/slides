@@ -46,7 +46,7 @@ Note:
 
 +++
 
-compare with RDBSMSs
+#### compare with RDBSMSs
 
 | Function                | RDBMS | Redis |
 |:-----------------------:|:-----:|:-----:|
