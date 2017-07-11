@@ -11,11 +11,11 @@
 
 # redis
 
----
++++
 
 ## DO YOU KNOW REDIS?
 
----
++++?image=assets/redis_background.png
 
 ## what is "redis"?
 
