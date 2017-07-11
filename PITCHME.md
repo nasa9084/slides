@@ -46,7 +46,7 @@ Note:
 
 +++
 
-#### Comparison with RDBMSs
+compare with RDBSMSs
 
 | Function                | RDBMS | Redis |
 |:-----------------------:|:-----:|:-----:|
