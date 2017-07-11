@@ -33,3 +33,13 @@ Note:
 * BSD license
 * implemented with C
 * latest stable version is 3.2.9
+
++++
+
+## Key-Value Store (KVS)
+### LIKE...
+
+* dict (Python)
+* hash (Perl, Ruby)
+* map(C++, Java, Go)
+* namespaces
