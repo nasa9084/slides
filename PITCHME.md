@@ -3,7 +3,7 @@
 
 ---
 
-## $whoami
+## $ whoami
 ### @nasa9084
 ![ICON](assets/pika.jpg)
 
