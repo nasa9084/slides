@@ -23,7 +23,7 @@
 * a kind of Key-Value Store (KVS)
   - **Varied Data Structure**
 * In-Memory
-  - **Having  persistence***
+  - **Having  persistence**
 * Easy and Fast
 * Compatible w/Python, Ruby, and so on
 - web engineers should learn redis! |
