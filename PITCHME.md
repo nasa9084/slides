@@ -43,3 +43,18 @@ Note:
 * hash (Perl, Ruby)
 * map(C++, Java, Go)
 * namespaces
+
++++
+
+## Comparison with RDBMSs
+
+| Function                | RDBMS | Redis |
+|:-----------------------:|:-----:|:-----:|
+| using simply            | △    | ◎    |
+| high speed processing   | △    | ◎    |
+| horizontal distribution | ×    | ◎    |
+| high availability       | △    | ◎    |
+| persistency             | ◎    | ○    |
+| complex query           | ◎    | ×    |
+| transaction             | ◎    | △    |
+| consistency             | ◎    | △    |
