@@ -48,8 +48,6 @@ Note:
 
 #### compare with RDBSMSs
 
-<div style="font-size: .8em;">
-
 | Function                | RDBMS | Redis |
 |:-----------------------:|:-----:|:-----:|
 | using simply            | △    | ◎    |
@@ -60,5 +58,3 @@ Note:
 | complex query           | ◎    | ×    |
 | transaction             | ◎    | △    |
 | consistency             | ◎    | △    |
-
-</div>
