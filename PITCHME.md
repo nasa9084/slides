@@ -58,3 +58,7 @@ Note:
 | complex query           | ◎    | ×    |
 | transaction             | ◎    | △    |
 | consistency             | ◎    | △    |
+
+Note:
+- クラスタリングをネイティブサポートしている
+- マスター・スレーブ構成をサポート
