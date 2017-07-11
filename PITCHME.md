@@ -15,3 +15,15 @@
 
 ## DO YOU KNOW REDIS?
 
+---
+
+## what is "redis"?
+
+* REmote DIctionary Server
+* a kind of Key-Value Store (KVS)
+  - **Varied Data Structure**
+* In-Memory
+  - **Having  persistence***
+* Easy and Fast
+* Compatible w/Python, Ruby, and so on
+- web engineers should learn redis! |
