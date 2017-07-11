@@ -10,3 +10,8 @@
 ---?image=assets/redis_background.png
 
 # redis
+
+---
+
+## DO YOU KNOW REDIS?
+
