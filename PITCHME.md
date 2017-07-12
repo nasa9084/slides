@@ -357,6 +357,35 @@ Note:
 Note:
 - 二重になっているだけで、Stringと同様の操作ができる
 
++++
+
+### Sample
+
+``` python
+from redis imort Redis
+
+redis = Redis()
+redis.hset('status', 404, 'Not Found')
+print(redis.hgetall('status'))
+#=>{b'404': b'Not Found'}
+add_dict = {
+    200: 'OK',
+    500: 'Internal Server Error'
+}
+redis.hmset('status', add_dict)
+print(redis.hkeys('status'))
+#=>[b'404', b'200', b'500']
+print(redis.hget('status', '200'))
+#=>b'OK'
+```
+
+@[4](`HSET status 404 "Not Found"`)
+@[5-6](`HGETALL status`: return dict(key and value is bytes))
+@[7-10](define dict)
+@[11](`HMSET status 200 OK 500 "Internal Server Error"`)
+@[12-13](`HKEYS status`: return list of keys)
+@[14-15](`HGET status 200`: return bytes)
+
 ---
 
 ## other feature
