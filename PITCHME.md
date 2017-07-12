@@ -287,8 +287,7 @@ class User:
 
 ``` python
 while True:
-    print('input member:score> ', end='')
-    ipt = input()
+    ipt = input('input member:score> ')
     if ipt == 'show':
         ranking = redis.zrange('ranking:', 0, 5, withscores=True)[::-1]
         for i, m in enumerate(ranking):
