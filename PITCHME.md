@@ -177,7 +177,7 @@ Note:
 
 ### COMMANDS
 
-* `LPUSH key value [value...]` / `RPUSH key value [value...]`
+* `LPUSH key value [values]` / `RPUSH key value [values]`
   - Prepend value / append value
 * `LLEN key`
   - Get the length of list
