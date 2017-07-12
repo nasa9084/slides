@@ -1,3 +1,4 @@
 *.html
 !/digiporo/#11/framework.html
 !/digiporo/#10/hubotmaker.html
+.DS_Store
