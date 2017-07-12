@@ -67,15 +67,15 @@ Note:
 
 #### compare with memcached
 
-|                   | memcached   | redis            |
-|:-----------------:|:-----------:|:----------------:|
-| good at           | Cache       | Cache            |
-| data structure    | only string | varied structure |
-| persistency       | ×          | ○               |
-| Disk I/O          | NOT DO      | can be disable   |
-| speed             | high        | high             |
-| multi thread      | ○          | ×               |
-| memory efficiency | △          | ○               |
+|                   | memcached   | redis          |
+|:-----------------:|:-----------:|:--------------:|
+| good at           | Cache       | Cache          |
+| data structure    | only string | varied types   |
+| persistency       | ×          | ○             |
+| Disk I/O          | NOT DO      | can be disable |
+| speed             | high        | high           |
+| multi thread      | ○          | ×             |
+| memory efficiency | △          | ○             |
 
 Note:
 - スレッド他院委ではmemcachedとredisは同程度の速度
