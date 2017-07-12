@@ -98,9 +98,9 @@ $ docker run -it --link rds-svr:redis --rm redis redis-cli -h redis -p 6379
 @[2](redisサーバコンテナの立ちあげ)
 @[3](redis-cliをコンテナ内で実行)
 
-+++?image=assets/try_redis.png
-
 ### try.redis.io
+
+![TRY REDIS](assets/try_redis.png)
 
 Note:
 - チュートリアルも搭載
