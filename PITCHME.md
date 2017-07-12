@@ -217,4 +217,4 @@ Note:
 * Having persistency
 * Having Varied data type
   - String, List, Set, Hash, SortedSet
-* Try out on `try.redis.io` or using official docker container
+* Try out on `try.redis.io` or official docker container
