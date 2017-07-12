@@ -88,6 +88,16 @@ Note:
 
 ### with Docker
 
+```
+$ docker pull redis:latest
+$ docker run -d --name rds-svr redis
+$ docker run -it --link rds-svr:redis --rm redis redis-cli -h redis -p 6379
+```
+
+@[1](`docker pull redis:alpine`でも可)
+@[2](redisサーバコンテナの立ちあげ)
+@[3](redis-cliをコンテナ内で実行)
+
 ---
 
 ## Redis Data Type
