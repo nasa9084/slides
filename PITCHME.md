@@ -192,6 +192,17 @@ Note:
 
 ---
 
+## Lua Scripts
+
+* Lua 5.1 interpreter is built into redis
+* using `EVAL` command
+* you can issue more complex query
+
+Note:
+- from 2.6
+
+
+---
 
 ## redis security
 
