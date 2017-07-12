@@ -229,6 +229,17 @@ Note:
 
 +++
 
+### COMMANDS
+
+* `ZADD key score member`
+* `ZRANK key member`
+  - Determine the index of a member in a sorted set
+
+Note:
+- ListやSetと同様のこともだいたいできる
+
++++
+
 ## Hash
 
 * String tto String map
