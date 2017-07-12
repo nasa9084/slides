@@ -312,6 +312,26 @@ Note:
 
 +++
 
+### Sample
+
+``` python
+from redis import Redis
+
+redis = Redis()
+redis.zadd('bar', 'ham', 20)
+redis.zadd('bar', 'egg', 10)
+redis.zadd('bar', 'spam', 30)
+print(redis.zrange('bar', 0, -1))
+#=>[b'egg', b'ham', b'spam']
+```
+
+@[4](`ZADD bar ham 20`)
+@[5](`ZADD bar egg 10`)
+@[6](`ZADD bar spam 30`)
+@[7-8](return list sorted by score)
+
++++
+
 ## Hash
 
 * String to String map
