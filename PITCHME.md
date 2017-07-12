@@ -99,9 +99,9 @@ $ docker run -d --name rds-svr redis
 $ docker run -it --link rds-svr:redis --rm redis redis-cli -h redis -p 6379
 ```
 
-@[1](`docker pull redis:alpine`でも可)
-@[2](redisサーバコンテナの立ちあげ)
-@[3](redis-cliをコンテナ内で実行)
+@[1](it's ok: `docker pull redis:alpine`)
+@[2](run redis server container)
+@[3](exec redis-cli command line tool)
 
 +++
 
@@ -177,14 +177,14 @@ Note:
 
 ### COMMANDS
 
-* `LPUSH key value [values]` / `RPUSH key value [values]`
+* `LPUSH key value(s)` / `RPUSH key value(s)`
   - Prepend value / append value
 * `LLEN key`
   - Get the length of list
 * `LPOP key`
   - Remove and return first elem of list
 * `RPOPLPUSH source destination`
-  - remove and return last elem of source list and prepend it to destination list
+  - Remove and return last elem of source list and prepend it to destination list
 
 +++
 
@@ -200,6 +200,18 @@ Note:
 - ハッシュ表を用いて実装されている
 - リサイズは同期操作
   + 巨大なセットを扱う時は注意
+
++++
+
+### COMMANDS
+
+* `SADD key member(s)`
+* `SCARD key`
+  - Get the number of members in a set
+* `SDIFF key(s)` / `SINTR key(s)` / `SUNION key(s)`
+  - Subtract / Intersect / Union
+* `SISMEMBER key value`
+  - Determine if a given value is a member of a set
 
 +++
 
