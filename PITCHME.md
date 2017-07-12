@@ -201,6 +201,25 @@ Note:
 
 ---
 
+## useful commands
+
++++
+
+### EXPIRES
+
+* `EXPIRE key seconds`
+  - set a timeout on key
+  - the key will auto-deleted after given seconds
+* `EXPIREAT key timestamp`
+  - the key will auto-deleted at given time
+
+* `PEXPIRE key milliseconds`
+  - set a timeout with milliseconds
+* `PEXPIREAT key timestamp`
+  - set a timeout with milliseconds-accuracy
+
+---
+
 ## Lua Scripts
 
 * Lua 5.1 interpreter is built into redis
