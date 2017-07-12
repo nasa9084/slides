@@ -179,7 +179,7 @@ print(redis.get('point')) #=> b'11'
 
 @[3](default connection: localhost:6379)
 @[4](`SET hoge fuga`)
-@[5](`GET hoge`: return bytes)
+@[5-6](`GET hoge`: return bytes)
 @[7](`SET point 10`)
 @[8](`GET point`: return **bytes**)
 @[9](`INCR point`: increment `point`)
@@ -229,9 +229,9 @@ print(redis.lrange('piyo', 0, -1))
 ```
 
 @[4](`RPUSH piyo 1 2 3`)
-@[5](`LRANGE piyo 0 -1`: return list of bytes<br>-1 means 'last index')
-@[7](`LPOP piyo`: return bytes)
-@[9](1 is removed)
+@[5-6](`LRANGE piyo 0 -1`: return list of bytes<br>-1 means 'last index')
+@[7-8](`LPOP piyo`: return bytes)
+@[9-10](1 is removed)
 
 +++
 
@@ -280,10 +280,11 @@ print(redis.sinter('foo', 'bar'))
 ```
 
 @[4](`SADD foo 1 3 5`)
-@[5](`SMEMBERS foo`: return set of bytes)
+@[5-6](`SMEMBERS foo`: return set of bytes)
 @[7](`SADD foo 1`)
-@[8](1 is not added)
-@[9](`SINTER foo bar`: return intersect set)
+@[8-9](1 is not added)
+@[10](`SADD bar 5 10 15`)
+@[11-12](`SINTER foo bar`: return intersect set)
 
 +++
 
