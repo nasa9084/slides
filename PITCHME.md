@@ -252,6 +252,33 @@ Note:
 
 ---
 
+## Usecases
+
++++
+
+### Using `EXPIRE`
+
+``` python
+from redis import Redis
+from uuid import uuid4
+
+class User:
+    self.name = 'username'
+    self.token = None
+
+    def generate_token(self):
+        redis = Redis(host='localhost', port=6389)
+        if redis.exists(self.token):
+            return self.token
+        new_token = str(uuid4())
+        ttl = 10 * 60 * 60
+        redis.setex(new_token, self.name, ttl)
+        self.token = new_token
+        return self.token
+```
+
+---
+
 ## IN CONCLUSION
 ### redis is...
 
