@@ -22,6 +22,10 @@ https://gitpitch.com/nasa9084/slides/osc17do
 
 +++
 
+# 🤔
+
++++
+
 ## what is "redis"?
 
 * <span style="color: #c6302b;">RE</span>mote <span style="color: #c6302b;">DI</span>ctionary <span style="color: #c6302b;">S</span>erver
@@ -392,7 +396,7 @@ print(redis.hget('status', '200'))
 
 +++
 
-### Geo commands
+### Geo commands🌎
 
 * `GEOADD key longitude latitude member`
   - Add geospatial items in the geospatial index represented
@@ -516,3 +520,7 @@ print('good bye')
 ---
 
 # Do you have any questions?
+
++++
+
+# THANK YOU!
