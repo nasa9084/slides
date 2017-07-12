@@ -251,6 +251,19 @@ Note:
 Note:
 - 少ないフィールドのhashはメモリ効率が良い
 
++++
+
+### COMMANDS
+
+* `HSET key field value`
+* `HGETALL key`
+  - Get all the fields and values in a hash
+* `HVALS key`
+  - Get all the values in a hash
+
+Note:
+- 二重になっているだけで、Stringと同様の操作ができる
+
 ---
 
 ## useful commands
