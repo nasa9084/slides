@@ -393,11 +393,4 @@ print('good bye')
 
 ---
 
-## IN CONCLUSION
-### redis is...
-
-* In-Memory Key-Value Store
-* Having persistency
-* Having Varied data type
-  - String, List, Set, Hash, SortedSet
-* Try out on `try.redis.io` or official docker container
+# Do you have any questions?
