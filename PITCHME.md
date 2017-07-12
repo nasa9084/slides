@@ -286,8 +286,6 @@ class User:
 #### Real time ranking
 
 ``` python
-# ... import and define variable
-
 while True:
     print('input member:score> ', end='')
     ipt = input()
@@ -305,6 +303,9 @@ while True:
     redis.zadd('ranking', member, int(score))
 print('good bye')
 ```
+
+@[0](import and definition is omitted)
+@[15](add to sorted set)
 
 ---
 
