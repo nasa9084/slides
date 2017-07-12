@@ -213,10 +213,11 @@ Note:
 * `EXPIREAT key timestamp`
   - the key will auto-deleted at given time
 
-* `PEXPIRE key milliseconds`
-  - set a timeout with milliseconds
-* `PEXPIREAT key timestamp`
-  - set a timeout with milliseconds-accuracy
+### RAMDOMKEY
+
+* `RANDOMKEY`
+  - returns a random key
+  - $\mathcal{O}(1)$
 
 ---
 
