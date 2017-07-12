@@ -1,4 +1,4 @@
-## Webエンジニアのための<br>はじめてのredis
+## First Redis for Web Engineers
 ### @nasa9084
 
 ---
