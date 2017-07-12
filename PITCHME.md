@@ -82,6 +82,14 @@ Note:
 
 ---
 
+## try out redis
+
++++?image=assets/docker.png
+
+### with Docker
+
+---
+
 ## Redis Data Type
 
 Note:
