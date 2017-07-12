@@ -112,6 +112,15 @@ $ docker run -it --link rds-svr:redis --rm redis redis-cli -h redis -p 6379
 Note:
 - チュートリアルも搭載
 
++++
+
+## HELP
+
+* you can use `HELP` command
+  - help for specific command: `HELP COMMAND`
+  - help for command group: `HELP @<GROUP>`
+    + e.g.) `HELP @generic`
+
 ---
 
 ## Redis Data Type
