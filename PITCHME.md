@@ -150,8 +150,8 @@ Note:
 
 * List of Strings
 * Implemented with Linked List
-  - insert / access to head or tail: $O(1)$
-  - access to mid: $O(N)$
+  - insert / access to head or tail: $\mathcal{O}(1)$
+  - access to mid: $\mathcal{O}(N)$
 * max size: $2^{32}-1$ elems.
 
 Note:
@@ -164,7 +164,7 @@ Note:
 * Set of Strings
   - un-ordered
   - no duplication
-* add / delete / access avarage: $O(1)$
+* add / delete / access avarage: $\mathcal{O}(1)$
 * max size: $2^{32}-1$ elems.
 
 Note:
@@ -179,8 +179,8 @@ Note:
 * Set of Strings
   - no duplication
 * each members are ordered with its score
-* take score: $O(1)$
-* add: $O(\log{N})$
+* take score: $\mathcal{O}(1)$
+* add: $\mathcal{O}(\log{N})$
 
 Note:
 - redisの型の内、最も特徴的
@@ -193,7 +193,7 @@ Note:
 * String tto String map
   - Java: `HashMap<String, String>`
   - Go: `map[string]string`
-* add / delete / access: $O(1)$
+* add / delete / access: $\mathcal{O}(1)$
 * max size: $2^{32}-1$ pairs
 
 Note:
@@ -212,6 +212,8 @@ Note:
   - the key will auto-deleted after given seconds
 * `EXPIREAT key timestamp`
   - the key will auto-deleted at given time
+
++++
 
 ### RAMDOMKEY
 
