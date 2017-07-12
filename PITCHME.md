@@ -162,6 +162,31 @@ Note:
 
 +++
 
+### Sample
+
+``` python
+from redis import Redis
+
+redis = Redis()
+redis.set('hoge', 'fugafuga')
+print(redis.get('hoge')) #=> b'fugafuga'
+
+redis.set('point', 10)
+print(redis.get('point')) #=> b'10'
+redis.incr('point')
+print(redis.get('point')) #=> b'11'
+```
+
+@[3](default connection: localhost:6379)
+@[4](`SET hoge fuga`)
+@[5](`GET hoge`: return bytes)
+@[7](`SET point 10`)
+@[8](`GET point`: return **bytes**)
+@[9](`INCR point`: increment `point`)
+@[10](returned value is incremented)
+
++++
+
 ## List
 
 * List of Strings
