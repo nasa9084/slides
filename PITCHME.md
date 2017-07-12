@@ -268,6 +268,24 @@ Note:
 
 ## other feature
 
++++
+
+### Geo commands
+
+* `GEOADD key longitude latitude member`
+  - Add geospatial items in the geospatial index represented
+* `GEODIST key member1 member2`
+  - Returns the distance between two members of a geospatial index
+* `GEORADIUS key longitude latitude radius m|km|ft|mi`
+  - Query to fetch members matching a given maximum distance from a point
+
+Note:
+- 3.2.0から追加
+- 内部的にはsorted set
+- 緯度経度に制限あり
+  + 妥当な経度は、-180°〜180°
+  + 妥当な緯度は、-85.05112878°〜85.05112878°
+
 
 +++
 
@@ -287,7 +305,7 @@ Note:
   - returns a random key
   - $\mathcal{O}(1)$
 
----
++++
 
 ## Lua Scripts
 
@@ -298,8 +316,7 @@ Note:
 Note:
 - from 2.6
 
-
----
++++
 
 ## redis security
 
