@@ -213,6 +213,28 @@ Note:
 
 +++
 
+### Sample
+
+``` python
+from redis import Redis
+
+redis = Redis()
+redis.rpush('piyo', 1, 2, 3)
+print(redis.lrange('piyo', 0, -1))
+#=> [b'1', b'2', b'3']
+print(redis.lpop('piyo'))
+#=> b'1'
+print(redis.lrange('piyo', 0, -1))
+#=> [b'2', b'3']
+```
+
+@[4](`RPUSH piyo 1 2 3`)
+@[5](`LRANGE piyo 0 -1`: return list of bytes<br>-1 means 'last index')
+@[7](`LPOP piyo`: return bytes)
+@[9](1 is removed)
+
++++
+
 ## Set
 
 * Set of Strings
