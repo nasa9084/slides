@@ -79,3 +79,36 @@ Note:
 
 Note:
 - スレッド他院委ではmemcachedとredisは同程度の速度
+
+---
+
+## Redis Data Type
+
+Note:
+- memcachedと比較して方が多いのがredisの特徴
+
++++
+
+## String
+
+* String
+  - replace
+  - get length
+* Number
+  - `INCR` / `DECR`
+* max: 512MB
+* Binary Safe
+  - you can insert pictures
+
+Note:
+- 最も基本の型
+
++++
+
+## List
+
+* List of Strings
+* Implemented with Linked List
+  - insert / access to head or tail: $$O(1)$$
+  - access to mid: $$O(N)$$
+* max size: $$2^{32}-1$$ elems.
