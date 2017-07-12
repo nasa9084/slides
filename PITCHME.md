@@ -263,9 +263,7 @@ from redis import Redis
 from uuid import uuid4
 
 class User:
-    self.name = 'username'
-    self.token = None
-
+    # ... some member variables
     def generate_token(self):
         redis = Redis(host='localhost', port=6389)
         if redis.exists(self.token):
