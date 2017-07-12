@@ -304,8 +304,8 @@ print('good bye')
 ```
 
 @[0](import and definition is omitted)
-@[5](`ZRANGE key start end [WITHSCORES]`)
-@[15](add to sorted set)
+@[4](`ZRANGE key start end [WITHSCORES]`)
+@[14](add to sorted set)
 
 ---
 
