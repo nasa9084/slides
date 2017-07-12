@@ -255,10 +255,35 @@ Note:
 * `SADD key member(s)`
 * `SCARD key`
   - Get the number of members in a set
-* `SDIFF key(s)` / `SINTR key(s)` / `SUNION key(s)`
+* `SDIFF key(s)` / `SINTER key(s)` / `SUNION key(s)`
   - Subtract / Intersect / Union
 * `SISMEMBER key value`
   - Determine if a given value is a member of a set
+
++++
+
+### Sample
+
+``` python
+from redis import Redis
+
+redis = Redis()
+redis.sadd('foo', 1, 3, 5)
+print(redis.smembers('foo'))
+#=> {b'3', b'5', b'1'}
+redis.sadd('foo', 1)
+print(redis.smembers('foo'))
+#=> {b'3', b'5', b'1'}
+redis.sadd('bar', 5, 10, 15)
+print(redis.sinter('foo', 'bar'))
+#=> {b'5'}
+```
+
+@[4](`SADD foo 1 3 5`)
+@[5](`SMEMBERS foo`: return set of bytes)
+@[7](`SADD foo 1`)
+@[8](1 is not added)
+@[9](`SINTER foo bar`: return intersect set)
 
 +++
 
