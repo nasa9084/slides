@@ -146,6 +146,22 @@ Note:
 
 +++
 
+### COMMANDS
+
+* `SET key value` / `GET key`
+* `APPEND key value`
+* `INCR key` / `INCRBY key increment`
+  - Increment the integer value of a key
+* `STRLEN key`
+  - Get the length of string
+* `BITOP operation destkey key [key...]`
+  - Perform bitwise operations between strings
+
+Note:
+- `AND` / `OR` / `XOR` / `NOT`が使える
+
++++
+
 ## List
 
 * List of Strings
@@ -156,6 +172,19 @@ Note:
 
 Note:
 - $2^{32}-1$ = 約42億
+
++++
+
+### COMMANDS
+
+* `LPUSH key value [value...]` / `RPUSH key value [value...]`
+  - Prepend value / append value
+* `LLEN key`
+  - Get the length of list
+* `LPOP key`
+  - Remove and return first elem of list
+* `RPOPLPUSH source destination`
+  - remove and return last elem of source list and prepend it to destination list
 
 +++
 
