@@ -269,11 +269,17 @@ class User:
         if redis.exists(self.token):
             return self.token
         new_token = str(uuid4())
-        ttl = 10 * 60 * 60
+        ttl = 10 * 60 * 60 # 10 minutes
         redis.setex(new_token, self.name, ttl)
         self.token = new_token
         return self.token
 ```
+
+@[1](`$ pip install redis`)
+@[7](configure connection)
+@[8-9](check key existential)
+@[11](TTL unit is `seconds`)
+@[12](set new key-value with expire)
 
 ---
 
