@@ -24,7 +24,7 @@ https://gitpitch.com/nasa9084/slides/osc17do
 
 ## what is "redis"?
 
-* REmote DIctionary Server
+* <span style="color: #c6302b;">RE</span>mote <span style="color: #c6302b;">DI</span>ctionary <span style="color: #c6302b;">S</span>erver
 * a kind of Key-Value Store (KVS)
   - **Varied Data Structure**
 * In-Memory
