@@ -189,3 +189,14 @@ Note:
 
 Note:
 - 少ないフィールドのhashはメモリ効率が良い
+
+---
+
+## IN CONCLUSION
+### redis is...
+
+* In-Memory Key-Value Store
+* Having persistency
+* Having Varied data type
+  - String, List, Set, Hash, SortedSet
+* Try out on `try.redis.io` or using official docker container
