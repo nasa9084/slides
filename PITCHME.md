@@ -86,7 +86,7 @@ Note:
 
 +++?image=assets/docker.png
 
-### with Docker
+### with Docker container(official)
 
 ```
 $ docker pull redis:latest
@@ -97,6 +97,13 @@ $ docker run -it --link rds-svr:redis --rm redis redis-cli -h redis -p 6379
 @[1](`docker pull redis:alpine`でも可)
 @[2](redisサーバコンテナの立ちあげ)
 @[3](redis-cliをコンテナ内で実行)
+
++++?image=assets/try_redis.png
+
+### try.redis.io
+
+Note:
+- チュートリアルも搭載
 
 ---
 
