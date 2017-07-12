@@ -3,6 +3,11 @@
 
 ---
 
+### this slide
+https://gitpitch.com/nasa9084/slides/osc17do
+
+---
+
 ## $ whoami
 ### @nasa9084
 ![ICON](assets/pika.jpg)
