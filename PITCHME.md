@@ -242,7 +242,7 @@ Note:
 
 ## Hash
 
-* String tto String map
+* String to String map
   - Java: `HashMap<String, String>`
   - Go: `map[string]string`
 * add / delete / access: $\mathcal{O}(1)$
