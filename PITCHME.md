@@ -192,6 +192,24 @@ Note:
 
 ---
 
+
+## redis security
+
+https://redis.io/topics/security
+
+* Protected Mode(default)
+  - only replies to from loopback interface
+* Disable some command
+  - `rename-command`
+* Authentication feature
+  - `AUTH`
+
+Note:
+- 予想できない任意の名称にするか空文字列に当てる
+- AUTHも暗号化されないので注意(ただの冗長化レイヤ)
+
+---
+
 ## IN CONCLUSION
 ### redis is...
 
