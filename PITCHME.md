@@ -111,4 +111,4 @@ Note:
 * Implemented with Linked List
   - insert / access to head or tail: $$O(1)$$
   - access to mid: $$O(N)$$
-* max size: $$2^{32}-1$$ elems.
+* max size: $2^{32}-1$ elems.
