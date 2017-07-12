@@ -112,3 +112,48 @@ Note:
   - insert / access to head or tail: $O(1)$
   - access to mid: $O(N)$
 * max size: $2^{32}-1$ elems.
+
+Note:
+- $2^{32}-1$ = 約42億
+
++++
+
+## Set
+
+* Set of Strings
+  - un-ordered
+  - no duplication
+* add / delete / access avarage: $O(1)$
+* max size: $2^{32}-1$ elems.
+
+Note:
+- ハッシュ表を用いて実装されている
+- リサイズは同期操作
+  + 巨大なセットを扱う時は注意
+
++++
+
+## Sorted Set (ZSet)
+
+* Set of Strings
+  - no duplication
+* each members are ordered with its score
+* take score: $O(1)$
+* add: $O(\log{N})$
+
+Note:
+- redisの型の内、最も特徴的
+- 中間要素へのアクセスが高速
+
++++
+
+## Hash
+
+* String tto String map
+  - Java: `HashMap<String, String>`
+  - Go: `map[string]string`
+* add / delete / access: $O(1)$
+* max size: $2^{32}-1$ pairs
+
+Note:
+- 少ないフィールドのhashはメモリ効率が良い
