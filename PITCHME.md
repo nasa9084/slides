@@ -256,7 +256,7 @@ Note:
 
 +++
 
-### session token
+#### session token
 
 ``` python
 from redis import Redis
@@ -281,14 +281,12 @@ class User:
 @[11](TTL unit is `seconds`)
 @[12](set new key-value with expire)
 
----
++++
 
-### Real time ranking
+#### Real time ranking
 
 ``` python
-from redis import Redis
-
-redis = Redis()
+# ... import and define variable
 
 while True:
     print('input member:score> ', end='')
