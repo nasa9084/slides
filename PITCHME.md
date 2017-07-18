@@ -9,3 +9,11 @@
 ---
 
 ## Golang
+
+---
+
+## Simple Syntax
+
+---
+
+## Initializer Statement
