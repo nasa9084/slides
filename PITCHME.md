@@ -42,7 +42,7 @@ func Bar() {
 ```
 
 @[2](open resource)
-@[5](something(may include panic))
+@[5](something may include panic)
 @[7](function ends)
 @[3](resource is released)
 
