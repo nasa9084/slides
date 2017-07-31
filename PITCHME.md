@@ -86,3 +86,7 @@ func Bar() {
 ---
 
 ## `go generate`
+
+---
+
+## The Go PlayGround
