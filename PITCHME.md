@@ -82,3 +82,7 @@ func Bar() {
 +++
 
 ### `testing.B`
+
+---
+
+## `go generate`
