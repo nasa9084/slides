@@ -66,6 +66,8 @@ func Bar() {
 
 ### `go get`
 
+tool for download and install packages and dependencies
+
 ---
 
 ## `testing` package
