@@ -26,3 +26,22 @@ if err := Foo(); err != nil {
 }
 ```
 
+---
+
+## `defer` Statement
+
+``` go
+func Bar() {
+    f, _ := os.Open("hoge.txt")
+    defer f.Close()
+
+    // Something
+
+    return
+}
+```
+
+@[2](open resource)
+@[5](something(may include panic))
+@[7](function ends)
+@[3](resource is released)
