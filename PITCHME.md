@@ -19,3 +19,10 @@
 ---
 
 ## Initializer Statement
+
+``` go
+if err := Foo(); err != nil {
+    // error handling
+}
+```
+
