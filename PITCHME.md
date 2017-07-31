@@ -59,3 +59,26 @@ func Bar() {
 +++
 
 ### `go get`
+
+---
+
+## `testing` package
+
+* provides support for automated testing for Go packages
+* run `$ go test`
+  - automate exec any functions of the form:
+    + `func TestXxx(*testing.T)`
+* run `$go test -bench`
+  - automates exec of benchmark functions of the form:
+    + `func BenchmarkXxx(*testing.B)`
+
++++
+
+### `testing.T`
+
+* test state and formatted test log manager
+* some useful functions
+
++++
+
+### `testing.B`
