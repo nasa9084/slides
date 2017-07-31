@@ -45,3 +45,17 @@ func Bar() {
 @[5](something(may include panic))
 @[7](function ends)
 @[3](resource is released)
+
+---
+
+## GOPATH
+
+* Go load packages from $GOPATH
+  - third party libs
+  - my(your) projects
+* $GOPATH/src/DOMAIN/USERNAME/REPO
+  - e.g.) $GOPATH/src/github.com/nasa9084/myproj
+
++++
+
+### `go get`
