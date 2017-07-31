@@ -26,6 +26,12 @@ if err := Foo(); err != nil {
 }
 ```
 
+@[1](exec `Foo()` and bind returned value to `err`)
+@[1](check the condition)
+@[2](do if the condition is true)
+
+`err` is local variable in `if` statement
+
 ---
 
 ## `defer` Statement
