@@ -180,7 +180,7 @@ $ stringer -type=Fruit
 
 +++
 
-Meh.
+### Meh.
 
 Note:
 すべての型に対して実行する必要がある
