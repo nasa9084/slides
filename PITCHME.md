@@ -171,7 +171,23 @@ func (f Fruit)String() string {
 
 +++
 
-## example: json
+## Lv.1: use `stringer` command
+
+```
+$ go get golang.org/x/tools/cmd/stringer
+$ stringer -type=Fruit
+```
+
++++
+
+Meh.
+
+Note:
+すべての型に対して実行する必要がある
+
++++
+
+## Lv.2: use automated generation
 
 ``` go
 //go:generate stringer -type=Fruit
