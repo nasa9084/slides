@@ -93,6 +93,25 @@ tool for download and install packages and dependencies
 
 ---
 
+## package document
+
++++
+
+### Documentation Comment
+
+Comments before top-level delarations are extracted as explanatory text
+like:
+
+``` go
+// Compile parses a regular expression and returns, if successful,
+// a Regexp that can be used to match against text.
+func Compile(str string) (*Regexp, error) {
+    ...
+}
+```
+
+---
+
 ## `go generate`
 
 ---
