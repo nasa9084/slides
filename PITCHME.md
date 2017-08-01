@@ -14,7 +14,7 @@
 
 ---
 
-## Simple Syntax
+## Syntax
 
 ---
 
