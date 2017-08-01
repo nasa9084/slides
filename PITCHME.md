@@ -120,6 +120,78 @@ func Compile(str string) (*Regexp, error) {
 
 ## `go generate`
 
++++
+
+## example: String()
+
+TASK: implements `Stringer` interface
+
+``` go
+type Stringer interface {
+    String() string
+}
+```
+
++++
+
+##  example: Fruit.String()
+
+``` go
+type Fruit int
+
+const (
+    Apple Fruit = iota
+    Orange
+    Grape
+)
+```
+
++++
+
+## example: Hand-written
+
+``` go
+func (f Fruit)String() string {
+    switch f {
+    case Apple:
+        return "Apple"
+    case Orange:
+        return "Orange"
+    case Grape:
+        return "Grape"
+    default:
+        panic("Unknown fruit")
+    }
+}
+```
+
++++
+
+# Meh...
+
++++
+
+## example: json
+
+``` go
+//go:generate stringer -type=Fruit
+type Fruit int
+
+const (
+    Apple Fruit = iota
+    Orange
+    Grape
+)
+```
+
+and do:
+
+`$ go generate`
+
++++
+
+# YES!
+
 ---
 
 ## The Go PlayGround
