@@ -203,7 +203,7 @@ and do:
 
 `$ go generate`
 
-+++
++++?image=assets/yes.jpg
 
 # YES!
 
