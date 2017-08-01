@@ -163,7 +163,7 @@ func (f Fruit)String() string {
 }
 ```
 
-+++
++++?image=assets/sad_cat.jpg
 
 # Meh...
 
