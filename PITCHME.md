@@ -14,9 +14,9 @@
 
 ---
 
-## Syntax
+## Syntaxes
 
----
++++
 
 ## Initializer Statement
 
@@ -32,7 +32,7 @@ if err := Foo(); err != nil {
 
 `err` is local variable in `if` statement
 
----
++++
 
 ## `defer` Statement
 
