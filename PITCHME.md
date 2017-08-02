@@ -12,7 +12,10 @@ https://gitpitch.com/nasa9084/osc17kyoto_go
 ## $ whoami
 
 ![](assets/pika.jpg)
+
 * @nasa9084
+
+---
 
 ## Golang
 
