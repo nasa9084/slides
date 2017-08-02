@@ -290,20 +290,13 @@ and do:
 
 +++
 
-### `godoc`
+### gofmt
 
-`$ go get golang.org/x/tools/cmd/godoc`
+* source code formatter for Go
+  - `gofmt -w hoge.go`
 
-#### without -http flag
-
-* command-line golang package reference
-  - `godoc fmt`
-    + documentation for package `fmt`
-
-#### with -http flag
-
-* runs as a web server and presents the docs as a web page
-  - like https://golang.org
+* c.f.) goimports: update imports and format
+  - `$ go get golang.org/x/tools/cmd/goimports`
 
 +++
 
@@ -327,4 +320,37 @@ func main() {
 
 +++
 
+### `godoc`
+
+`$ go get golang.org/x/tools/cmd/godoc`
+
+#### without -http flag
+
+* command-line golang package reference
+  - `godoc fmt`
+    + documentation for package `fmt`
+
+#### with -http flag
+
+* runs as a web server and presents the docs as a web page
+  - like https://golang.org
+
++++
+
+### present
+
+`$ go get golang.org/x/tools/cmd/present`
+
+* slide presentation
+  - like: https://talks.golang.org/2017/state-of-go.slide#1
+* can run go code in slides
+
++++
+
 ## The Go PlayGround
+
+https://play.golang.org/
+
++++
+
+# Q?
