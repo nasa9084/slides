@@ -94,7 +94,7 @@ if err := Foo(); err != nil {
 
 +++
 
-## `defer` Statement
+### `defer` Statement
 
 ``` go
 func Bar() {
