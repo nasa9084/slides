@@ -4,7 +4,7 @@
 ---
 
 ### this slide
-https://gitpitch.com/nasa9084/slides/osc17do
+https://gitpitch.com/nasa9084/slides/osc17kyoto_redis
 
 ---
 
