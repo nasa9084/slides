@@ -197,7 +197,7 @@ func Compile(str string) (*Regexp, error) {
 
 +++
 
-## example: String()
+## e.g.) gen: String()
 
 TASK: implements `Stringer` interface
 
@@ -209,7 +209,7 @@ type Stringer interface {
 
 +++
 
-##  example: Fruit.String()
+## e.g.) gen: Fruit.String()
 
 ``` go
 type Fruit int
@@ -223,7 +223,7 @@ const (
 
 +++
 
-## example: Hand-written
+## e.g.) gen: Hand-written
 
 ``` go
 func (f Fruit)String() string {
