@@ -18,6 +18,15 @@ https://gitpitch.com/nasa9084/osc17kyoto_go
 
 ## Golang
 
+![](assets/gophers.jpg)
+
+https://github.com/golang/go
+
+* open source programming language
+* compiled, statically typed language
+* looks like C, but useful like dynamic langs
+  - go is robustness and flexible
+
 ---
 
 ## Syntaxes
