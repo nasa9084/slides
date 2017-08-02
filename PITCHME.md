@@ -290,6 +290,23 @@ and do:
 
 +++
 
+### `godoc`
+
+`$ go get golang.org/x/tools/cmd/godoc`
+
+#### without -http flag
+
+* command-line golang package reference
+  - `godoc fmt`
+    + documentation for package `fmt`
+
+#### with -http flag
+
+* runs as a web server and presents the docs as a web page
+  - like https://golang.org
+
++++
+
 ### `go vet`
 
 * examine Go source code and reports suspicious constructs
