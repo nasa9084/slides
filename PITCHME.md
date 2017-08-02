@@ -98,7 +98,7 @@ if err := Foo(); err != nil {
 
 ``` go
 func Bar() {
-    f, _ := os.Open("hoge.txt")
+    f, _ := os.Open("hoge.txt") // _ is blank ident.
     defer f.Close()
 
     // Something
