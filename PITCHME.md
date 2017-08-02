@@ -162,6 +162,16 @@ func BenchmarkHoge(b *testing.B) {
 ```
 
 @[2](b.N is adjusted until the benchmark function lasts long enough to be timed reliably)
+
++++
+
+### Example Tests
+
+* functions of the form:
+  + `func ExampleXxx()`
+* when ran the test, also verified example codes
+  + if there's a line comment begining with "Output", the example code will ran and compared the Output
+
 ---
 
 ## package document
