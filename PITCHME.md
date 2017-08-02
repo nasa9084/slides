@@ -14,11 +14,9 @@ https://gitpitch.com/nasa9084/osc17kyoto_go
 ![](assets/pika.jpg)
 * @nasa9084
 
----
+---?image=assets/gophers.jpg
 
 ## Golang
-
-![](assets/gophers.jpg)
 
 https://github.com/golang/go
 
