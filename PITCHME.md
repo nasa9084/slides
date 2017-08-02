@@ -14,8 +14,6 @@ https://gitpitch.com/nasa9084/osc17kyoto_go
 ![](assets/pika.jpg)
 * @nasa9084
 
----?image=assets/gophers.jpg
-
 ## Golang
 
 https://github.com/golang/go
@@ -24,6 +22,8 @@ https://github.com/golang/go
 * compiled, statically typed language
 * looks like C, but useful like dynamic langs
   - go is robustness and flexible
+
++++?image=assets/gophers.jpg
 
 ---
 
