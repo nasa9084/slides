@@ -33,7 +33,54 @@ https://github.com/golang/go
 
 +++
 
-## Initializer Statement
+### iota
+
+* use within a constant declaration
+* represents successive untyped integer constants
+  - reset to 0 when `const` appears
+  - increments after each ConstSpec
+
++++
+
+#### e.g.) iota: every
+
+``` go
+const (
+    a = iota // a == 0
+    b = iota // b == 1
+    c = iota // c == 2
+    d = iota // d == 3
+)
+```
+
++++
+
+#### e.g.) iota: can ommit
+
+```go
+const (
+    a = iota // a == 0
+    b        // b == 1
+    c        // c == 2
+    d        // d == 3
+)
+```
+
++++
+
+#### e.g.) iota: w/bit shift
+
+``` go
+const (
+    a = 1 << iota // a == 1
+    b             // b == 2
+    c             // c == 4
+    d             // d == 8
+```
+
++++
+
+### Initializer Statement
 
 ``` go
 if err := Foo(); err != nil {
