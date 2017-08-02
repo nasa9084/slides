@@ -286,4 +286,28 @@ and do:
 
 ---
 
+## tools for Go
+
++++
+
+### `go vet`
+
+* examine Go source code and reports suspicious constructs
+  - uses heuristics
+  - find errors not caught by the compilers
+
+#### e.g.) unreachable code
+
+``` go
+func main() {
+    fmt.Print("hello, ...")
+    return
+    fmt.Print("this print is unreachable")
+}
+```
+
+@[0](main.go:7: unreachable code)
+
++++
+
 ## The Go PlayGround
