@@ -151,6 +151,17 @@ tool for download and install packages and dependencies
 
 ### `testing.B`
 
+* benchmark state and formatted benchmark log manager
+
+``` go
+func BenchmarkHoge(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        fmt.Println(i)
+    }
+}
+```
+
+@[2](b.N is adjusted until the benchmark function lasts long enough to be timed reliably)
 ---
 
 ## package document
