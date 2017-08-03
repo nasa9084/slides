@@ -273,7 +273,6 @@ func BenchmarkHoge(b *testing.B) {
 
 @[2](b.N is adjusted until the benchmark function lasts long enough to be timed reliably)
 
-+++
 
 +++
 
@@ -446,6 +445,7 @@ func main() {
 
 * runs as a web server and presents the docs as a web page
   - like https://golang.org
+  - but not same. local packages are printed!!
 
 +++
 
@@ -457,7 +457,7 @@ func main() {
   - like: https://talks.golang.org/2017/state-of-go.slide#1
 * can run go code in slides
 
-+++
+---
 
 ## The Go PlayGround
 
@@ -466,6 +466,6 @@ https://play.golang.org/
 * you can run go code on browser
 * you can share go code
 
-+++
+---
 
 # Q?
