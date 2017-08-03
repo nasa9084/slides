@@ -14,6 +14,7 @@ https://gitpitch.com/nasa9084/osc17kyoto_go
 ![](assets/pika.jpg)
 
 * @nasa9084
+* emacs! emacs! emacs!
 
 ---
 
@@ -31,6 +32,25 @@ https://github.com/golang/go
 ---
 
 ## Syntaxes
+
++++
+
+### variable declaration
+
+``` go
+var a int
+var b = 1
+var c, d int = 2, 3
+
+func F() {
+    l := 10
+}
+```
+
+@[1](a is not set the value, initialized by zero)
+@[2](b is declared with init value 1)
+@[3](you can declare some variable at the same time)
+@[6](short variable declaration)
 
 +++
 
@@ -112,6 +132,35 @@ func Bar() {
 @[5](something may include panic)
 @[7](function ends)
 @[3](resource is released)
+
++++
+
+### Composite literal
+
+initializer literal for array, map, and structs
+
+``` go
+a := []int{1, 2, 3}
+m := map[string]int{"Jack": 24, "James": 30}
+
+type Person struct {
+    ID   string
+    Name string
+}
+p := Person{ID: "foo", Name: "bar"}
+p := Person{"hoge", "fuga"}
+
+type Fruit struct {
+    Name  string
+    Value int
+}{"Apple", "120"}
+```
+
+@[1](array)
+@[2](string to int map)
+@[8](Person struct)
+@[9](can ommit field name)
+@[11-14](can connect type declaration and composite literal)
 
 ---
 
