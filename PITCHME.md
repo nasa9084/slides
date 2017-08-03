@@ -147,6 +147,7 @@ tool for download and install packages and dependencies
 
 * test state and formatted test log manager
 * some useful functions
+* you can write tests **regular** go way.
 
 +++
 
