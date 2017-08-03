@@ -127,7 +127,10 @@ func Bar() {
 
 ### `go get`
 
-tool for download and install packages and dependencies
+download and install packages and dependencies
+
+* you can install packages like pip, gem, cpan(m)...
+* you can install binary created from Go
 
 ---
 
