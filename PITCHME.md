@@ -411,6 +411,9 @@ func main() {
 
 https://play.golang.org/
 
+* you can run go code on browser
+* you can share go code
+
 +++
 
 # Q?
