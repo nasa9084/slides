@@ -95,7 +95,7 @@ if err := Foo(); err != nil {
 
 +++
 
-### `defer` Statement
+### defer Statement
 
 ``` go
 func Bar() {
@@ -131,7 +131,7 @@ tool for download and install packages and dependencies
 
 ---
 
-## `testing` package
+## testing package
 
 * provides support for automated testing for Go packages
 * run `$ go test`
