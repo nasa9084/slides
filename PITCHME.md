@@ -154,39 +154,33 @@ tool for download and install packages and dependencies
 #### e.g.) you can write tests regular go way
 
 ``` go
-func Add(a, b int) int {
-    return a + b
+func Unit(in float64) int {
+    if in <= 0 {
+        return 0
+    }
+    return 1
 }
 
-func TestAdd(t *testing.T) {
-    a := 3
-    b := 5
-    expected := 8
-    if output:= Add(a, b); output != expected {
-        t.Errorf("error: %d != %d", output, expected)
+func TestUnit(t *testing.T) {
+    in := 2.0
+    expected := 1
+    if out:= Unit(in); out != expected {
+        t.Errorf("error: %d != %d", out, expected)
         return
     }
 }
 ```
 
-@[1-3](Add function returns sum of int inputs)
-@[6-7](define input)
-@[8](define expected)
-@[9](LOOK: using `if` statement, not `assume` or `equal` or so on)
-@[10](if returned unexpected value, use `t.Errorf` like `fmt.Errorf`)
+@[1-6](Unit function returns 1 if input is over 0, otherwise return 1)
+@[9-10](define test values)
+@[11-14](LOOK: using `if` statement, not `assume` or `equal` or so on)
+@[12](if returned unexpected value, use `t.Errorf` like `fmt.Errorf`)
 
 +++
 
 #### e.g.) Table Driven Tests
 
 ``` go
-func Unit(a float64) int {
-    if a <= 0 {
-        return 0
-    }
-    return 1
-}
-
 func TestUnit(t *testing.T) {
     candidates := []struct{
         in float64
@@ -205,6 +199,11 @@ func TestUnit(t *testing.T) {
     }
 }
 ```
+
+@[2-9](define test values)
+@[10-16](test the values)
+@[6-8](if you want to add some test patterns, you can add easily)
+
 
 +++
 
