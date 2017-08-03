@@ -151,6 +151,63 @@ tool for download and install packages and dependencies
 
 +++
 
+#### e.g.) you can write tests regular go way
+
+``` go
+func Add(a, b int) int {
+    return a + b
+}
+
+func TestAdd(t *testing.T) {
+    a := 3
+    b := 5
+    expected := 8
+    if output:= Add(a, b); output != expected {
+        t.Errorf("error: %d != %d", output, expected)
+        return
+    }
+}
+```
+
+@[1-3](Add function returns sum of int inputs)
+@[6-7](define input)
+@[8](define expected)
+@[9](LOOK: using `if` statement, not `assume` or `equal` or so on)
+@[10](if returned unexpected value, use `t.Errorf` like `fmt.Errorf`)
+
++++
+
+#### e.g.) Table Driven Tests
+
+``` go
+func Unit(a float64) int {
+    if a <= 0 {
+        return 0
+    }
+    return 1
+}
+
+func TestUnit(t *testing.T) {
+    candidates := []struct{
+        in float64
+        expected int
+    }{
+        {in: -0.1, expected: 0},
+        {in: 0, expected: 0},
+        {in: 0.1, expected: 1},
+    }
+    for _, c := range candidates {
+        t.Logf("input: %f", c.in)
+        if out := Unit(c.in); out != c.expected {
+            t.Errorf("error: %d != %d", out, c.expected)
+            return
+        }
+    }
+}
+```
+
++++
+
 ### `testing.B`
 
 * benchmark state and formatted benchmark log manager
@@ -164,6 +221,8 @@ func BenchmarkHoge(b *testing.B) {
 ```
 
 @[2](b.N is adjusted until the benchmark function lasts long enough to be timed reliably)
+
++++
 
 +++
 
