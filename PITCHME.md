@@ -31,26 +31,7 @@ https://github.com/golang/go
 
 ---
 
-## Syntaxes
-
-+++
-
-### variable declaration
-
-``` go
-var a int
-var b = 1
-var c, d int = 2, 3
-
-func F() {
-    l := 10
-}
-```
-
-@[1](a is not set the value, initialized by zero)
-@[2](b is declared with init value 1)
-@[3](you can declare some variable at the same time)
-@[6](short variable declaration)
+## go special syntaxes
 
 +++
 
@@ -60,19 +41,6 @@ func F() {
 * represents successive untyped integer constants
   - reset to 0 when `const` appears
   - increments after each ConstSpec
-
-+++
-
-#### e.g.) iota: every
-
-``` go
-const (
-    a = iota // a == 0
-    b = iota // b == 1
-    c = iota // c == 2
-    d = iota // d == 3
-)
-```
 
 +++
 
@@ -109,10 +77,6 @@ if err := Foo(); err != nil {
 }
 ```
 
-@[1](exec `Foo` and bind returned value to `err`)
-@[1](check the condition)
-@[2](do if the condition is true)
-
 +++
 
 ### defer Statement
@@ -132,54 +96,6 @@ func Bar() {
 @[5](something may include panic)
 @[7](function ends)
 @[3](resource is released)
-
-+++
-
-### Composite literal
-
-initializer literal for array, map, and structs
-
-``` go
-a := []int{1, 2, 3}
-m := map[string]int{"Jack": 24, "James": 30}
-
-type Person struct {
-    ID   string
-    Name string
-}
-p := Person{ID: "foo", Name: "bar"}
-p := Person{"hoge", "fuga"}
-
-type Fruit struct {
-    Name  string
-    Value int
-}{"Apple", "120"}
-```
-
-@[1](array)
-@[2](string to int map)
-@[8](Person struct)
-@[9](can ommit field name)
-@[11-14](can connect type declaration and composite literal)
-
----
-
-## GOPATH
-
-* Go load packages from $GOPATH
-  - third party libs
-  - my(your) projects
-* $GOPATH/src/DOMAIN/USERNAME/REPO
-  - e.g.) $GOPATH/src/github.com/nasa9084/myproj
-
-+++
-
-### `go get`
-
-download and install packages and dependencies
-
-* you can install packages like pip, gem, cpan(m)...
-* you can install binary created from Go
 
 ---
 
@@ -230,35 +146,6 @@ func TestUnit(t *testing.T) {
 
 +++
 
-#### e.g.) Table Driven Tests
-
-``` go
-func TestUnit(t *testing.T) {
-    candidates := []struct{
-        in float64
-        expected int
-    }{
-        {in: -0.1, expected: 0},
-        {in: 0, expected: 0},
-        {in: 0.1, expected: 1},
-    }
-    for _, c := range candidates {
-        t.Logf("input: %f", c.in)
-        if out := Unit(c.in); out != c.expected {
-            t.Errorf("error: %d != %d", out, c.expected)
-            return
-        }
-    }
-}
-```
-
-@[2-9](define test values)
-@[10-16](test the values)
-@[6-8](if you want to add some test patterns, you can add easily)
-
-
-+++
-
 ### `testing.B`
 
 * benchmark state and formatted benchmark log manager
@@ -273,7 +160,6 @@ func BenchmarkHoge(b *testing.B) {
 
 @[2](b.N is adjusted until the benchmark function lasts long enough to be timed reliably)
 
-
 +++
 
 ### Example Tests
@@ -282,25 +168,6 @@ func BenchmarkHoge(b *testing.B) {
   + `func ExampleXxx()`
 * when ran the test, also verified example codes
   + if there's a line comment begining with "Output", the example code will ran and compared the Output
-
----
-
-## package document
-
-+++
-
-### Documentation Comment
-
-Comments before top-level delarations are extracted as explanatory text
-like:
-
-``` go
-// Compile parses a regular expression and returns, if successful,
-// a Regexp that can be used to match against text.
-func Compile(str string) (*Regexp, error) {
-    ...
-}
-```
 
 ---
 
@@ -397,6 +264,17 @@ and do:
 
 ---
 
+## useful stdlibs
+
+- HASH Algorithms: crypto/sha512, crypto/md5
+- Data Encodings: encoding/json, encoding/csv
+- Image Editings: image/jpeg, image/png
+- HTTP Libs: HTTP Client, HTTP Server
+- String Editings: strconv, strings
+- Cmdline Parser: flag
+
+---
+
 ## tools for Go
 
 +++
@@ -435,37 +313,6 @@ func main() {
 
 `$ go get golang.org/x/tools/cmd/godoc`
 
-#### without -http flag
-
-* command-line golang package reference
-  - `godoc fmt`
-    + documentation for package `fmt`
-
-#### with -http flag
-
-* runs as a web server and presents the docs as a web page
-  - like https://golang.org
-  - but not same. local packages are printed!!
-
-+++
-
-### present
-
-`$ go get golang.org/x/tools/cmd/present`
-
-* slide presentation
-  - like: https://talks.golang.org/2017/state-of-go.slide#1
-* can run go code in slides
-
 ---
 
-## The Go PlayGround
-
-https://play.golang.org/
-
-* you can run go code on browser
-* you can share go code
-
----
-
-# Q?
+# ❤️GO
