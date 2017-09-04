@@ -10,7 +10,7 @@
 * VirtualTech Japan Inc.
 * emacs! emacs! emacs!
 
----
+---?image=assets/docker.png
 
 ## Docker
 
@@ -21,6 +21,15 @@
 +++
 
 ## Are you using?
+
++++
+
+### what is Docker?
+
+* コンテナプラットフォーム
+  * ~~雑な言い方をすると~~すごいchroot
+* ポータブル
+  * Dockerfileやイメージ
 
 ---
 
