@@ -46,6 +46,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 @[1]()
 @[0]()
 
++++
+
 ---
 
 ## Database Container
@@ -102,6 +104,15 @@ $ psql -h localhost -p 5432 -U postgres
 
 @[2](PostgreSQLは`localhost`でも大丈夫)
 
++++
+
+### データベースをコンテナ化するメリット
+
+* 毎回初期状態から使える
+  * 特にテストなどで有用
+* 複数のデータベースを立てられる
+  * 複数のアプリケーションがあっても干渉しない
+
 ---
 
 ### Container as a Command
@@ -123,4 +134,4 @@ document.md  document.pdf
     * OSとか
       * ライブラリのバージョンとか
   * 配布しやすい
-    * ユーザにパッケージインストールさせるとか・・・
+    * ユーザにパッケージインストールさせるの？
