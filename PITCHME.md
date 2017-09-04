@@ -75,11 +75,12 @@ $ mysql -uroot -p -h 127.0.0.1
 ``` shell
 # docker run --name mymysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
 # docker run -it --link mymysql:mysql --rm mysql \
-    sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+    sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" \
+    -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
 ```
 
 @[2](`--link`でコンテナ同士を接続)
-@[3](環境変数に接続情報が入っている)
+@[3-4](環境変数に接続情報が入っている)
 
 +++
 
