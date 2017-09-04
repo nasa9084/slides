@@ -10,7 +10,7 @@
 * VirtualTech Japan Inc.
 * emacs! emacs! emacs!
 
----?image=assets/docker.png
+---?image=assets/docker.png&size=auto auto
 
 ## Docker
 
