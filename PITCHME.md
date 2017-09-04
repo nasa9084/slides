@@ -95,7 +95,7 @@ $ psql -h localhost -p 5432 -U postgres
 
 ---
 
-## Container as a Command
+### Container as a Command
 
 ``` shell
 $ ls
@@ -107,7 +107,7 @@ document.md  document.pdf
 
 +++
 
-### コンテナをコマンドのように使用するメリット
+#### コンテナをコマンドのように使用するメリット
 
 * スクリプトをそのまま配布ではダメなの？
     * コンテナ内で実行することにより環境の差を吸収できる
