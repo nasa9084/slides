@@ -14,6 +14,7 @@ https://gitpitch.com/nasa9084/slides/pyconjp17_rejectcon
 * nasa9084
 * VirtualTech Japan Inc.
 * emacs! emacs! emacs!
+  * twitterができないエディタはエディタではない
 
 ---?image=assets/docker.png&size=auto auto
 
