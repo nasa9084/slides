@@ -16,7 +16,9 @@ https://gitpitch.com/nasa9084/slides/pyconjp17_rejectcon
 * emacs! emacs! emacs!
   * twitterができないエディタはエディタではない
 
-+++?image=assets/builderscon.png&size=auto auto
++++
+
+![builderscon](assets/builderscon.png)
 
 #### 2018/09/06 - 2018/09/08
 
