@@ -3,6 +3,11 @@
 
 ---
 
+# this slide:
+https://gitpitch.com/nasa9084/slides/pyconjp17_rejectcon
+
+---
+
 ## $ whoami
 
 ![](assets/pika.jpg)
