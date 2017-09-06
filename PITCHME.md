@@ -147,6 +147,8 @@ $ psql -h localhost -p 5432 -U postgres
 
 ### Container as a Command
 
+* example: virtualtechjp/md2pdf
+
 ``` shell
 $ ls
 document.md
@@ -171,5 +173,16 @@ document.md  document.pdf
 * 問題の特定がしにくいこともある
 
 ---
+
+#### in Concl.
+
+* ローカル環境でVMのごとく使用する
+  * 起動が速いので便利
+  * (大体の場合)問題はない
+* アプリケーション単位で使用する
+  * データベースとか
+  * 環境をクリーンに保てる
+
++++
 
 ## DO YOU HAVE ANY QUESTIONS?
