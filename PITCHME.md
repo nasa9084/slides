@@ -64,6 +64,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 * 実行コマンドが少し煩雑になる
 
++++
+
+#### テスト環境をコンテナ化
+
+* 手元でテストをするときにコンテナを立ちあげる
+  + 毎回新しい環境なので更新前環境が原因の問題が発生しにくい
+
 ---
 
 ## Database Container
