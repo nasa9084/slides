@@ -69,7 +69,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 #### テスト環境をコンテナ化
 
 * 手元でテストをするときにコンテナを立ちあげる
-  + 毎回新環境→更新前環境原因の問題が発生しにくい
+  + 毎回新環境→旧環境原因の問題が発生しにくい
 
 ---
 
