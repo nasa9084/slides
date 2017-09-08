@@ -1,10 +1,14 @@
-# ローカル環境でDockerをドカドカつかう
-## @nasa9084
+## ローカル環境でDockerをドカドカつかう
+### @nasa9084
+
+---
+
+## PyCon JP Reject Conference 2017
 
 ---
 
 # this slide:
-https://gitpitch.com/nasa9084/slides/pyconjp17_rejectcon
+https://gitpitch.com/nasa9084/slides/lt_pyconjp17
 
 ---
 
@@ -189,7 +193,3 @@ document.md  document.pdf
 * アプリケーション単位で使用する
   * データベースとか
   * 環境をクリーンに保てる
-
-+++
-
-## DO YOU HAVE ANY QUESTIONS?
