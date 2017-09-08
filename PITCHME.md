@@ -3,12 +3,12 @@
 
 ---
 
-## PyCon JP Reject Conference 2017
+# this slide:
+https://gitpitch.com/nasa9084/slides/lt_pyconjp17
 
 ---
 
-# this slide:
-https://gitpitch.com/nasa9084/slides/lt_pyconjp17
+## PyCon JP Reject Conference 2017
 
 ---
 
