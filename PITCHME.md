@@ -27,7 +27,20 @@ https://github.com/golang/go
 * looks like C, but useful like dynamic langs
   - go is robustness and flexible
 
-+++?image=assets/gophers.jpg
++++
+
+### Go Apps/Products
+
+* Docker(Docker Inc.)
+* Kubernetes(Google Inc.)
+* Grafana(OSS)
+* Prometheus(OSS)
+* hub(OSS)
+* ghq(OSS)
+
+Note:
+* Grafana: Monitoring Dashboard
+* Prometheus: Monitoring and TSDB
 
 ---
 
