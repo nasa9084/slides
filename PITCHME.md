@@ -5,7 +5,7 @@
 
 ## AT FIRST
 ## this slide:
-https://gitpitch.com/nasa9084/osc17tk
+https://gitpitch.com/nasa9084/osc17fk
 
 ---
 
