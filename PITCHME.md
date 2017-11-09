@@ -186,6 +186,12 @@ https://www.gitignore.io
 
 * generates .gitignore for your lang, your os
 
+``` shell
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+```
+
+and `$ gi macos,emacs,go > .gitignore`
+
 ---
 
 # anyenv
