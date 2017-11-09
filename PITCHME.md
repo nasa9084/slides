@@ -110,4 +110,64 @@ function peco-src () {
 zle -N peco-src
 bindkey '^S' peco-src
 ```
+
+---
+
+# hub
+
+* by GitHub, written in Go
+* extend `git` command
+
++++
+
+## installation
+
+### macOS(w/ homebrew) user
+
+`$ brew install hub`
+
+### windows(w/ chocolatey) user
+
+`C:\> choco install hub`
+
+### fedora user
+
+`# dnf install hub`
+
+### other user
+
+download binary from https://github.com/github/hub/releases
+
++++
+
+## prepare hub
+
+### Unix user
+
+put `eval "$(hub alias -s)"` into your .bashrc or .zshrc
+
+### windows user
+
+do on powershell `Add-Content $PROFILE "``nSet-Alias git hub"`
+
++++
+
+## how to use hub
+
+you can use as same as `git` command, and some GitHub integrations are added.
+
+* `$ git create`
+    - create repository on GitHub
+* `$ git pull-request`
+    - open a pull req on GitHub
+* `$ git ci-status`
+    - show CI status of a commit
+
++++
+
+## BONUS: gitignore.io
+
+https://www.gitignore.io
+
+* generates .gitignore for your lang, your os
 ## DO YOU HAVE ANY QUESTIONS?
