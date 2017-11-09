@@ -63,4 +63,33 @@ bindkey '^R' peco-history-selection
 
 ---
 
+# ghq
+
+* by @metemen, written in Go
+* remote repository clones management tool
+* having good compatibility with GOPATH
+
++++
+
+## installation
+
+`$ go get https://github.com/motemen/ghq`
+
++++
+
+## using with peco: src dir selection
+
+``` shell
+function peco-src () {
+  local selected_dir=$(ghq list -p | perl -nlpe 's[.*src/(.*)][$1\0$_]' | peco --null)
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+
+zle -N peco-src
+bindkey '^S' peco-src
+```
 ## DO YOU HAVE ANY QUESTIONS?
