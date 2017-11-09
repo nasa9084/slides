@@ -223,4 +223,64 @@ $ pyenv global 3.6.0 # enable python 3.6.0
 * sbtenv: sbt
 * scalaenv: Scala
 * swiftenv: Swift
+
+---
+
+# direnv
+
+* written in Go
+* environment switcher
+
++++
+
+## installation
+
+download from https://github.com/direnv/direnv/releases
+
+or install w/ package manager:
+
+* Fedora
+* Arch AUR
+* Debian
+* Gentoo go-overlay
+* NetBSD pkgsrc-wip
+* NixOS
+* OSX Homebrew
+* MacPorts
+* Ubuntu
+* GNU Guix
+
++++
+
+## prepare
+
+put into your profile:
+
+### BASH
+
+`eval "$(direnv hook bash)"`
+
+### ZSH
+
+`eval "$(direnv hook zsh)"`
+
+### FISH
+
+`eval (direnv hook fish)`
+
+### TCSH
+
+``eval `direnv hook tcsh` ``
+
++++
+
+## how to use
+
+``` shell
+$ echo export FOO=foo > .envrc
+$ direnv allow .
+```
+
+---
+
 ## DO YOU HAVE ANY QUESTIONS?
