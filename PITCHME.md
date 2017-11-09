@@ -148,7 +148,7 @@ put `eval "$(hub alias -s)"` into your .bashrc or .zshrc
 
 ### windows user
 
-do on powershell `Add-Content $PROFILE "``nSet-Alias git hub"`
+do on powershell ``Add-Content $PROFILE "`nSet-Alias git hub"``
 
 +++
 
