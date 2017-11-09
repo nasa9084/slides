@@ -3,6 +3,14 @@
 
 ---
 
+## at first:
+
+this slide:
+
+https://gitpitch.com/nasa9084/slides/kof2017
+
+---
+
 ## $ whoami
 
 ![](assets/pika.jpg)
