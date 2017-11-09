@@ -1,4 +1,4 @@
-# 最近のコマンドライン・ツール事情
+## 最近のコマンドライン・ツール事情
 ## @nasa9084
 
 ---
@@ -33,7 +33,7 @@ NOTE:
 
 #### Unix or macOS(w/o homebrew) users:
 
-download binary from https://github.com/peco/peco/releases,
+download binary from GitHub(peco/peco),
 and put it into your PATH
 
 #### Windows(w/ chocolatey) users:
@@ -55,7 +55,8 @@ in .zshrc,
 
 ``` shell
 function peco-history-selection() {
-    BUFFER="$(history -nr 1 | awk '!a[$0]++' | peco --query "$LBUFFER" | sed 's/\\n/\n/g')"
+    BUFFER="$(history -nr 1 | awk '!a[$0]++' |\
+    peco --query "$LBUFFER" | sed 's/\\n/\n/g')"
     zle clear-screen
 }
 
@@ -100,7 +101,8 @@ or,
 
 ``` shell
 function peco-src () {
-  local selected_dir=$(ghq list -p | perl -nlpe 's[.*src/(.*)][$1\0$_]' | peco --null)
+  local selected_dir=$(ghq list -p |\
+  perl -nlpe 's[.*src/(.*)][$1\0$_]' | peco --null)
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
     zle accept-line
@@ -137,17 +139,19 @@ bindkey '^S' peco-src
 
 #### other user
 
-download binary from https://github.com/github/hub/releases
+download binary from GitHub(github/hub)
 
 +++
 
 ## prepare hub
 
-### Unix user
+#### Unix user
 
-put `eval "$(hub alias -s)"` into your .bashrc or .zshrc
+put into your .bashrc or .zshrc:
 
-### windows user
+`eval "$(hub alias -s)"`
+
+#### windows user
 
 do on powershell:
 
@@ -207,7 +211,6 @@ $ pyenv global 3.6.0 # enable python 3.6.0
 
 ## **envs
 
-* crenv: Crystal
 * erlenv: Erlang
 * goenv: Go
 * jenv: Java
