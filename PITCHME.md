@@ -77,6 +77,24 @@ bindkey '^R' peco-history-selection
 
 +++
 
+## how to use ghq
+
+### get repo
+
+#### GitHub repo
+
+`$ ghq get some/repository`
+
+#### other repo
+
+`$ ghq get https://some.your/repository/url`
+
+### listup repo
+
+`$ ghq list`
+
++++
+
 ## using with peco: src dir selection
 
 ``` shell
