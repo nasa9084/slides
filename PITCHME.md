@@ -27,16 +27,16 @@ NOTE:
 
 ## installation
 
-### macOS(w/ homebrew) users:
+#### macOS(w/ homebrew) users:
 
 `$ brew install peco`
 
-### Unix or macOS(w/o homebrew) users:
+#### Unix or macOS(w/o homebrew) users:
 
 download binary from https://github.com/peco/peco/releases,
 and put it into your PATH
 
-### Windows(w/ chocolatey) users:
+#### Windows(w/ chocolatey) users:
 
 `C:\> choco install peco`
 
@@ -49,7 +49,9 @@ and put it into your PATH
 
 +++
 
-## history-selection: in zsh
+## history-selection
+
+in .zshrc,
 
 ``` shell
 function peco-history-selection() {
@@ -81,11 +83,9 @@ bindkey '^R' peco-history-selection
 
 ### get repo
 
-#### GitHub repo
-
 `$ ghq get some/repository`
 
-#### other repo
+or,
 
 `$ ghq get https://some.your/repository/url`
 
@@ -95,7 +95,8 @@ bindkey '^R' peco-history-selection
 
 +++
 
-## using with peco: src dir selection
+## using with peco
+#### src dir selection
 
 ``` shell
 function peco-src () {
@@ -122,19 +123,19 @@ bindkey '^S' peco-src
 
 ## installation
 
-### macOS(w/ homebrew) user
+#### macOS(w/ homebrew) user
 
 `$ brew install hub`
 
-### windows(w/ chocolatey) user
+#### windows(w/ chocolatey) user
 
 `C:\> choco install hub`
 
-### fedora user
+#### fedora user
 
 `# dnf install hub`
 
-### other user
+#### other user
 
 download binary from https://github.com/github/hub/releases
 
@@ -148,7 +149,9 @@ put `eval "$(hub alias -s)"` into your .bashrc or .zshrc
 
 ### windows user
 
-do on powershell ``Add-Content $PROFILE "`nSet-Alias git hub"``
+do on powershell:
+
+``Add-Content $PROFILE "`nSet-Alias git hub"``
 
 +++
 
@@ -204,25 +207,18 @@ $ pyenv global 3.6.0 # enable python 3.6.0
 
 ## **envs
 
-* Renv: R
 * crenv: Crystal
-* denv: D
 * erlenv: Erlang
-* exenv: Elixir
 * goenv: Go
-* hsenv: Haskell
 * jenv: Java
-* luaenv: Lua
 * ndenv: Node.js
-* nenv: Node.js
-* nodenv: Node.js
-* phpenv: PHP
 * plenv: Perl
 * pyenv: Python
 * rbenv: Ruby
-* sbtenv: sbt
 * scalaenv: Scala
 * swiftenv: Swift
+
+and more!
 
 ---
 
@@ -239,36 +235,25 @@ download from https://github.com/direnv/direnv/releases
 
 or install w/ package manager:
 
-* Fedora
-* Arch AUR
-* Debian
-* Gentoo go-overlay
-* NetBSD pkgsrc-wip
-* NixOS
-* OSX Homebrew
-* MacPorts
-* Ubuntu
-* GNU Guix
-
 +++
 
 ## prepare
 
 put into your profile:
 
-### BASH
+#### BASH
 
 `eval "$(direnv hook bash)"`
 
-### ZSH
+#### ZSH
 
 `eval "$(direnv hook zsh)"`
 
-### FISH
+#### FISH
 
 `eval (direnv hook fish)`
 
-### TCSH
+#### TCSH
 
 ``eval `direnv hook tcsh` ``
 
