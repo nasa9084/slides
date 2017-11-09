@@ -36,7 +36,7 @@ NOTE:
 download binary from https://github.com/peco/peco/releases,
 and put it into your PATH
 
-### Windows users:
+### Windows(w/ chocolatey) users:
 
 `C:\> choco install peco`
 
