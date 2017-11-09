@@ -42,7 +42,14 @@ and put it into your PATH
 
 +++
 
-## history-selection
+## how to use
+
+* input which you want to filter from stdin
+
+
++++
+
+## history-selection: in zsh
 
 ``` shell
 function peco-history-selection() {
