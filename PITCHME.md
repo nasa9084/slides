@@ -194,17 +194,10 @@ $ exec $SHELL -l
 ## how to use
 
 ``` shell
-$ python -V # check python version
-Python 2.7.10
 $ anyenv install pyenv
 $ exec $SHELL -l
 $ pyenv install 3.6.0
 $ pyenv global 3.6.0 # enable python 3.6.0
-$ python -V # check python version, cool!
-Python 3.6.0
-$ pyenv global system
-$ python -V # you can return to system python
-Python 2.7.10
 ```
 
 +++
