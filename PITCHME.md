@@ -14,7 +14,7 @@
 
 # peco
 
-* by @lestrrat
+* by @lestrrat, written in Go
 * interactive filtering tool
 * like helm (namespace is conflicted!)
 * incremental search
