@@ -244,19 +244,19 @@ or install w/ package manager:
 
 put into your profile:
 
-#### BASH
+##### BASH
 
 `eval "$(direnv hook bash)"`
 
-#### ZSH
+##### ZSH
 
 `eval "$(direnv hook zsh)"`
 
-#### FISH
+##### FISH
 
 `eval (direnv hook fish)`
 
-#### TCSH
+##### TCSH
 
 ``eval `direnv hook tcsh` ``
 
