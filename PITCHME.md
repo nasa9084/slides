@@ -170,4 +170,64 @@ you can use as same as `git` command, and some GitHub integrations are added.
 https://www.gitignore.io
 
 * generates .gitignore for your lang, your os
+
+---
+
+# anyenv
+
+* by riywo, written in shell
+* wrapper for **env
+
++++
+
+## installation
+
+``` shell
+$ git clone https://github.com/riywo/anyenv ~/.anyenv
+$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.your_profile
+$ echo 'eval "$(anyenv init -)"' >> ~/.your_profile
+$ exec $SHELL -l
+```
+
++++
+
+## how to use
+
+``` shell
+$ python -V # check python version
+Python 2.7.10
+$ anyenv install pyenv
+$ exec $SHELL -l
+$ pyenv install 3.6.0
+$ pyenv global 3.6.0 # enable python 3.6.0
+$ python -V # check python version, cool!
+Python 3.6.0
+$ pyenv global system
+$ python -V # you can return to system python
+Python 2.7.10
+```
+
++++
+
+## **envs
+
+* Renv: R
+* crenv: Crystal
+* denv: D
+* erlenv: Erlang
+* exenv: Elixir
+* goenv: Go
+* hsenv: Haskell
+* jenv: Java
+* luaenv: Lua
+* ndenv: Node.js
+* nenv: Node.js
+* nodenv: Node.js
+* phpenv: PHP
+* plenv: Perl
+* pyenv: Python
+* rbenv: Ruby
+* sbtenv: sbt
+* scalaenv: Scala
+* swiftenv: Swift
 ## DO YOU HAVE ANY QUESTIONS?
