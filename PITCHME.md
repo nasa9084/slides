@@ -285,6 +285,39 @@ $ direnv allow .
 
 ---
 
+## docker
+
+* by docker inc., written in Go
+* Linux Container Platform
+
++++
+
+## usecase
+
+* Database for development
+* like compiler
+* as packaging system
+
++++
+
+#### run mysql
+
+``` shell
+$ docker run -d -p 3306:3306 --name=mysql\
+    --rm -e MYSQL_ROOT_PASSWORD=password mysql:latest
+```
+
+#### use like compiler
+
+* e.g: golang
+
+``` shell
+$ docker run --rm -v $PWD:/app -w /app golang:1.9 go build -v
+```
+
+
+---
+
 # DEMO
 
 ---
