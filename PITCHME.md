@@ -289,6 +289,7 @@ $ direnv allow .
 
 * by docker inc., written in Go
 * Linux Container Platform
+* you can use as local tool
 
 +++
 
