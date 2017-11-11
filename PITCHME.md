@@ -20,6 +20,22 @@ https://gitpitch.com/nasa9084/slides/kof2017
 
 ---
 
+# jq
+
+* by stedolan, written in C
+* command-line json processor
+* filtering, pipe, mapping, ...
+
++++
+
+## installation
+
+Download from below and put into your PATH.
+
+https://stedolan.github.io/jq/
+
+---
+
 # peco
 
 * by @lestrrat, written in Go
