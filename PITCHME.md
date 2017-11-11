@@ -289,4 +289,16 @@ $ direnv allow .
 
 ---
 
+## .gitconfig
+
+use ssh instead of git/https on push
+
+``` ini
+[url "git@github.com:"]
+pushInsteadOf = git://github.com/
+pushInsteadOf = https://github.com/
+```
+
+---
+
 ## DO YOU HAVE ANY QUESTIONS?
