@@ -305,6 +305,9 @@ $ direnv allow .
 ``` shell
 $ docker run -d -p 3306:3306 --name=mysql\
     --rm -e MYSQL_ROOT_PASSWORD=password mysql:latest
+$ mysql -u root -p -h 127.0.0.1
+Enter password:
+mysql>
 ```
 
 #### use like compiler
