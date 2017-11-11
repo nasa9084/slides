@@ -285,7 +285,7 @@ $ direnv allow .
 
 ---
 
-## docker
+# docker
 
 * by docker inc., written in Go
 * Linux Container Platform
