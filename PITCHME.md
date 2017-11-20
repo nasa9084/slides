@@ -149,6 +149,17 @@ used by `enable` and `disable` commands
 | 6            | reboot.target         |
 | emergency    | emergency.target      |
 
++++
+
+### specifier
+
+| specifier | meaning        |
+|:---------:|:--------------:|
+| %n        | full unit name |
+| %u        | user name      |
+| %U        | user UID       |
+| %h        | user home dir  |
+
 ---
 
 ## service
