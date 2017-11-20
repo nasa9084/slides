@@ -208,9 +208,10 @@ WantedBy=multi-user.target
 ### `[Timer]` section
 
 - `OnCalendar`
-  + realtime timers with calendar event expressions
+  + realtime timers
 - `OnXXXSec`
   + monotonic timers
+
 - `AccuracySec`
   + defaults to 1min
 - `Unit`
