@@ -210,10 +210,9 @@ WantedBy=multi-user.target
 - `OnCalendar`
   + realtime timers with calendar event expressions
 - `OnXXXSec`
-  + XXX=Active/Boot/Startup/UnitActive/UnitInactive
   + monotonic timers
 - `AccuracySec`
-  + accucary the time shall elapse with (defaults to 1min)
+  + defaults to 1min
 - `Unit`
   + the unit to activate when this timer elapses
 
@@ -221,16 +220,12 @@ WantedBy=multi-user.target
 
 ### OnCalendar
 
-- [WEEKDAY] [[YEAR-]MONTH-DAY] [HOUR:MINUTE[:SECOND]] ["UTC" | TIMEZONE]
-  + e.g.) `Thu,Fri 2012-*-1,5 11:12:13`
-
+- `[WEEKDAY] [[YEAR-]MONTH-DAY] [HOUR:MINUTE[:SECOND]] ["UTC" | TIMEZONE]`
 - separatad by comma or ".." refers to a range
 - WEEKDAY: in English like Wed or Wednesday
 - date and time
   + wildcard: `*`
-  + repetation value: `/n`
 - DAY:  `~` indicates the last day(s) in a month
-  + `Mon *-05~07/1` means "the last Monday in May"
 
 +++
 
