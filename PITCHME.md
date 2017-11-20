@@ -126,7 +126,7 @@ used by `enable` and `disable` commands
 
 - `Alias`
 - `WantedBy`/`RequiredBy`
-  + symlink is created in the .wants/ or .requires/ dir
+  + symlink is created in .wants/ or .requires/ dir
   + usually, specify some target
 
 +++
