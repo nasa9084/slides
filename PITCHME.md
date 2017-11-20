@@ -68,15 +68,17 @@ https://gitpitch.com/nasa9084/slides/osc17hiroshima
   + `systemctl status UNIT`
 
 Note:
-`service`/`chkconfig` is redirect to `systemctl`
+- `service`/`chkconfig` is redirect to `systemctl`
 
-+++ power management
++++
+
+#### power management
 
 - `systemctl reboot`
 - `systemctl poweroff`
 
 Note:
-`reboot`/`shutdown` is aliased to `systemctl`
+- `reboot`/`shutdown` is aliased to `systemctl`
 
 +++
 
