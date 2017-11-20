@@ -169,7 +169,7 @@ used by `enable` and `disable` commands
 
 +++
 
-##### e.g.) nginx
+#### e.g.) nginx
 
 ``` ini
 [Unit]
@@ -184,9 +184,6 @@ ExecStartPre=/usr/sbin/nginx -t
 ExecStart=/usr/sbin/nginx
 ExecReload=/bin/kill -s HUP $MAINPID
 KillSignal=SIGQUIT
-TimeoutStopSec=5
-KillMode=process
-PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target
