@@ -1,4 +1,4 @@
-## 最近のコマンドライン・ツール事情
+## Now, beginning "systemd"
 ## @nasa9084
 
 ---
@@ -7,7 +7,7 @@
 
 this slide:
 
-https://gitpitch.com/nasa9084/slides/kof2017
+https://gitpitch.com/nasa9084/slides/osc17hiroshima
 
 ---
 
@@ -20,272 +20,262 @@ https://gitpitch.com/nasa9084/slides/kof2017
 
 ---
 
-# peco
+## systemd System and Service Manager
 
-* by @lestrrat, written in Go
-* interactive filtering tool
-* like helm (namespace is conflicted!)
-* incremental search
-* select multiple line
-
-NOTE:
-* not kubernetes helm
-
-+++
-
-## installation
-
-#### macOS(w/ homebrew) users:
-
-`$ brew install peco`
-
-#### Unix or macOS(w/o homebrew) users:
-
-download binary from GitHub(peco/peco),
-and put it into your PATH
-
-#### Windows(w/ chocolatey) users:
-
-`C:\> choco install peco`
+- replacing init/Upstart
+  + Fedora v15 or later
+  + openSUSE v12.2 or later
+  + RHEL/CentOS 7 or later
+  + Ubuntu 15.04 or later
+  + Debian v8 or later
+- managing system and services
+- LGPL version 2.1 or later
 
 +++
 
-## how to use
+### components
 
-* input which you want to filter from stdin
-
+- **systemd**
+- networkd
+  + networking service
+- **journald**
+  + logging service
+- logind
+  + user login management service
+- user sessions
+  + controls user logins
+- nspawn
+  + enhanced `chroot`
 
 +++
 
-## history-selection
+### commands
 
-in .zshrc,
+- `systemctl`
+- `journalctl`
 
-``` shell
-function peco-history-selection() {
-    BUFFER="$(history -nr 1 | awk '!a[$0]++' |\
-    peco --query "$LBUFFER" | sed 's/\\n/\n/g')"
-    zle clear-screen
-}
++++
 
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+#### systemctl
+
+- starting service
+  + `systemctl start UNIT`
+- stop service
+  + `systemctl stop UNIT`
+- start service on boot
+  + `systemctl enable UNIT`
+- show status
+  + `systemctl status UNIT`
+
+Note:
+- `service`/`chkconfig` is redirect to `systemctl`
+
++++ power management
+
+- `systemctl reboot`
+- `systemctl poweroff`
+
+Note:
+- `reboot`/`shutdown` is aliased to `systemctl`
+
++++
+
+### unit file
+
+- configuration file
+  + syntax like `.ini` files
+  + `usr/lib/systemd/system`
+    * default configs (**DO NOT EDIT**)
+  + `/etc/systemd/system`
+    * user configs
+- services, devices, sockets, timers, ...
+
+Note:
+- when edit default config, copy to `/etc/systemd/system`
+- prior `/etc/systemd/system`
+
++++
+
+### general section
+
+- `[Unit]` section
+- `[Install]` section
+
++++
+
+### `[Unit]` section
+
+generic information about the unit
+
+- `Description`
+- `Wants`/`Requires`
+  + dependency
+- `Before`/`After`
+  + run order
+
+Note:
+- `Wants` is weaker than `Requires`
+- Require is **NOT INCLUDE** `Before`/`After`
+
++++
+
+### `[Install]` section
+
+used by `enable` and `disable` commands
+
+- `Alias`
+- `WantedBy`/`RequiredBy`
+  + symlink is created in the .wants/ or .requires/ dir
+  + usually, specify some target
+
++++
+
+## target
+
+- serving a similar purpose as runlevels
+- can have multiple targets at the same time
+
++++
+
+### vs. SysV init Run Level
+
+| SysV Lv.     | systemd target        |
+|:------------:|:---------------------:|
+| 0            | poweroff.target       |
+| 1, s, single | rescure.target        |
+| 2, 3, 4      | **multi-user.target** |
+| 5            | graphical.target      |
+| 6            | reboot.target         |
+| emergency    | emergency.target      |
+
+---
+
+## service
+
+- configure `.service` file
+- process controlled by systemd
+- write `[Service]` section
+
++++
+
+### `[Service]` section
+
+- `Type`
+- `ExecStart`
+- `ExecReload`
+- `ExecStop`
+- `Restart`
+
++++
+
+### e.g.) nginx
+
+``` ini
+[Unit]
+Description=The nginx HTTP and reverse proxy server
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+# Nginx will fail to start if /run/nginx.pid already exists but has the wrong
+# SELinux context. This might happen when running `nginx -t` from the cmdline.
+# https://bugzilla.redhat.com/show_bug.cgi?id=1268621
+ExecStartPre=/usr/bin/rm -f /run/nginx.pid
+ExecStartPre=/usr/sbin/nginx -t
+ExecStart=/usr/sbin/nginx
+ExecReload=/bin/kill -s HUP $MAINPID
+KillSignal=SIGQUIT
+TimeoutStopSec=5
+KillMode=process
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ---
 
-# ghq
+## timer
 
-* by @metemen, written in Go
-* remote repository clones management tool
-* having good compatibility with GOPATH
-
-+++
-
-## installation
-
-`$ go get https://github.com/motemen/ghq`
+- configure `.timer` file
+- timer-based service activation
+- write `[Timer]` section
+- use instead of `cron`
+- `foo.timer` activates `foo.service` by default
+- `WantedBy=timers.target`
 
 +++
 
-## how to use ghq
+### `[Timer]` section
 
-### get repo
-
-`$ ghq get some/repository`
-
-or,
-
-`$ ghq get https://some.your/repository/url`
-
-### listup repo
-
-`$ ghq list`
+- `OnCalendar`
+  + realtime timers with calendar event expressions
+- `OnXXXSec`
+  + XXX=Active/Boot/Startup/UnitActive/UnitInactive
+  + monotonic timers
+- `AccuracySec`
+  + accucary the time shall elapse with (defaults to 1min)
+- `Unit`
+  + the unit to activate when this timer elapses
 
 +++
 
-## using with peco
-#### src dir selection
+### OnCalendar
 
-``` shell
-function peco-src () {
-  local selected_dir=$(ghq list -p |\
-  perl -nlpe 's[.*src/(.*)][$1\0$_]' | peco --null)
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd ${selected_dir}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
+- [WEEKDAY] [[YEAR-]MONTH-DAY] [HOUR:MINUTE[:SECOND]] ["UTC" | TIMEZONE]
+  + e.g.) `Thu,Fri 2012-*-1,5 11:12:13`
 
-zle -N peco-src
-bindkey '^S' peco-src
-```
-
----
-
-# hub
-
-* by GitHub, written in Go
-* extend `git` command
+- separatad by comma or ".." refers to a range
+- WEEKDAY: in English like Wed or Wednesday
+- date and time
+  + wildcard: `*`
+  + repetation value: `/n`
+- DAY:  `~` indicates the last day(s) in a month
+  + `Mon *-05~07/1` means "the last Monday in May"
 
 +++
 
-## installation
+#### special expressions
 
-#### macOS(w/ homebrew) user
-
-`$ brew install hub`
-
-#### windows(w/ chocolatey) user
-
-`C:\> choco install hub`
-
-#### fedora user
-
-`# dnf install hub`
-
-#### other user
-
-download binary from GitHub(github/hub)
+- `minutely`: `*-*-* *:*:00`
+- `hourly`: `*-*-* *:00:00`
+- `daily`: `*-*-* 00:00:00`
+- `monthly`: `*-*-01 00:00:00`
+- `weekly`: `Mon *-*-* 00:00:00`
+- `yearly`: `*-01-01 00:00:00`
+- `quarterly`: `*-01,04,07,10-01 00:00:00`
+- `semiannually`: `*-01,07-01 00:00:00`
 
 +++
 
-## prepare hub
+#### Examples
 
-#### Unix user
-
-put into your .bashrc or .zshrc:
-
-`eval "$(hub alias -s)"`
-
-#### windows user
-
-do on powershell:
-
-``Add-Content $PROFILE "`nSet-Alias git hub"``
+https://www.freedesktop.org/software/systemd/man/systemd.time.html
 
 +++
 
-## how to use hub
+### OnXXXSec
 
-you can use as same as `git` command, and some GitHub integrations are added.
-
-* `$ git create`
-    - create repository on GitHub
-* `$ git pull-request`
-    - open a pull req on GitHub
-* `$ git ci-status`
-    - show CI status of a commit
+- OnActiveSec: the moment the time itself is activated
+- OnBootSec: when the machine was booted up
+- OnStartupSec: when systemd was first started
+- OnUnitActiveSec: when the unit was lastActivated
+- OnUnitInactiveSec: when the unit was last deactivated
 
 +++
 
-## BONUS: gitignore.io
+#### expressions
 
-https://www.gitignore.io
-
-* generates .gitignore for your lang, your os
-
-``` shell
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-```
-
-and `$ gi macos,emacs,go > .gitignore`
-
----
-
-# anyenv
-
-* by riywo, written in shell
-* wrapper for **env
-
-+++
-
-## installation
-
-``` shell
-$ git clone https://github.com/riywo/anyenv ~/.anyenv
-$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.your_profile
-$ echo 'eval "$(anyenv init -)"' >> ~/.your_profile
-$ exec $SHELL -l
-```
-
-+++
-
-## how to use
-
-``` shell
-$ anyenv install pyenv
-$ exec $SHELL -l
-$ pyenv install 3.6.0
-$ pyenv global 3.6.0 # enable python 3.6.0
-```
-
-+++
-
-## **envs
-
-* erlenv: Erlang
-* goenv: Go
-* jenv: Java
-* ndenv: Node.js
-* plenv: Perl
-* pyenv: Python
-* rbenv: Ruby
-* scalaenv: Scala
-* swiftenv: Swift
-
-and more!
-
----
-
-# direnv
-
-* written in Go
-* environment switcher
-
-+++
-
-## installation
-
-download from https://github.com/direnv/direnv/releases
-
-or install w/ package manager:
-
-+++
-
-## prepare
-
-put into your profile:
-
-##### BASH
-
-`eval "$(direnv hook bash)"`
-
-##### ZSH
-
-`eval "$(direnv hook zsh)"`
-
-##### FISH
-
-`eval (direnv hook fish)`
-
-##### TCSH
-
-``eval `direnv hook tcsh` ``
-
-+++
-
-## how to use
-
-``` shell
-$ echo export FOO=foo > .envrc
-$ direnv allow .
-```
-
----
-
-# DEMO
+- usec, us
+- msec, ms
+- seconds, second, sec, s (default)
+- minutes, minute, min, m
+- hours, hour, hr, h
+- days, day, d
+- weeks, week, w
+- months, month, M (defined as 30.44d)
+- years, year, y (defined as 365.25d)
 
 ---
 
