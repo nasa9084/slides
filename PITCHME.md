@@ -169,7 +169,7 @@ used by `enable` and `disable` commands
 
 +++
 
-### e.g.) nginx
+#### e.g.) nginx
 
 ``` ini
 [Unit]
