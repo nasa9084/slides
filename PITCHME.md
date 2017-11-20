@@ -279,4 +279,21 @@ https://www.freedesktop.org/software/systemd/man/systemd.time.html
 
 ---
 
+## journald
+
+- logging service for systemd
+- saved on `/var/run/log/journal`
+  + removed at reboot
+- collect from:
+  + stdout/stderr managed by systemd
+  + syslog
+  + journald API
+- `journalctl` command
+
+Note:
+- `/var/log/journal`
+- `journalctl` pipes to `less`
+
+---
+
 ## DO YOU HAVE ANY QUESTIONS?
