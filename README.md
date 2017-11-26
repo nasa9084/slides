@@ -1,1 +1,1 @@
-# Now going with Go
+# ローカル環境でDockerをドカドカつかう
