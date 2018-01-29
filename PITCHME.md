@@ -45,6 +45,14 @@ https://gitpitch.com/nasa9084/slides/wakate2018w
 
 ### git-license
 
+#### installation
+
+``` shell
+$ go get github.com/nasa9084/git-license
+```
+
+or download from release page on GitHub into your $PATH
+
 +++
 
 ### git-search
