@@ -1,5 +1,5 @@
-# Improving Command-Line Git Environments
-## @nasa9084
+## Improving Command-Line Git Environments
+### @nasa9084
 
 ---
 
