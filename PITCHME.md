@@ -41,6 +41,13 @@ https://gitpitch.com/nasa9084/slides/wakate2018w
 
 ### Git Subcommand
 
+you can create your git subcommand easily
+
+0. make your command
+0. name the executable git-xxx
+0. put it in your $PATH
+0. now you can use `git xxx`
+
 +++
 
 ### git-license
