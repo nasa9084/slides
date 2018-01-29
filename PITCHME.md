@@ -16,3 +16,31 @@ https://gitpitch.com/nasa9084/slides/wakate2018w
 * @nasa9084
 * Go/Python
 * emacs! emacs! emacs!
+
+---
+
+## Creating Repository on GitHub...
+
+---
+
+## gitignore.io
+
++++
+
+### Git Command Alias
+
++++
+
+### Install to Command Line
+
+---
+
+## LICENSE
+
++++
+
+### Git Subcommand
+
++++
+
+### git-license
