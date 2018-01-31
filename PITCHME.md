@@ -21,23 +21,53 @@ https://gitpitch.com/nasa9084/slides/wakate2018w
 
 ## Creating Repository on GitHub...
 
++++
+
+### You can auto-make .gitignore/LICENSE
+
+![gitignore-github](assets/gi-license.png)
+
++++
+
+### You can choose your product's license
+
+![select-license](assets/select-license.png)
+
 ---
 
 ## gitignore.io
+
+![gitignore.io](assets/gitignore-io.png)
+
++++
+
+### gitignore.io API
+
+web API to get .gitignore
+
+`$ curl https://www.gitignore.io/api/LANGUAGE,OS,EDITOR,...`
+
+#### e.g.
+
+`$ curl https://www.gitignore.io/api/go,macos,emacs`
 
 +++
 
 ### Git Command Alias
 
+use `git config alias.xxx` to create command alias "`git xxx`"
+
 +++
 
-### Install to Command Line
+### Install gitignore.io to Command Line
+
+``` shell
+$ git config --global alias.ignore '!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi'
+```
+
+now you can use `git ignore foo,bar,baz,...`
 
 ---
-
-## LICENSE
-
-+++
 
 ### Git Subcommand
 
@@ -52,6 +82,8 @@ you can create your git subcommand easily
 
 ### git-license
 
+auto-make LICENSE file using GitHub API
+
 #### installation
 
 ``` shell
@@ -60,6 +92,6 @@ $ go get github.com/nasa9084/git-license
 
 or download from release page on GitHub into your $PATH
 
-+++
+---
 
-### git-search
+# </present>
