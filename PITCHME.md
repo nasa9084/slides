@@ -19,6 +19,26 @@ https://gitpitch.com/nasa9084/slides/wakate2018w
 
 ---
 
+## GitHub with CLI
+### `hub` command
+
+![hub](assets/hub-website.png)
+
++++
+
+### Usage
+
+- wraps `git` command
+  + `alias git=hub`
+- creates repository on GitHub:
+  + `git create`
+- makes a fork:
+  + `git fork`
+- makes a pull-request:
+  + `git pull-request`
+
+---
+
 ## Creating Repository on GitHub...
 
 +++
