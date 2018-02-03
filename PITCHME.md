@@ -22,7 +22,7 @@ https://gitpitch.com/nasa9084/slides/wakate2018w
 ## GitHub with CLI
 ### `hub` command
 
-![hub](assets/hub-website.png)
+![hub](assets/hub_website.png)
 
 +++
 
