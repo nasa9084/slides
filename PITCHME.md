@@ -14,6 +14,7 @@ https://gitpitch.com/nasa9084/slides/wakate2018w
 ![ICON](assets/pika.jpg)
 
 * @nasa9084
+* VirtualTech Japan Inc.
 * Go/Python
 * emacs! emacs! emacs!
 
