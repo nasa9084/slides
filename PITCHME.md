@@ -48,6 +48,8 @@ App Dev.「インフラはそこに有って当たり前」
 
 ##### Infrastructure as Codeの強制
 
+![deploy-yaml](assets/image/deploy.png)
+
 ---
 
 ##### Self-Healing
