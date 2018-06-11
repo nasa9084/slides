@@ -33,6 +33,8 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 * /k(j)uːbəˈnɛtɪs/, /k(j)uːbəˈneɪtɪs/
 * コンテナオーケストレーションシステム
   * MicroService Architecture
+  * コンテナノードのクラスタリング
+  * 自律システム
 * **抽象化基盤**
 
 ---
