@@ -24,6 +24,8 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 
 ### Kubernetes #とは
 
+![kubernetes](assets/image/kubernetes.png)
+
 +++
 
 #### Kubernetes (K8s)
