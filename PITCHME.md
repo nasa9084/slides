@@ -5,9 +5,7 @@
 
 ### $ whoami
 
-<div style="float:left;">
 ![pika](assets/image/pika.jpg)
-</div>
 
 * @nasa9084
 * 日本仮想化技術株式会社
