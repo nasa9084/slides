@@ -6,7 +6,6 @@
 #
 theme : sky
 theme-override : assets/css/PITCHME.css
-logo : assets/image/logo.png
 background : assets/image/triangles.svg
 background-size : cover
 background-opacity : 80
