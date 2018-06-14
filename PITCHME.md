@@ -107,6 +107,10 @@ spec:
 
 ---
 
+##### Service Discovery
+
+---
+
 ##### Automated Rollout & Rollback
 
 ---
