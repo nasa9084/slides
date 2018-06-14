@@ -33,9 +33,10 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 * /k(j)uːbəˈnɛtɪs/, /k(j)uːbəˈneɪtɪs/
 * distributed container orchestration system
   * infrastructure for containerized applications
-  * MicroService Architecture
+  * microservice architecture
   * container node clustering
-  * Autonomous system
+  * autonomous system
+  * immutable infrastructure
 * **Abstraction Environment**
 
 ---
