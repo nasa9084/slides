@@ -16,13 +16,13 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 ![pika](assets/image/pika.jpg)
 
 * @nasa9084
-* 日本仮想化技術株式会社
-* 自宅K8ser
+* VirtualTech Japan Inc.
+* on-home K8s-er
 * Go/Python
 
 ---
 
-### Kubernetes #とは
+### WHAT IS Kubernetes?
 
 ![kubernetes](assets/image/kubernetes.png)
 
@@ -31,18 +31,19 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 #### Kubernetes (K8s)
 
 * /k(j)uːbəˈnɛtɪs/, /k(j)uːbəˈneɪtɪs/
-* コンテナオーケストレーションシステム
+* distributed container orchestration system
+  * infrastructure for containerized applications
   * MicroService Architecture
-  * コンテナノードのクラスタリング
-  * 自律システム
-* **抽象化基盤**
+  * container node clustering
+  * Autonomous system
+* **Abstraction Environment**
 
 ---
 
-#### K8sを導入するメリット
+#### ADVANTAGES of Kubernetes
 
-* インフラの抽象化
-* Infrastructure as Codeの**強制**
+* Abstract Infrastructure
+* Force Infrastructure as Code
 * Self-Healing
 * Service Discovery
 * Automated Rollout & Rollback
@@ -50,13 +51,13 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 
 ---
 
-##### インフラの抽象化
+##### Abstract Infrastructure
 
-App Dev.「インフラはそこに有って当たり前」
+App Dev. "Infrastructures are given."
 
 ↓
 
-**Kubernetesはインフラを抽象化して提供する**
+**Kubernetes abstracts the infrastructures**
 
 +++
 
@@ -97,7 +98,7 @@ spec:
 
 ---
 
-##### Infrastructure as Codeの強制
+##### force Infrastructure as Code
 
 ![deploy-yaml](assets/image/deploy.png)
 
