@@ -136,10 +136,20 @@ spec:
 
 ---
 
-#### K8sを導入するデメリット
+#### DISADVANTAGES of Kubernetes
 
-* 学習コスト
-* 導入が大変
+* Learning cost
+  * K8s' concepts
+  * about container
+  * about containerizing apps
+* Initial Cost
+  * using on-premises is hard
+    * setup
+    * operations
+  * **USE ON CLOUD!**
+* network latency
+  * VXLAN overhead(flannel)
+  * iptables(too many records)
 
 ---
 
