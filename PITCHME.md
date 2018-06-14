@@ -106,6 +106,10 @@ spec:
 
 ##### Self-Healing
 
+* Application Health Check
+  * LivenessProbe
+  * ReadinessProbe
+
 ---
 
 ##### Service Discovery
