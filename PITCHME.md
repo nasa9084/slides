@@ -48,7 +48,7 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 * Automated Rollout & Rollback
 * Automated Horizontal Scale
 
-+++
+---
 
 ##### インフラの抽象化
 
@@ -57,6 +57,43 @@ App Dev.「インフラはそこに有って当たり前」
 ↓
 
 **Kubernetesはインフラを抽象化して提供する**
+
++++
+
+###### Ingress / Service type LoadBalancer
+
+``` yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: yourApplication
+spec:
+  selector:
+    app: yourApplication
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
+```
+
++++
+
+###### Deployment
+
+``` yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - image: prom/prometheus:v2.2.1
+          name: prometheus
+```
 
 ---
 
