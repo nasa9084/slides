@@ -118,6 +118,9 @@ spec:
 
 ##### Automated Rollout & Rollback
 
+* Rolling update
+* `kubectl rollout undo`
+
 ---
 
 ##### Automated Horizontal Scale
