@@ -20,6 +20,12 @@ https://gitpitch.com/nasa9084/slides/oolforum2018
 * on-home K8s-er
 * Go/Python
 
++++
+
+#### myhome k8s
+
+![infra](assets/image/myhome_infra.png)
+
 ---
 
 ### WHAT IS Kubernetes?
