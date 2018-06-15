@@ -162,4 +162,17 @@ spec:
 
 ---
 
+#### Documents
+
+* WebSite: [k8s.io](https://kubernetes.io)
+* Reference: [k8s.io/docs/reference](https://kubernetes.io/docs/reference/)
+
+#### Community
+
+* Slack: [slack.k8s.io](http://slack.k8s.io/)
+  * JP users: #jp-users
+  * Translate Docs: #kubernetes-docs-ja
+
+---
+
 # Q?
