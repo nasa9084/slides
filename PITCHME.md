@@ -4,6 +4,14 @@
 
 ## $ whoami
 
+![pika](assets/image/pika.png)
+
+* @nasa9084
+* 日本仮想化技術株式会社
+* 自宅K8s-er
+* Go / Python
+* emacs! emacs! emacs!
+
 ---
 
 ## prometheusってなに？
