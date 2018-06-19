@@ -16,15 +16,53 @@
 
 ## Prometheus #とは
 
++++
+
+### Prometheus
+
+* /pɹəˈmiːθi.əs/
+* Google社内監視ツールBorgmonにインスパイアされたOSS
+* Pull型アーキテクチャ
+  * データのフォーマットを統一
+    * ツリー構造ではなくフラットなデータ
+* Go製
+
++++
+
+#### データフォーマット
+
+``` text
+node_memory_MemTotal_bytes 1.6809955328e+10
+node_memory_Active_bytes 1.031897088e+10
+
+node_network_receive_bytes_total{device="eno1"} 7.863558737e+09
+node_network_receive_bytes_total{device="eno2"} 0
+node_network_receive_bytes_total{device="lo"} 2.130147354e+10
+```
+
++++
+
+### Prometheusの役割
+
+0. メトリクスの収集・格納
+0. クエリ(PromQL)への回答
+0. アラート
 
 ---
 
 ## 選ばれる理由
 
-* 収集簡単
-* 柔軟
-* コンテナと相性がよい
-* 自動化（ansible等）と相性がよい
+* セットアップが簡単
+  * 1バイナリなのでダウンロードするだけ
+  * 細かい依存解決とかを考えなくて良い
+  * DBなどのセットアップも不要
+* 収集が簡単
+  * 一般的な監視対象はExporterが提供されている
+  * Exporterの実装も難しくない
+* コンテナ等のスケールする基盤と相性が良い
+  * Service Discovery
+* 高性能
+  * 数百台の監視も2C4GBで十分なくらい
 
 ---
 
