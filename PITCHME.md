@@ -5,6 +5,7 @@
 
 ---
 
+@title[whoami]
 ## $ whoami
 
 ![pika](assets/image/pika.png)
@@ -17,10 +18,12 @@
 
 ---
 
+@title[Prometheus #とは]
 ## Prometheus #とは
 
 +++
 
+@title[Prometheus]
 ### Prometheus
 
 * /pɹəˈmiːθi.əs/
@@ -32,6 +35,7 @@
 
 +++
 
+@title[データフォーマット]
 #### データフォーマット
 
 ``` text
@@ -45,6 +49,7 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
 
 +++
 
+@title[Prometheusの役割]
 ### Prometheusの役割
 
 0. メトリクスの収集・格納
@@ -53,6 +58,7 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
 
 ---
 
+@title[選ばれる理由]
 ## 選ばれる理由
 
 * セットアップが簡単
@@ -69,10 +75,12 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
 
 ---
 
+@title[使いどころ]
 ## 使いどころ
 
 ---
 
+@title[インストールの流れ]
 ## インストールの流れ
 
 0. [Prometheus](https://prometheus.io/download/)をダウンロード
@@ -83,10 +91,12 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
 
 ---
 
+@title[注意点]
 ## 注意点
 
 ---
 
+@title[Exporterの作り方]
 ## Exporterの作り方(Goの場合)
 
 +++
