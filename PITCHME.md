@@ -100,6 +100,18 @@ Note:
 Note:
 * Exporters and integrationsにない場合は自作する(後述)
 
++++
+
+### 可視化
+
+Prometheusには可視化機能は(ほぼ)ない
+
+↓
+
+Grafanaを使用して可視化する
+
+e.g.) https://grafana.web-apps.tech (viewer/viewer)
+
 ---
 
 ## 注意点
