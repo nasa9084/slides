@@ -58,8 +58,6 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
 
 * セットアップが簡単
   * 1バイナリなのでダウンロードするだけ
-  * 細かい依存解決とかを考えなくて良い
-  * DBなどのセットアップも不要
 * 収集が簡単
   * 一般的な監視対象はExporterが提供されている
   * Exporterの実装も難しくない
@@ -67,6 +65,10 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
   * Service Discovery
 * 高性能
   * 数百台の監視も2C4GBで十分なくらい
+
+Note:
+* 細かい依存関係とかを考えなくて良い
+* DBのセットアップも不要
 
 ---
 
