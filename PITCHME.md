@@ -28,9 +28,9 @@ https://gitpitch.com/nasa9084/slides/dbas2018
 * Go / Python
 * emacs! emacs! emacs!
 
----
+---?image=assets/image/prometheus_bg.png&size=cover
 
-## Prometheus #とは
+## <span style="color: black;">Prometheus #とは</span>
 
 +++
 
