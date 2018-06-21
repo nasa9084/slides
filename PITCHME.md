@@ -11,7 +11,7 @@ this slide:
 
 https://gitpitch.com/nasa9084/slides/dbas2018
 
-+++?image=assets/image/caution.jpg
++++?image=assets/image/caution_bg.jpg
 
 # @fa[exclamation-triangle](CAUTION!)
 
