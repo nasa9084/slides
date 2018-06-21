@@ -5,6 +5,14 @@
 
 ---
 
+## at first
+
+this slide:
+
+https://gitpitch.com/nasa9084/slides/dbas2018
+
+---
+
 @title[whoami]
 ## $ whoami
 
