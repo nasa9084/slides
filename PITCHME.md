@@ -107,7 +107,7 @@ Note:
 ---
 
 @title[Exporterの作り方]
-## Exporterの作り方(Goの場合)
+### Exporterの作り方(Goの場合)
 
 +++
 
