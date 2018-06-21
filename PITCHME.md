@@ -37,7 +37,7 @@ https://gitpitch.com/nasa9084/slides/dbas2018
 ### Prometheus
 
 * /pɹəˈmiːθi.əs/
-* Google社内監視ツールBorgmonにインスパイアされたOSS
+* OSSの監視ツール
 * Pull型アーキテクチャ
   * データのフォーマットを統一
     * ツリー構造ではなくフラットなデータ
