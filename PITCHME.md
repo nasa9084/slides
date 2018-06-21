@@ -88,7 +88,7 @@ Note:
 
 ---
 
-## インストールの流れ(サーバ)
+### インストールの流れ(サーバ)
 
 0. [Prometheus](https://prometheus.io/download/)をダウンロード
 0. 適当なところに配置
@@ -107,7 +107,7 @@ Note:
 0. (必要なら)設定をする
 0. 起動する
    * systemd等でデーモン化するとよい
-0. (サービスディスカバリされない場合)サーバ側の設定に登録する
+0. サーバ側の設定に登録する
 
 Note:
 * Exporters and integrationsにない場合は自作する(後述)
@@ -127,6 +127,8 @@ e.g.) https://grafana.web-apps.tech (viewer/viewer)
 ---
 
 ## 注意点
+
+*
 
 ---
 
