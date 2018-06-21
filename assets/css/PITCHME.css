@@ -70,3 +70,6 @@ body {
 
 .gp-download { margin-left: 10px; }
 
+.reveal section img {
+    border: none;
+}
