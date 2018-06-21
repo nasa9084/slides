@@ -76,7 +76,7 @@ Note:
 
 ---
 
-## インストールの流れ
+## インストールの流れ(サーバ)
 
 0. [Prometheus](https://prometheus.io/download/)をダウンロード
 0. 適当なところに配置
@@ -85,6 +85,20 @@ Note:
    * systemd等でデーモン化するとよい
 0. `:9090/graph`にアクセス
 
++++
+
+### インストールの流れ(クライアント)
+
+0. [Exporters and integrations](https://prometheus.io/docs/instrumenting/exporters/)からExporterを探す
+0. 対象ホストでバイナリをダウンロード
+0. 適当なところに配置
+0. (必要なら)設定をする
+0. 起動する
+   * systemd等でデーモン化するとよい
+0. (サービスディスカバリされない場合)サーバ側の設定に登録する
+
+Note:
+* Exporters and integrationsにない場合は自作する(後述)
 
 ---
 
