@@ -151,6 +151,14 @@ Note:
 
 +++
 
+#### Exporterが不要なソフトウェア
+
+* Kubernetes
+* Minio
+* Concource
+
++++
+
 ### 可視化
 
 Prometheusには可視化機能は(ほぼ)ない
