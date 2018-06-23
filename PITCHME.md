@@ -42,6 +42,7 @@ https://gitpitch.com/nasa9084/slides/dbas2018
   * データのフォーマットを統一
     * ツリー構造ではなくフラットなデータ
 * Go製
+* CNCF incubating project
 
 +++
 
