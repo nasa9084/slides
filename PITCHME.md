@@ -88,6 +88,21 @@ Note:
 
 ## 使いどころ
 
++++
+
+### autoscaleするようなシステム
+
+* Service Discoveryを搭載している
+
+``` yaml
+- job_name: 'node'
+  ec2_sd_configs:
+  - region: ap-northeast-1
+    access_key: YOUR_AWS_ACCESS_KEY
+    secret_key: YOUR_AWS_SECRET_ACCESS_KEY
+    port: 9100
+```
+
 ---
 
 ### インストールの流れ(サーバ)
