@@ -108,6 +108,14 @@ Note:
 
 ---
 
+### 自動化をしたい場合
+
+* Prometheusのアラートの哲学
+  * できるだけ人間にはアラートを投げない
+* alertを起点にwebhook
+
+---
+
 ### インストールの流れ(サーバ)
 
 0. [Prometheus](https://prometheus.io/download/)をダウンロード
