@@ -114,6 +114,26 @@ Note:
 
 +++
 
+#### 代表的なExporter
+##### (official)
+
+* Node exporter
+* MySQL server exporter
+* SNMP exporter
+* Blackbox exporter
+
++++
+
+#### 代表的なExporter
+##### (unofficial)
+
+* cAdvisor
+* PostgreSQL exporter
+* Gluster exporter
+* GitHub exporter
+
++++
+
 ### 可視化
 
 Prometheusには可視化機能は(ほぼ)ない
