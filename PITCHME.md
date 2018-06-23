@@ -82,6 +82,7 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
 Note:
 * 細かい依存関係とかを考えなくて良い
 * DBのセットアップも不要
+* 1サンプルあたり2byteくらいで保存される
 
 ---
 
