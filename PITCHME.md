@@ -89,8 +89,6 @@ Note:
 
 ## 使いどころ
 
-+++
-
 ### autoscaleするようなシステム
 
 * Service Discoveryを搭載している
