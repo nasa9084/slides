@@ -15,6 +15,10 @@ https://gitpitch.com/nasa9084/slides/dbas2018
 
 ![caution](assets/image/caution.png)
 
+Note:
+* 解析的な話はない
+* 撮影はしても良いけど、スライドは公開済みなので周りの迷惑にならないように
+
 ---
 
 @title[whoami]
