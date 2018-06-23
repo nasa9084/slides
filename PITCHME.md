@@ -78,6 +78,7 @@ node_network_receive_bytes_total{device="lo"} 2.130147354e+10
   * Service Discovery
 * 高性能
   * 数百台の監視も2C4GBで十分なくらい
+* アラートの哲学
 
 Note:
 * 細かい依存関係とかを考えなくて良い
