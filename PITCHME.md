@@ -18,6 +18,8 @@ slide: https://gitpitch.com/nasa9084/slides/osc18do
 
 ## cf. https://l.cncf.io
 
+---?image=assets/image/wordcloud.png&size=contain
+
 ---
 
 # Computing
