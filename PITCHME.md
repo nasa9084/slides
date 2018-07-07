@@ -10,6 +10,8 @@ slide: https://gitpitch.com/nasa9084/slides/osc18do
 
 # $ whoami
 
+![pika](assets/image/pika.png]
+
 * @nasa9084
 * Go/Python
 * emacs! emacs! emacs!
