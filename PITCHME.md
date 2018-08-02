@@ -82,6 +82,17 @@ spec:
 
 ![type LoadBalancer](assets/image/typeloadbalancer.png)
 
++++
+
+##### self-healing
+
+* Liveness Probe
+  * check application health
+    * HTTP GET
+    * Exec command
+  * kill container if not healthy
+    * K8s will make a new app container
+
 ---
 
 ### HOW-TO build
