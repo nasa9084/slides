@@ -71,4 +71,19 @@ https://gitpitch.com/nasa9084/slides/osc18kyoto
 
 ---
 
+### resources
+
+* Pod
+* Deployment
+* DaemonSet
+* Service
+* ConfigMap
+* PersistentVolume
+
+Note:
+* Secret
+* Job
+
+---
+
 # Q?
