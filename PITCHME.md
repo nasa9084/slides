@@ -59,14 +59,4 @@ https://gitpitch.com/nasa9084/slides/osc18kyoto
 
 ---
 
-##### Abstract Infrastructure
-
-App Dev. "Infrastructures are given."
-
-↓
-
-**Kubernetes abstracts the infrastructures**
-
----
-
 # Q?
