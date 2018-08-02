@@ -57,6 +57,31 @@ https://gitpitch.com/nasa9084/slides/osc18kyoto
 * automated rollout & rollback
 * automated horizontal scale
 
++++
+
+##### abstract infrastructure
+
+* e.g.: Service type LoadBalancer
+
+``` yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: example
+spec:
+  type: LoadBalancer
+  selector:
+    app: example
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+```
+
++++
+
+![type LoadBalancer](assets/image/typeloadbalancer.png)
+
 ---
 
 ### HOW-TO build
@@ -83,6 +108,14 @@ https://gitpitch.com/nasa9084/slides/osc18kyoto
 Note:
 * Secret
 * Job
+
+---
+
+### tools
+
+* kustomize
+* kubectx/kubens
+* stern
 
 ---
 
