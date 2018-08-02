@@ -59,4 +59,16 @@ https://gitpitch.com/nasa9084/slides/osc18kyoto
 
 ---
 
+### HOW-TO build
+
+* Public Clouds
+  * GCP-GKE, AWS-EKS, Azure-AKS
+* On-Prem
+  * kubeadm, kubespray, juju/MAAS, Rancher/RKE
+  * the hard way
+* Localhost
+  * minikube, Docker for Mac/Windows
+
+---
+
 # Q?
