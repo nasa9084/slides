@@ -93,9 +93,52 @@ spec:
   * kill container if not healthy
     * K8s will make a new app container
 
++++
+
+##### automated rollout & rollback
+
+* automated rolling update
+* `kubectl rollout undo`
+
++++
+
+##### automated horizontal scale
+
+``` yaml
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoScaler
+metadata:
+  name: someAutoScaler
+spec:
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+  scaleTargetRef:
+    apiVersion: app/v1
+    kind: Deployment
+    name: someDeployment
+```
+
 ---
 
-### HOW-TO build
+#### DISADVANTAGES of Kubernetes
+
+* Learning cost
+  * K8s' concepts
+  * about container
+  * about containerizing apps
+* Initial Cost
+  * using on-premises is hard
+    * setup
+    * operations
+  * **USE ON CLOUD!**
+* network latency
+  * VXLAN overhead(flannel)
+  * iptables(too many records)
+
+---
+
+### HOW-TO use Kubernetes
 
 * Public Clouds
   * GCP-GKE, AWS-EKS, Azure-AKS
@@ -127,6 +170,20 @@ Note:
 * kustomize
 * kubectx/kubens
 * stern
+
+---
+
+#### Documents
+
+* WebSite: [k8s.io](https://kubernetes.io)
+* Reference: [k8s.io/docs/reference](https://kubernetes.io/docs/reference/)
+
+#### Community
+
+* Slack: [slack.k8s.io](http://slack.k8s.io/)
+  * JP users: #jp-users
+  * Translate Docs: #kubernetes-docs-ja
+
 
 ---
 
