@@ -24,7 +24,7 @@ https://gitpitch.com/nasa9084/slides/osc18kyoto
 
 #### myhome k8s
 
-![infra](assets/image/myhome_infra.png)
+![infra](assets/image/my_infra.png)
 
 ---
 
