@@ -4,7 +4,9 @@
 ---
 @transition[none]
 
+@snap[north]
 ## $ whoami
+@snapend
 
 @snap[east]
 * @nasa9084
