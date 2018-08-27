@@ -37,6 +37,7 @@
 ## What is "self-hosting"?
 
 > Self-hosting is the use of a computer program as part of the toolchain or operating system that produces new versions of that same program
+> - [Wikipedia](https://en.wikipedia.org/wiki/Self-hosting)
 
 Note:
 * e.g. C compiler is written in C
