@@ -2,6 +2,7 @@
 ## @nasa9084
 
 ---
+@transition[none]
 
 ## $ whoami
 
