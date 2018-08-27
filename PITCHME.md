@@ -12,7 +12,7 @@
 * Go, emacs, Kubernetes
 @snapend
 
-@snap[west sidebar]
+@snap[west]
 ![pika](assets/image/pika.png)
 @snapend
 
