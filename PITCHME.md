@@ -9,7 +9,7 @@
 @snapend
 
 @snap[east]
-* @nasa9084
+* nasa9084
 * ~~VirtualTech Japan Inc.~~
 * Go, emacs, Kubernetes
 @snapend
