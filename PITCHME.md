@@ -5,6 +5,10 @@
 
 ## $ whoami
 
+@snap[east sidebar]
+![pika](assets/image/pika.png)
+@snapend
+
 * @nasa9084
 * ~~VirtualTech Japan Inc.~~
 * Go, emacs, Kubernetes
