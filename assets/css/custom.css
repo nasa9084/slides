@@ -4,5 +4,5 @@
 }
 
 div.east, div.west, div.north, div.south {
-    position: relative;
+    transform: none;
 }
