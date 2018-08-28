@@ -54,9 +54,9 @@ Note:
 
 @ol
 
-1. Kubernetes manages containerized applications especially microservices.
-2. Kubernetes **IS** an microservice application written in Go.
-3. Kubernetes can manages Kubernetes.
+- Kubernetes manages containerized applications especially microservices.
+- Kubernetes **IS** an microservice application written in Go.
+- Kubernetes can manages Kubernetes.
 
 @ol
 
