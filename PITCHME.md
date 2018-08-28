@@ -40,7 +40,7 @@
 
 @ol
 
-- K8s manages containerized apps especially microservices.
+- K8s manages containerized apps esp. microservices.
 - K8s **IS** an microservice app.
 - K8s can manages K8s.
 
