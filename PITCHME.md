@@ -94,6 +94,8 @@ Note:
 
 ### How K8s works
 
+![components](assets/image/kubernetes_componentns.png)
+
 +++
 
 ### The Level of Self-Hosting
