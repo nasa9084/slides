@@ -70,9 +70,8 @@ Note:
 ## What is "Self-Hosted"?
 
 > Self-hosting is the use of a computer program as part of the toolchain or operating system that produces new versions of that same program
+
 -- Wikipedia
-
-
 
 ---
 
