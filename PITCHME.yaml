@@ -1,4 +1,4 @@
-theme: night
+theme: white
 theme-override: assets/css/custom.css
 transition: none
 published: true

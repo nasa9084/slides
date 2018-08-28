@@ -2,7 +2,3 @@
     border: 0;
     box-shadow: none;
 }
-
-div.east, div.west, div.north, div.south {
-    transform: none;
-}
