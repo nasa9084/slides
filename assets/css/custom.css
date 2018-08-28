@@ -4,5 +4,5 @@
 }
 
 .north, .west, .east, .south {
-    font-family: "Montserrat", Impact, sans-serif;
+    font-family: "Montserrat", Impact, sans-serif; !important
 }
