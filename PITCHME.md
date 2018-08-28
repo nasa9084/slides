@@ -2,7 +2,6 @@
 ## @nasa9084
 
 ---
-@transition[none]
 
 @snap[north]
 <h2>foo</h2>

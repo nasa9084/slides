@@ -1,3 +1,4 @@
 theme: night
 theme-override: assets/css/custom.css
+transition: none
 published: true
