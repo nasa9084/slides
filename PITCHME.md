@@ -34,20 +34,6 @@
   * Automated deployment/rolling out/scaling
 * A CNCF project
 
----
-
-# Self-Hosting
-
-+++
-
-## What is "self-hosting"?
-
-> Self-hosting is the use of a computer program as part of the toolchain or operating system that produces new versions of that same program
-> - [Wikipedia](https://en.wikipedia.org/wiki/Self-hosting)
-
-Note:
-* e.g. C compiler is written in C
-
 +++
 
 ## Kubernetes can manages...
@@ -62,7 +48,31 @@ Note:
 
 +++
 
-## Self-Hosted Kubernetes
+## Kubernetes on Kubernetes
+
+* Deploy Kubernetes on Kubernetes
+* Overcloud Kubernetes is managed by Kubernetes
+* How about undercloud kubernetes?
+
+Note:
+* cf. K8s on K8s on OpenStack
+
++++
+
+# 🤔
+
++++
+
+## @fa[angle-double-right] Self-Hosted Kubernetes
+
++++
+
+## What is "Self-Hosted"?
+
+> Self-hosting is the use of a computer program as part of the toolchain or operating system that produces new versions of that same program
+-- Wikipedia
+
+
 
 ---
 
@@ -72,11 +82,24 @@ Note:
 
 ### Kubernetes Components
 
+* kube-apiserver
+* kube-scheduler
+* kube-controller-manager
+* cloud-controller-manager
+* etcd
+* kubelet
+* kube-proxy
+* cluster DNS
+
 +++
 
 ### The Level of Self-Hosting
 
 ![level of self-hosting](assets/image/level_of_self-hosting.png)
+
++++
+
+
 
 ---
 
