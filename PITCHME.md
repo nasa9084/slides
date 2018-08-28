@@ -1,5 +1,5 @@
-# Building Self-Hosted Kubernetes
-## @nasa9084
+## Building Self-Hosted Kubernetes
+### @nasa9084
 
 ---
 
@@ -84,3 +84,7 @@ Note:
 ---
 
 # Do you have any question?
+
+---
+
+# Please feedback from QR on your badge!
