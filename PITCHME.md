@@ -75,7 +75,7 @@ Note:
 
 ---
 
-## How to build "self-hosted" K8s
+### How to build "self-hosted" K8s
 
 +++
 
@@ -92,13 +92,20 @@ Note:
 
 +++
 
+### How K8s works
+
++++
+
 ### The Level of Self-Hosting
 
 ![level of self-hosting](assets/image/level_of_self-hosting.png)
 
 +++
 
+## KEY: static Pod
 
+* Pods managed directly by kubelet
+* **WITHOUT** kube-apiserver
 
 ---
 
