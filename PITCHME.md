@@ -7,10 +7,9 @@
 
 <div style="float: left;">
 ![pika](assets/image/pika.png)
-@fa[github] @fa[twitter] @nasa9084
 </div>
 
-* nasa9084
+* @nasa9084 @fa[twitter] @fa[github]
 * ~~VirtualTech Japan, Inc.~~
 * Go, emacs, Kubernetes
 * blog.web-apps.tech
