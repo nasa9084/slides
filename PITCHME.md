@@ -3,18 +3,13 @@
 
 ---
 
-@snap[north]
-<h2>foo</h2>
-@snapend
+## $ whoami
 
-@snap[west]
-bar
-@snapend
+<div style="float: left;">
+![pika](assets/image/pika.png)
+</div>
 
-
-@snap[east]
-baz
-@snapend
+* @nasa9084
 
 ---
 
