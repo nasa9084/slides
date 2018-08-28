@@ -3,6 +3,6 @@
     box-shadow: none;
 }
 
-div.east {
+div.east, div.west, div.north, div.south {
     position: relative;
 }
