@@ -49,9 +49,9 @@
 
 ## Kubernetes on Kubernetes
 
-* Deploy Kubernetes on Kubernetes
-* Overcloud Kubernetes is managed by Kubernetes
-* How about undercloud kubernetes?
+- Deploy Kubernetes on Kubernetes
+- Overcloud Kubernetes is managed by Kubernetes
+- How about undercloud kubernetes?
 
 Note:
 * cf. K8s on K8s on OpenStack
