@@ -32,26 +32,27 @@
   * Self-Healing
   * Automated deployment/rolling out/scaling
 * A CNCF project
+* abbreviated: k8s
 
 +++
 
-## Kubernetes can manages...
+## K8s can manages...
 
 @ol
 
-- Kubernetes manages containerized apps especially microservices.
-- Kubernetes **IS** an microservice app.
-- Kubernetes can manages Kubernetes.
+- K8s manages containerized apps especially microservices.
+- K8s **IS** an microservice app.
+- K8s can manages K8s.
 
 @olend
 
 +++
 
-## Kubernetes on Kubernetes
+## K8s on K8s
 
-- Deploy Kubernetes on Kubernetes
-- Overcloud Kubernetes is managed by Kubernetes
-- How about undercloud kubernetes?
+- Deploy K8s on K8s
+- Overcloud K8s is managed by K8s
+- How about undercloud k8s?
 
 Note:
 * cf. K8s on K8s on OpenStack
@@ -62,7 +63,7 @@ Note:
 
 +++
 
-## @fa[angle-double-right] Self-Hosted Kubernetes
+## @fa[angle-double-right] Self-Hosted K8ss
 
 +++
 
@@ -75,11 +76,11 @@ Note:
 
 ---
 
-## How to build "self-hosted" Kubernetes
+## How to build "self-hosted" K8s
 
 +++
 
-### Kubernetes Components
+### K8s Components
 
 * kube-apiserver
 * kube-scheduler
@@ -102,7 +103,7 @@ Note:
 
 ---
 
-## kubeadm cah build self-hosted Kubernetes
+## kubeadm cah build self-hosted K8s
 
 ---
 
