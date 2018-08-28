@@ -5,7 +5,7 @@
 @transition[none]
 
 @snap[north]
-## foo
+<h2>foo</h2>
 @snapend
 
 @snap[west]
