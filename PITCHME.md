@@ -5,17 +5,16 @@
 @transition[none]
 
 @snap[north]
-## $ whoami
-@snapend
-
-@snap[east]
-* nasa9084
-* ~~VirtualTech Japan Inc.~~
-* Go, emacs, Kubernetes
+## foo
 @snapend
 
 @snap[west]
-![pika](assets/image/pika.png)
+bar
+@snapend
+
+
+@snap[east]
+baz
 @snapend
 
 ---
