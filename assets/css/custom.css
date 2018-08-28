@@ -3,6 +3,6 @@
     box-shadow: none;
 }
 
-.north, .west, .east, .south {
-    font-family: "Montserrat", Impact, sans-serif; !important
+div.east {
+    position: relative;
 }
