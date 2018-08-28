@@ -10,6 +10,9 @@
 </div>
 
 * @nasa9084
+* ~~VirtualTech Japan, Inc.~~
+* Go, emacs, Kubernetes
+* blog.web-apps.tech
 
 ---
 
