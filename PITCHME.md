@@ -94,7 +94,7 @@ Note:
 
 ### How K8s works
 
-![components](assets/image/kubernetes_componentns.png)
+![components](assets/image/kubernetes_components.png)
 
 +++
 
