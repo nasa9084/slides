@@ -63,7 +63,7 @@ Note:
 
 +++
 
-## @fa[angle-double-right] Self-Hosted K8ss
+## @fa[angle-double-right] Self-Hosted K8s
 
 +++
 
