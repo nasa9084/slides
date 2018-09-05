@@ -149,12 +149,12 @@ deploy master components using kubectl
 
 ---
 
-## kubeadm can build self-hosted K8s
+### kubeadm can build self-hosted K8s
 
 ---
 
-# Do you have any question?
+## Do you have any question?
 
 ---
 
-# Please feedback from QR on your badge!
+## Please feedback from QR on your badge!
