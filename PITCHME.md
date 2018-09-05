@@ -12,7 +12,13 @@
 * @nasa9084 @fa[twitter] @fa[github]
 * ~~VirtualTech Japan, Inc.~~
 * Go, emacs, Kubernetes
-* blog.web-apps.tech
+
++++
+
+### My Home Infra with Kubernetes
+
+![blog_screenshot](assets/image/blog_ss.png)
+https://blog.web-apps.tech
 
 ---
 
