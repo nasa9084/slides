@@ -157,4 +157,4 @@ deploy master components using kubectl
 
 ---
 
-### Please feedback from QR on your badge!
+#### Please feedback from QR on your badge!
