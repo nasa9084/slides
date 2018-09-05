@@ -131,7 +131,7 @@ $ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
 
 ![step-2](assets/image/2.png)
 
-bootstrap master components are deployed using static Pod
+bootstrap cluster is deployed using static Pod
 
 +++
 
