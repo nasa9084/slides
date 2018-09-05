@@ -129,17 +129,17 @@ $ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
 
 ### step 2: bootstrap cluster
 
+bootstrap cluster is deployed using static Pod
 ![step-2](assets/image/2.png)
 
-bootstrap cluster is deployed using static Pod
 
 +++
 
 ### step 3: deploy k8s onto bootstrap
 
+deploy master components using kubectl
 ![step-3](assets/image/3.png)
 
-deploy master components using kubectl
 
 +++
 
