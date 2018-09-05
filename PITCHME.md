@@ -119,6 +119,30 @@ Note:
 $ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
 ```
 
++++
+
+### step 1:
+
+![step-1](assets/image/1.png)
+
++++
+
+### step 2:
+
+![step-1](assets/image/1.png)
+
++++
+
+### step 3:
+
+![step-1](assets/image/1.png)
+
++++
+
+### step 4:
+
+![step-1](assets/image/1.png)
+
 ---
 
 ## kubeadm can build self-hosted K8s
