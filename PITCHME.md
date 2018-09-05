@@ -129,19 +129,19 @@ $ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
 
 ### step 2:
 
-![step-1](assets/image/2.png)
+![step-2](assets/image/2.png)
 
 +++
 
 ### step 3:
 
-![step-1](assets/image/3.png)
+![step-3](assets/image/3.png)
 
 +++
 
 ### step 4:
 
-![step-1](assets/image/4.png)
+![step-4](assets/image/4.png)
 
 ---
 
