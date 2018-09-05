@@ -115,6 +115,10 @@ Note:
 * Pods managed directly by kubelet
 * **WITHOUT** kube-apiserver
 
+``` shell
+$ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
+```
+
 ---
 
 ## kubeadm cah build self-hosted K8s
