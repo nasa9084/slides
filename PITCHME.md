@@ -121,25 +121,29 @@ $ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
 
 +++
 
-### step 1:
+### step 1: prepare nodes
 
 ![step-1](assets/image/1.png)
 
 +++
 
-### step 2:
+### step 2: bootstrap kubernetes cluster
 
 ![step-2](assets/image/2.png)
 
+bootstrap master components are deployed using static Pod
+
 +++
 
-### step 3:
+### step 3: deploy Kubernetes on bootstrap cluster
 
 ![step-3](assets/image/3.png)
 
+deploy master components using kubectl
+
 +++
 
-### step 4:
+### step 4: delete bootstrap cluster
 
 ![step-4](assets/image/4.png)
 
