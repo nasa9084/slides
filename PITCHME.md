@@ -145,12 +145,14 @@ K8sのコンポーネントをちゃんと更新するために、構成管理�
 * **WITHOUT** kube-apiserver
 
 ``` shell
-$ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
+$ kubelet --pod-manifest-path=/PATH/TO/MANIFESTS
 ```
 
 +++
 
 ### step 1: prepare nodes
+
+3 nodes: master-node-node
 
 ![step-1](assets/image/1.png)
 
@@ -159,6 +161,7 @@ $ kubelet ----pod-manifest-path=/PATH/TO/MANIFESTS
 ### step 2: bootstrap cluster
 
 bootstrap cluster is deployed using static Pod
+
 ![step-2](assets/image/2.png)
 
 
@@ -167,12 +170,15 @@ bootstrap cluster is deployed using static Pod
 ### step 3: deploy k8s onto bootstrap
 
 deploy master components using kubectl
+
 ![step-3](assets/image/3.png)
 
 
 +++
 
 ### step 4: delete bootstrap cluster
+
+remove manifests from static pod manifest path
 
 ![step-4](assets/image/4.png)
 
