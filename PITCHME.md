@@ -176,7 +176,43 @@ deploy master components using kubectl
 
 ---
 
-### kubeadm can build self-hosted K8s
+## Which one can deploy Self-Hosted Cluster?
+
+| Tool | can |
+|:---:|:---:|
+| Tectonic | @fa[check] |
+| kubeadm | @fa[check]* |
+| Magnum | @fa[times] |
+| Rancher | @fa[times] |
+| kubespray | @fa[times] |
+
+Note:
+* kubeadm self-hostedはアルファ
+* kubesprayは半self-host
+  * 一部static podで動いてる
+
++++
+
+### How to manage Self-Hosted K8s Cluster?
+
+You can manage K8s cluster via K8s API
+
+* no config management system
+* no extra tool
+
+@fa[arrow-right] easy to manage
+
+---
+
+## Summary
+
+* Kubernetes can manage Kubernetes
+* It's easy to manage than not self-hosting
+  * manage cluster via K8s API
+* You can deploy Self-Hosted cluster using...
+  * Tectonic
+  * kubeadm (not stable)
+* May be default in the future
 
 ---
 
