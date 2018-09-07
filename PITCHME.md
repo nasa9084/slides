@@ -20,6 +20,10 @@
 ![blog_screenshot](assets/image/blog_ss.png)
 https://blog.web-apps.tech
 
++++
+
+![web-apps.tech](assets/image/web-apps-tech.png)
+
 ---
 
 # Kubernetes
