@@ -79,6 +79,33 @@ Note:
 
 -- Wikipedia
 
++++
+
+## Why Self-Hosted K8s?
+
+1. API driven update/rollbacks
+2. Cluster Introspection
+
++++
+
+### API driven update/rollbacks
+
+Upgrading Kubernetes can be difficult (at least for me, it's difficult!)
+
+@fa[arrow-right] You can use K8s API for self-hosted cluster
+
+Note:
+K8sのコンポーネントをちゃんと更新するために、構成管理ツールなどの外部ツールを使わなければならない
+
++++
+
+### Cluster Introspection
+
+| | not self-hosted | self-hosted |
+|:---:|:---|:---|
+| log | journalctl | kubectl logs |
+| status | systemctl status | kubectl describe |
+
 ---
 
 ### How to build Self-Hosted K8s
