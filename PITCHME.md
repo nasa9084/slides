@@ -81,7 +81,7 @@ Note:
 
 ---
 
-### How to build "self-hosted" K8s
+### How to build Self-Hosted K8s
 
 +++
 
