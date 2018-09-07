@@ -20,7 +20,7 @@
 ![blog_screenshot](assets/image/blog_ss.png)
 https://blog.web-apps.tech
 
-+++?image=assets/image/web-apps-tech.png
++++?image=assets/image/web-apps-tech.png&size=contain
 
 +++
 
