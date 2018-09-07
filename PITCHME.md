@@ -90,7 +90,9 @@ Note:
 
 ### API driven update/rollbacks
 
-Upgrading Kubernetes can be difficult (at least for me, it's difficult!)
+Upgrading Kubernetes can be difficult
+
+(at least for me, it's difficult!)
 
 @fa[arrow-right] You can use K8s API for self-hosted cluster
 
