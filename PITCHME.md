@@ -2,11 +2,23 @@
 
 ---
 
+slide: https://gitpitch.com/nasa9084/slides/rancherjp15
+
+---
+
 ### $ whoami
 
 ![pika](assets/image/pika.png)
 
 * @nasa9084
+
+---
+
+### Do you know Object Storage?
+
+---
+
+### Do you know S3?
 
 ---
 
