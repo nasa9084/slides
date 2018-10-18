@@ -53,7 +53,7 @@ for all server (>=4 servers)
 
 ---
 
-# DEMO?
+# NO SLIDES
 
 ---
 
