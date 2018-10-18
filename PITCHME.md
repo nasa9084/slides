@@ -4,6 +4,8 @@
 
 ### $ whoami
 
+![pika](assets/image/pika.png)
+
 * @nasa9084
 
 ---
