@@ -23,6 +23,7 @@
   * can tolerate up to (N/2)-1 node failures
 * designed as "deployed once and forgotten"
 * written in Golang
+* https://minio.io/
 
 ---
 
