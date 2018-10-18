@@ -11,6 +11,7 @@ slide: https://gitpitch.com/nasa9084/slides/rancherjp15
 ![pika](assets/image/pika.png)
 
 * @nasa9084
+* Kubernetes-docs-ja owner
 
 ---
 
@@ -37,7 +38,19 @@ slide: https://gitpitch.com/nasa9084/slides/rancherjp15
 * written in Golang
 * https://minio.io/
 
++++
+
+#### Clients
+
+* `aws-cli`
+* `s3cmd`
+* `mc`
+
 ---
+
+# SETUP
+
++++
 
 ### How to setup minio (standalone)
 
@@ -47,7 +60,7 @@ $ chmod +x minio
 $ ./minio server /mnt/data
 ```
 
----
++++
 
 ### How to setup minio (cluster)
 
@@ -62,6 +75,30 @@ $ ./minio server http://192.168.1.1{1...4}/export
 ```
 
 for all server (>=4 servers)
+
+---
+
+### multi-tenant
+
+![multi-tenant](assets/image/multi-tenant.png)
+
+---
+
+### multi-user
+
+only 1 user
+
++++
+
+![multi-user](assets/image/multi-user.png)
+
++++
+
+![multi-user](assets/image/9-days-ago.png)
+
++++
+
+🎉
 
 ---
 
