@@ -21,7 +21,7 @@
 
 ## 1. 漬サーモン丼
 
-![salmon-don](assets/image/salmon-don.png)
+![salmon-don](assets/image/salmon-don.jpeg)
 
 +++
 
@@ -33,19 +33,19 @@
 
 ## 3. おからハンバーグとおからメンチ
 
-![burg](assets/image/burg-and-menti.png)
+![burg](assets/image/burg-and-menti.jpeg)
 
 +++
 
 ## 4. 親子丼
 
-![oyako-don](assets/image/oyako-don.png)
+![oyako-don](assets/image/oyako-don.jpeg)
 
 +++
 
 ## 5. アヒージョ
 
-![ajillo](assets/image/ajillo.png)
+![ajillo](assets/image/ajillo.jpeg)
 
 +++
 
@@ -75,19 +75,19 @@
 
 ## 9. 骨サンマ
 
-![samma](assets/image/samma.png)
+![samma](assets/image/samma.jpg)
 
 +++
 
 ## 10. エビチリ
 
-![ebi](assets/image/ebi-chilli.png)
+![ebi](assets/image/ebi-chilli.jpeg)
 
 +++
 
 ## 11. 唐揚げ
 
-![kara-age](assets/image/karaage.png)
+![kara-age](assets/image/karaage.jpeg)
 
 +++
 
