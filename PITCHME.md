@@ -105,13 +105,13 @@
 
 ## 14. カルボナーラ
 
-![karbo](assets/image/karbo.png)
+![karbo](assets/image/karbo.jpeg)
 
 +++
 
 ## 15. カマンベールチーズ蜂蜜がけ
 
-![sake](assets/image/sake.png)
+![sake](assets/image/sake.jpeg)
 
 ---
 
