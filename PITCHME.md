@@ -81,7 +81,7 @@
 
 ## 10. エビチリ
 
-![ebi](assets/image/ebi-chilli.jpeg)
+![ebi](assets/image/ebi-chili.jpeg)
 
 +++
 
