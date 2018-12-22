@@ -93,13 +93,13 @@
 
 ## 12. 鮭いくら丼
 
-![sake-ikura-don](assets/image/sake-ikura-don.png)
+![sake-ikura-don](assets/image/sake-ikura-don.jpeg)
 
 +++
 
 ## 13. マルゲリータ
 
-![margh](assets/image/margh.png)
+![margh](assets/image/margh.jpeg)
 
 +++
 
