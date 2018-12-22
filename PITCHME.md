@@ -27,7 +27,7 @@
 
 ## 2. ベーコンとジャガイモのキッシュ
 
-![bacon-potato](assets/image/bacon-potato.png)
+![bacon-potato](assets/image/bacon-potato.jpeg)
 
 +++
 
