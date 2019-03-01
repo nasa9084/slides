@@ -21,7 +21,7 @@
 
 +++
 
-## Open API Specification
+## Open API Specification (OAS)
 
 * ex. swagger (2.0)
 * JSON / YAML
