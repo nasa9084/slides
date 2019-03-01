@@ -27,9 +27,9 @@
 
 [builderscon.io](https://builderscon.io)
 
-+++
++++?image=assets/bibimpa.jpg
 
-# </advertise>
+# <span style="color: white;">&lt;/advertise&gt;</span>
 
 ---
 
