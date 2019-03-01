@@ -2,6 +2,13 @@
 
 ---
 
+# Wi-Fi
+
+## SSID: `NJ_SEMINAR`
+## PASSWORD: `wxVuAfjp5x#`
+
+---
+
 # Code Generation from OpenAPI specification
 
 ---
