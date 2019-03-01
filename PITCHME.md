@@ -115,7 +115,7 @@
 * you may need to write fmt.Fprintf * Line of Code
 * not easy to read...
 
----
+---?image=assets/roast_don.jpg
 
 # Muscle CodeGen tips
 
