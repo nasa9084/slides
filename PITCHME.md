@@ -1,4 +1,4 @@
----?image=assets/line_go.png
+---?image=assets/line_go.png&size=auto 100vh
 
 ---
 
