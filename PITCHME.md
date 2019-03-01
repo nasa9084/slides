@@ -2,7 +2,7 @@
 
 ---
 
-# API Server Codegen from OpenAPI specification
+# Code Generation from OpenAPI specification
 
 ---
 
