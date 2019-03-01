@@ -42,7 +42,7 @@
 
 ---
 
-# Open API Specification
+# OpenAPI Specification
 
 +++
 
