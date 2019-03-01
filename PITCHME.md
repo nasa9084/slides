@@ -1,3 +1,7 @@
+---?image=assets/line_go.png
+
+---
+
 # API Server Codegen from OpenAPI specification
 
 ---
@@ -29,16 +33,28 @@
 
 ---
 
+## Agenda
+
+* What is OpenAPI Specification
+* How do I generated codes
+* Tips
+* Explore my code generator
+
+---
+
 # Open API Specification
 
 +++
 
 ## OpenAPI Specification (OAS)
 
+![openapi_logo](assets/openapi.png)
+
 * ex. swagger (2.0)
 * machine readable (JSON/YAML)
 * a standard, programming language-agnostic interface description for REST APIs
 * just text, can managed by SCM
+* [github/oai](https://github.com/oai)
 
 +++
 
@@ -99,6 +115,10 @@
 * you may need to write fmt.Fprintf * Line of Code
 * not easy to read...
 
+---
+
+# Muscle CodeGen tips
+
 +++
 
 ### `internal` package
@@ -107,10 +127,6 @@
 * unexposed code outside repository
 * code /a/b/c/internal/d/e/f can be imported only by code in the dir rooted at /a/b/c
 * usable for **generator** codes
-
----
-
-# CodeGen tips
 
 +++
 
@@ -179,8 +195,8 @@ f.Write(src)
 
 ---
 
-# DEMO?
+# Explore my code generator
 
 ---
 
-# Q?
+# </slide>
