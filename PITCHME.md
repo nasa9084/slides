@@ -4,6 +4,8 @@
 
 # Wi-Fi
 
+![wi-fi](assets/wi-fi.png)
+
 ## SSID: `NJ_SEMINAR`
 ## PASSWORD: `wxVuAfjp5x#`
 
