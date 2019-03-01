@@ -117,7 +117,7 @@
 
 ---?image=assets/roast_don.jpg
 
-# Muscle CodeGen tips
+# <span style="color: white;">Muscle CodeGen tips</span>
 
 +++
 
@@ -131,6 +131,7 @@
 +++
 
 ### Sort
+
 * sort your definitions (from map)
   * diff changed every codegen
 
