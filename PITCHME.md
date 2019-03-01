@@ -33,7 +33,7 @@
 
 +++
 
-## Open API Specification (OAS)
+## OpenAPI Specification (OAS)
 
 * ex. swagger (2.0)
 * machine readable (JSON/YAML)
